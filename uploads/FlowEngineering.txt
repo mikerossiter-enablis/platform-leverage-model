@@ -1,0 +1,3927 @@
+IT Revolution
+Independent Publisher Since 2013
+Portland, Oregon
+FOREWORD BY KAREN MARTIN
+COAUTHOR OF VALUE STREAM MAPPING
+
+-- 1 of 108 --
+
+25 NW 23rd Pl, Suite 6314
+Portland, OR 97210
+Copyright © 2024 by Steve Pereira and Andrew Davis
+All rights reserved. For information about permission to reproduce selections from this book,
+write to Permissions, IT Revolution Press, LLC, 25 NW 23rd Pl, Suite 6314, Portland, OR 97210.
+First Edition
+Printed in the United States of America
+30 29 28 27 26 25 24 	1 2 3 4 5 6 7 8 9
+Cover, book design, and illustrations by
+Julianna Johnson and Kate Giambrone, Bologna Sandwich LLC.
+Cover layout by Devon Smith.
+Library of Congress Control Number: 2024931067
+ISBN: 9781950508457
+eBook ISBN: 9781950508464
+Web PDF ISBN: 9781950508488
+Audiobook ISBN: 9781950508471
+For information about special discounts for bulk purchases or for information on
+booking authors for an event, please visit our website at www.ITRevolution.com.
+FLOW ENGINEERING
+
+-- 2 of 108 --
+
+3 | FLOW ENGINEERING
+Contents
+List of Figures 	vii
+Foreword by Karen Martin 	xiii
+Introduction 	xvii
+PART 1 The Flow Landscape
+1 The Problem with Scale 	3
+2 Solutions to Scale 	17
+3 The Elements of Action 	29
+4 Flow Engineering 	35
+PART 2 Mapping the Landscape
+5 Outcome Mapping 	53
+6 Current State Value Stream Mapping 	77
+7 Dependency Mapping 	109
+8 Future State Value Stream Mapping 	129
+9 The Flow Roadmap 	145
+PART 3 Navigating the Landscape
+10 Principles of Flow Engineering 	165
+11 Leading Flow Engineering 	185
+12 Traps to Avoid 	199
+13 Value Stream Management 	213
+14 Scaling Flow Engineering 	227
+Conclusion 	249
+Appendix 	253
+Glossary 	263
+Bibliography 	265
+Notes 	271
+Acknowledgments 	275
+About the Authors 	276
+
+-- 3 of 108 --
+
+4 | FLOW ENGINEERING
+List of Figures
+Introduction
+FIG. 0.1 Bolt Global Current State Challenge 	xxvi
+Chapter 1
+FIG. 1.1 The Three Human Costs of Scale 	5
+FIG. 1.2 Misalignment in Teams 	7
+FIG. 1.3 The Paradox of Scale Illustrated 	9
+FIG. 1.4 The Checkbox Project: Teams Involved 	12
+Chapter 2
+FIG. 2.1 The Spectrum of Solution Approaches 	18
+FIG. 2.2 The Three Gaps to Enabling Large-Scale Collaboration 	19
+FIG. 2.3 The Iron Triangle of Constraints 	20
+FIG. 2.4 Cybernetic Feedback Loop 	22
+FIG. 2.5 A Siloed Organizational Structure 	23
+FIG. 2.6 Effects of Limited Visibility 	23
+FIG. 2.7 The Value Stream 	24
+FIG. 2.8 A Simple Value Stream Map 	25
+FIG. 2.9 The Toyota Production System’s Improvement Kata 	26
+TBL. 2.1 Cybernetic Control Systems in Popular Decision Frameworks 	27
+Chapter 3
+FIG. 3.1 Collective and Individual Flow 	30
+FIG. 3.2 Effects of the Three Elements of Action 	30
+FIG. 3.3 The Three Elements of Action 	31
+FIG. 3.4 Cybernetic Loop with the Elements of Actions 	32
+FIG. 3.5 The Elements of Action: Value, Clarity, and Flow 	32
+Chapter 4
+FIG. 4.1 The Power of a Map 	36
+
+-- 4 of 108 --
+
+5 | FLOW ENGINEERING
+FIG. 4.2 Value, Clarity, and Flow Woven through all
+Flow Engineering Maps 	38
+FIG. 4.3 Five Maps of Flow Engineering 	39
+TBL. 4.1 Addressing the Three Gaps through Flow Engineering 	40
+TBL. 4.2 Each Map Serves at Least One of the Elements of Action 	41
+TBL. 4.3 General Facilitator Rules of Engagement 	43
+FIG. 4.4 A Segment of the Full Value Stream Map 	46
+TBL. 4.4 Purposes and Benefits of the Five Flow Engineering Exercises 	48
+Chapter 5
+FIG. 5.1 Outcome Mapping Primarily Serves to Identify Value 	54
+FIG. 5.2 The Five Stages of Outcome Mapping 	55
+FIG. 5.3 A Rapid Outcome Map 	56
+TBL. 5.1 Common Situations That Can Be Transformed into
+Actionable Outcomes via Outcome Discovery 	57
+FIG. 5.4 Five Categories for Outcome Mapping 	64
+FIG. 5.5 Stages of Outcome Mapping 	65
+FIG. 5.6 Example of the Discovery Stage of Outcome Mapping 	66
+FIG. 5.7 Notes Organized into Themes 	67
+FIG. 5.8 Example of Voting Using Dots 	67
+FIG. 5.9 A Completed Outcome Map 	70
+FIG. 5.10 The Challenge Landscape within Sharon’s Area of Responsibility 72
+FIG. 5.11 The Bolt Global Outcome Mapping Process 	73
+Chapter 6
+FIG. 6.1 Value Stream Mapping Primarily Serves to Build Clarity 	77
+FIG. 6.2 The Five Stages of Value Stream Mapping 	81
+FIG. 6.3 Simplified Value Stream Map 	82
+TBL. 6.1 Differences between Customer Journey Maps and
+Value Stream Maps 	84
+FIG. 6.4 Customer Journey vs. Value Stream 	85
+FIG. 6.5 The Traditional Form of Representing a Value Stream
+Map for Manufacturing 	86
+FIG. 6.6 A Simple Flow Engineering Value Stream Map 	87
+FIG. 6.7 Example of a Completed Value Stream Map 	89
+
+-- 5 of 108 --
+
+6 | FLOW ENGINEERING
+FIG. 6.8 Identifying a Constraint in the Value Stream 	94
+FIG. 6.9 Example Value Stream Map for Software Development 	95
+FIG. 6.10 Sample Value Stream Map Showing Cycle Timing and
+Wait Timing 	96
+FIG. 6.11 Annotated Value Stream Map 	96
+FIG. 6.12 Example Small-Scale Value Stream Map 	97
+FIG. 6.13 Identifying a Constraint on a Value Stream Map 	98
+FIG. 6.14 Value Stream Map with VAT and %C&A 	102
+FIG. 6.15 Sample Value Stream Map with Many Notes 	104
+Chapter 7
+FIG. 7.1 Dependency Mapping Primarily Serves to Enhance the
+Clarity Built by Value Stream Mapping 	109
+FIG. 7.2 Dependency Mapping Targets Only Dependencies
+That Impact the Constraint 	110
+FIG. 7.3 Example of the Extent of Dependencies 	111
+FIG. 7.4 The Five Stages of Dependency Mapping 	112
+FIG. 7.5 Dependency Map of the Constraint: Environment Setup 	117
+FIG. 7.6 Gap between Sharon’s Team and Karl’s Team 	118
+FIG. 7.7 Three Assets for Collaboration 	119
+FIG. 7.8 The Dependency Map Jointly Created by Karl and Sharon 	120
+FIG. 7.9 Suspected Constraint Identified in Value Stream Mapping 	122
+FIG. 7.10 Example Sub–Value Stream Map 	122
+FIG. 7.11 A Sub–Value Stream Map to Illustrate the
+Dependent Workflow 	123
+FIG. 7.12 Direct Causes of Hot Spots 	123
+FIG. 7.13 Practice the Five Whys to Dig Deeper into the
+Suspected Constraint 	124
+FIG. 7.14 A Visualization of Dependencies across the Flow
+of the Checkbox Project 	126
+Chapter 8
+FIG. 8.1 Future State Mapping Opens the Door to Enabling Flow 	129
+FIG. 8.2 Current, Ideal, and Future State Maps 	130
+FIG. 8.3 Flow Engineering Cycle of Mapping as an Improvement Kata 	133
+
+-- 6 of 108 --
+
+7 | FLOW ENGINEERING
+FIG. 8.4 The Four Stages of Future State Mapping 	133
+FIG. 8.5 Current State Map with Bottleneck Highlighted 	139
+FIG. 8.6 Future State Map with Improvement Areas Noted in Green 	140
+FIG. 8.7 Future State Map Reduced to Seven Serial Steps and
+One Parallel Step 	140
+FIG. 8.8 Future State Map with Cycle Timings 	141
+TBL. 8.1 Results of Mapping at a Travel Tech Company 	143
+Chapter 9
+FIG. 9.1 The Flow Roadmap Primarily Serves to Enable Flow 	145
+FIG. 9.2 The Three Stages of a Flow Roadmap 	146
+TBL. 9.1 Issues Transformed into Actions/Experiments to Improve
+Flow at Bolt Global 	148
+FIG. 9.3 Sharon’s Completed Flow Roadmap 	149
+FIG. 9.4 The Flow Roadmap Board 	151
+FIG. 9.5 The Future State Map Showing Improvement Areas 	152
+FIG. 9.6 Improvement Opportunities Broken Down into Actions 	152
+FIG. 9.7 Possible Improvements Ranked by Importance 	153
+FIG. 9.8 Plot Feasibility along the Horizontal Axis 	154
+FIG. 9.9 Indicate Dependencies between Activities 	154
+FIG. 9.10 Improvement Activities Categorized by Time Horizon
+(Now, Next, Later) 	155
+FIG. 9.11 Items Arranged in Sequential Order: Now, Next, Later 	155
+FIG. 9.12 Identified Measure of Progress 	156
+TBL. 9.2 Gartner’s Flow Metrics Cover Technical, Product, and
+Business Concerns 	156
+FIG. 9.13 Example of Adding Assigned Owners 	157
+FIG. 9.14 Flow Roadmap Creation Progressing from Problem
+Areas and Concerns to Actions 	160
+Chapter 10
+FIG. 10.1 The Five Principles of Lean 	168
+FIG. 10.2 A Simple Outcome Map Representing Diverse Concerns 	170
+FIG. 10.3 A Simple Flow Engineering Value Stream Map 	172
+FIG. 10.4 Value Stream Map Highlighting Wait Times 	173
+
+-- 7 of 108 --
+
+8 | FLOW ENGINEERING
+FIG. 10.5 The Efficiency Matrix 	175
+FIG. 10.6 Theory of Constraints Step 1: Identify the Constraint 	176
+FIG. 10.7 Theory of Constraints Step 2: Exploit the Constraint 	176
+FIG. 10.8 Theory of Constraints Step 3: Subordinate Everything
+Else to the Constraint 	177
+FIG. 10.9 Theory of Constraints Step 4: Elevate the Constraint 	177
+FIG. 10.10 Excess Work in Progress Is a Sign of Lacking Pull Systems 	180
+Chapter 11
+FIG. 11.1 A Value Stream Map Depicts Multiple Feedback Loops 	187
+FIG. 11.2 Business Frameworks Are Templates for Management 	189
+FIG. 11.3 The Constraint on a Value Stream 	191
+TBL. 11.1 Examples of Enabling and Governing Constraints 	192
+Chapter 12
+FIG. 12.1 Outcome Discovery and Outcome Mapping Help You
+Craft a Productive Narrative 	201
+FIG. 12.2 Outcome Mapping and Discovery Can Bridge Local
+Incentives by Establishing a Higher-Value Shared Target 	203
+FIG. 12.3 Limited Visibility Enables Limited Focus 	205
+FIG. 12.4 Example Value Stream Map with Irrelevant Downstream
+Precision 	206
+FIG. 12.5 The Current State Map Depicting the Full Agile Release
+Train (ART) 	209
+TBL. 12.1 Visual Activity Classification Legend, Depicting
+Non–Value-Adding, Testing, Value-Adding, and
+Coordinating Activities 	209
+FIG. 12.6 Example Future State Map Depicting Non-Critical and
+Non-Value Adding Activities 	210
+TBL. 12.2 Current State Flow Performance vs. Future State 	211
+Chapter 13
+FIG. 13.1 Focus on Project Leads to Ignoring Longer Term Impact 	214
+FIG. 13.2 Each Cycle of Continuous Improvement Builds on the
+Previous One 	214
+
+-- 8 of 108 --
+
+9 | FLOW ENGINEERING
+FIG. 13.3 Current State Map: Steps, Timing, Roles, Tools, Artifacts 	215
+FIG. 13.4 Project or Product Orientation Lies on a Spectrum 	216
+TBL. 13.1 A Comparison of Value Stream Mapping and Value
+Stream Management 	217–218
+FIG. 13.5 Phil’s Journey at Parchment 	221
+TBL. 13.2 The Parchment Measurement Journey 	222
+FIG. 13.6 Waiting for Data Availability and Quality Means Uncertainty
+Remains High for Longer and Outcomes are Later to Arrive 	224
+Chapter 14
+FIG. 14.1 Value Streams Sharing a Common Constraint 	228
+FIG. 14.2 The Spectrum of Flow Investment 	231
+TBL. 14.1 Developmental and Operational Focus Implications 	232
+FIG. 14.3 Interdependence of Core and Supportive Value Streams 	234
+FIG. 14.4 A Value Stream Network Map 	235
+FIG. 14.5 The Y Axis of a Value Stream Network Map 	236
+FIG. 14.6 The X Axis of a Value Stream Network Map 	237
+FIG. 14.7 Connections Show Dependencies between Value Streams 	237
+FIG. 14.8 Example Value Stream Network Map Showing Shift
+in Internal Dev Platform 	238
+FIG. 14.9 Example Value Stream Network Map Showing
+Developmental Shift 	238
+FIG. 14.10 Flow Enabling Team Interactions with Product Streams 	242
+FIG. 14.11 The Flywheel of Flow Engineering 	246
+Appendix
+FIG. A.1 Value, Clarity, and Flow 	253
+FIG. A.2 Calculating Speed: Lead, Wait, and Active Times 	256
+FIG. A.3 Cycle Time Includes All Value-Added and Non–Value-
+Added Time Composing Each Stage 	257
+FIG. A.4 Calculating Quality: Percent Complete & Accurate 	257
+FIG. A.5 Example Map Board in Progress 	259
+TBL. A.1 Estimated Costs of Flow Engineering Exercises 	261
+
+-- 9 of 108 --
+
+10 | FLOW ENGINEERING
+FIGURE 0.1: Bolt Global Current State Challenge
+Every organization grapples with how to address current state
+challenges in the face of increasing scale.
+Need to do
+more with less
+Need to
+improve quality
+Need to deliver
+more value 	How?
+Huge backlog
+of changes
+Constant
+distractions 	Need to keep
+talent happy
+Business
+objectives
+Improvement
+initiatives
+Tech &
+process debt 	Need to go
+faster
+Fires &
+defects
+FIGURE 1.1: The Three Human Costs of Scale
+Distraction 	Disorientation 	Disengagement
+FIRE
+$#@&! 	ZZZZZZZ
+	ZZZZZZZ
+!
+??????
+
+-- 10 of 108 --
+
+11 | FLOW ENGINEERING
+FIGURE 1.2 Misalignment in Teams
+Perspectives, goals, and scope vary widely across individuals,
+across groups, and over time.
+Different
+Perspectives
+Different
+Goals
+Different
+Scopes
+FIGURE 1.3: The Paradox of Scale Illustrated
+The graph shows the relative amount of effort by each individual declining and the
+prevalence of collaboration rising as the size of the team grows (more person-hours).
+Adapted from Andrew Mao et al. “An Experimental Study of Team Size and Performance on a
+Complex Task.” PLoS ONE 11, no. 4 (April 2016). https://doi.org/10.1371/journal.pone.0153048.
+Normalized
+Effort
+Team Size
+Collaboration
+Index
+1 	2 	4 	8 	16 	32
+25.49	12.55	6.43	3.40	1.89	0.96
+0.0 	0.7
+0.8
+0.9
+1.0
+1.1
+1.2
+1.3
+1.4
+0.5
+1.0
+1.5
+2.0
+2.5
+Effective Team Size
+
+-- 11 of 108 --
+
+12 | FLOW ENGINEERING
+FIGURE 1.4 The Checkbox Project: Teams Involved
+The effort spanned 10+ delivery teams for each of two lines of business (LOB) with three
+channels for each LOB, each heavily reliant on shared services.
+Source: Kamran Kazempour et al., “The Checkbox Project: Learnings for Organizing
+for Outcomes,” The DevOps Enterprise Journal 5, no. 2 (Fall 2023),
+https://itrevolution.com/product/the-checkbox-project/.
+Teams Involved
+Line of Business (B2B, B2C)
+Channel (In Store, Call Center, Digital)
+Delivery Teams
+Front End
+Back End
+Middleware Tier 2
+Middleware Tier 1
+Enterprise Data
+Marketing
+Notifications
+Integration
+Networking
+Analytics
+Shared Teams
+Billing
+Finance
+PMO
+Collections
+Compliance
+Internal Council
+AppSec
+Architecture
+Procurement
+Accessibility
+
+-- 12 of 108 --
+
+13 | FLOW ENGINEERING
+FIGURE 2.1: The Spectrum of Solution Approaches
+CMMI, PMBOK, PRINCE2, ITIL
+Prescriptive
+High consistency
+Low adaptability
+High entry cost
+Low context needed
+High ROI delay
+Low ROI delay
+High context needed
+Low entry cost
+High adaptability
+Low consistency
+Generative
+SAFe, TOGAF, RUP, Six Sigma
+Scrum, Lean Software Development, XP, Kanban
+Domain-Driven Design, Team Topologies, Jobs-to-be-Done, Wardley Mapping
+Design Thinking, Liberating Structures, Open Space Technology, Cynefin
+FIGURE 2.2: The Three Gaps to Enabling Large-Scale Collaboration
+Alignment Gap 	Visibility Gap 	On-Ramp Gap
+FIGURE 2.3: The Iron Triangle of Constraints
+Budget
+Scope 	Schedule
+$
+
+-- 13 of 108 --
+
+14 | FLOW ENGINEERING
+FIGURE 2.4: Cybernetic Feedback Loop
+A cybernetic loop represents the flow of navigating change
+through targeting, sensing, and response.
+Target 	Change
+Sensor 	Controller
+Difference 	Action
+Feedback
+System under
+Control
+FIGURE 2.5: A Siloed Organizational Structure
+Silos are effective for personnel management but not for cross-organizational flow.
+Siloed
+visibility
+FIGURE 2.6: Effects of Limited Visibility
+Constraint
+The Flow of Work
+Improvement focus
+Siloed visibility
+
+-- 14 of 108 --
+
+15 | FLOW ENGINEERING
+FIGURE 2.7: The Value Stream
+The value stream, the full scope of activity needed to satisfy customers,
+passes through multiple functional groups.
+Value
+Stream
+FIGURE 2.8: A Simple Value Stream Map
+KEY
+= wait time
+= cycle time
+Sprint
+planning Build Code
+review
+QA 	Perf
+testing
+Security
+review
+Deploy to
+prod
+4 Days 	4 Days 	1 Day
+Product
+planning
+1 Hour 	2 Hours 	4 Days 	1 Hour
+30 Min 	2 Hours
+2 Weeks 	1 Day 	1 Day
+4 Days
+Backlog
+creation
+1 Day 	1 Day
+2 Days 	1 Day
+Deploy
+to
+staging
+1 Day 	1 Day
+
+-- 15 of 108 --
+
+16 | FLOW ENGINEERING
+FIGURE 2.9: The Toyota Production System’s Improvement Kata
+Source: Mike Rother, Toyota Kata: Managing People for Improvement, Adaptiveness,
+and Superior Results (New York: McGraw-Hill, 2009).
+Grasp the
+Current
+Condition
+Establish
+Your Next
+Target
+Condition
+Get the
+Direction or
+Challenge
+Conduct
+Experiments
+To Get There
+Experiments
+Step 4
+Step 2
+Step 3
+Step 1
+
+-- 16 of 108 --
+
+17 | FLOW ENGINEERING
+TABLE 2.1: Cybernetic Control Systems in Popular Decision Frameworks
+Framework/
+Methodology Target 	Sense 	Compare 	Compute 	Act
+Lean Startup Set
+hypothesis Measure 	Learn 	Build 	Build
+OKRs 	Objectives Monitor key
+results
+Compare to
+objectives
+Compute
+adjustments
+Act on
+adjustments
+V2MOM 	Vision 	Obstacles 	Values 	Measures 	Methods
+Scrum 	Sprint goal 	Standup 	Retrospective
+Identified
+improve-
+ments
+Improvement
+Balanced
+Scorecard
+Strategic
+objectives
+Monitor
+perspectives
+Compare to
+objectives
+Compute
+strategy
+Act on
+strategy
+DMAIC 	Define goal 	Measure 	Analyze 	Improve 	Control
+Lean 	Define value Map the
+value stream
+Measure the
+value stream
+against target
+outcome
+Identify
+constraint &
+causes
+Create flow/
+establish
+pull/strive for
+perfection
+TQM Quality
+objectives
+Monitor
+metrics
+Compare to
+objectives
+Compute
+corrective
+measures
+Implement
+measures
+OODA 	Mission aim 	Observe 	Orient 	Decide 	Act
+PDSA/PDCA 	Plan 	Do/observe 	Check/study 	Check/study 	Act/adapt
+Toyota
+Production
+System
+Operational
+excellence
+Observe
+(Gemba
+walks,
+Andon)
+Identify waste
+(muda, mura,
+muri)
+Kaizen bursts
+Implement
+changes
+(jidoka,
+just-in-time,
+continuous
+improvement)
+
+-- 17 of 108 --
+
+18 | FLOW ENGINEERING
+FIGURE 3.1: Collective and Individual Flow
+Flow exists across collective activities and within individual work.
+The two levels are interdependent.
+Individual
+Skill
+Flow
+Challenge
+Flow
+Collective
+Plan 	Develop 	Test 	Deploy
+FIGURE 3.2 Effects of the Three Elements of Action
+Flow without direction or clarity leads us on a winding path
+full of waste and confusion. Value and clarity enable you to
+build high-speed railways for flow.
+VS.
+High-Speed Train
+Automation, Decoupling
+& Standards
+The Winding Path
+Distraction, Disorientation
+& Disengagement
+
+-- 18 of 108 --
+
+19 | FLOW ENGINEERING
+FIGURE 3.3: The Three Elements of Action
+The elements of action—value, clarity, and flow—
+are interdependent and feed each other.
+Build
+Clarity
+Enable
+Flow
+Identify
+Value
+FIGURE 3.4: Cybernetic Loop with the Elements of Action
+Value, clarity, and flow summarize the cybernetic loop.
+Target
+Value
+Clarity
+Flow
+Change
+Sensor 	Controller
+Difference 	Action
+Feedback
+System under
+Control
+
+-- 19 of 108 --
+
+20 | FLOW ENGINEERING
+FIGURE 3.5: The Elements of Action: Value, Clarity, and Flow
+Value is our target; clarity allows us to understand a path to that target;
+and flow is about optimizing that path.
+Value 	Clarity 	Flow
+
+-- 20 of 108 --
+
+21 | FLOW ENGINEERING
+FIGURE 4.1: The Power of a Map
+Maps allow individuals to have higher-quality conversations
+on specific areas of focus.
+Tech
+Focus
+I see your concern
+for meeting OKRs,
+roadmap, cost,
+& talent targets.
+Business
+Focus
+I see your concern
+for capacity, focus,
+technical debt,
+and investment.
+We see the data revealing a constraint that affects us both.
+FIGURE 4.2: Value, Clarity, and Flow Woven through all Flow Engineering Maps
+Solid lines indicate a direct contribution, dotted lines indicate indirect contribution.
+Identify Value
+Outcome 	Value Stream 	Dependency 	Future State 	Flow Roadmap
+Build Clarity
+Maps
+Enable Flow
+
+-- 21 of 108 --
+
+22 | FLOW ENGINEERING
+FIGURE 4.3: Five Maps of Flow Engineering
+The full set of Flow Engineering exercises involves creating five maps:
+an Outcome Map, a Current State Value Stream Map, a Dependency Map,
+a Future State Value Stream Map, and a Flow Roadmap.
+Discover and
+align on value
+Purpose 	Simplified Diagram of Maps	Maps
+Outcome
+Map
+Find and
+measure key
+constraints
+Value Stream
+Map
+Connect
+constraints to
+dependencies	Dependency
+Map
+Design
+improved flow	Future State
+Map
+Create and
+plot clear
+next steps	
+Flow
+Roadmap
+
+-- 22 of 108 --
+
+23 | FLOW ENGINEERING
+TABLE 4.1: Addressing the Three Gaps through Flow Engineering
+Need
+Gaps
+Alignment 	On-Ramp 	Visibility
+Establish and maintain focus on a
+valuable target 	✓ 	✓ 	✓
+Visual and collaborative in real time 	✓ 	✓ 	✓
+Flexible and easily integrated into
+current practices 	✓ 	✓
+Accessible to aspiring and novice
+facilitators 	✓
+Inclusive and equitable 	✓ 	✓ 	✓
+Remote friendly 	✓ 	✓ 	✓
+Simple, quick, and affordable 	✓ 	✓ 	✓
+Scalable from pilot to enterprise-wide 	✓ 	✓ 	✓
+Complete program to address flow
+challenges 	✓ 	✓ 	✓
+Has its own flow (obviously) 	✓
+
+-- 23 of 108 --
+
+24 | FLOW ENGINEERING
+TABLE 4.2: Each Map Serves at Least One of the Elements of Action
+Map 	Primary goal 	Secondary benefits
+Outcome Map 	Assemble context and
+identify value
+Provide clarity and alignment
+across multiple perspectives
+Current State Value
+Stream Map
+Clearly identify the most
+impactful constraint
+Build clarity on current state
+workflow and performance
+Dependency Map 	Build clarity on causal
+factors
+Build an artifact to share with
+external stakeholders
+Future State Value
+Stream Map
+Define improved flow 	Identify valuable experiments and
+actions to improve flow
+Flow Roadmap 	Prioritize and plan flow
+improvements
+Provide clarity on next steps and
+flow from today to future goals
+TABLE 4.3: General Facilitator Rules of Engagement
+✓ Facilitators talk as little as possible outside of guiding the mechanics
+of the process; they let the participants own most of the dialogue.
+✓
+Facilitators should caution any individual from talking too long;
+aim to stay within the duration of an elevator ride. In a larger group, a
+single sentence constraint can keep the effort moving.
+✓ Promote a standard, non-disruptive interruption method (i.e., hand
+raise) to provide participants a way to voice their thoughts.
+✓ Encourage participants to reach out to other participants who haven’t
+spoken to ensure we hear from everyone.
+✓ Keep participants comfortable with ranges and guesses; trust but
+verify with the group.
+✓
+Facilitators emphasize the need to stay focused on the time horizon
+in question. If we’re looking at the current state, avoid talking about
+solutions or how things ought to be.
+
+-- 24 of 108 --
+
+25 | FLOW ENGINEERING
+FIGURE 4.4: A Segment of the Full Value Stream Map
+This mapping exercise disproved the assumption that
+automating artifact deployment would make a meaningful improvement.
+Two other bottlenecks were found instead.
+10 mins
+8 Hours 	1 Hour
+Artifact
+Creation
+Environmental
+Update
+Artifact
+Deploy
+Smoke
+Testing
+3 hours
+Bottleneck 1
+Bottleneck 2
+5 mins 	1 min
+12 Hours 	8 Hours
+Acceptance
+Testing
+4 Days
+Stakeholder
+Validation
+1 hour
+Performance
+Testing
+30 mins
+KEY
+= wait time
+= cycle time
+= issue
+
+-- 25 of 108 --
+
+26 | FLOW ENGINEERING
+TABLE 4.4: Purposes and Benefits of the Five Flow Engineering Exercises
+Mapping Exercise 	Purpose 	Risk It Averts
+Outcome Mapping 	Align all members of a team
+around the value they need
+to deliver.
+Investing in irrelevant
+improvements.
+Current State Value
+Stream Mapping
+Clarify the most likely con-
+straints in an end-to-end
+workflow.
+Optimizing a process that is
+not the constraint.
+Dependency Mapping 	Enhance the team’s clarity
+around likely constraints.
+Inadequate understanding
+of the constraint.
+Future State Mapping 	Jointly envision a value
+stream with improved flow.
+Failing to create a visible
+target for change.
+Flow Roadmapping 	Define the minimum set
+of steps to achieving
+improved flow.
+Failing to effectively act on
+insights.
+
+-- 26 of 108 --
+
+27 | FLOW ENGINEERING
+FIGURE 5.1: Outcome Mapping Primarily Serves to Identify Value
+Outcome	Value Stream	Dependency	Future State	Flow Roadmap	
+Maps
+Identify Value 	Build Clarity 	Enable Flow
+FIGURE 5.2: The Five Stages of Outcome Mapping
+Discovery 	Target
+Outcome
+Benefits 	Obstacles 	Next Steps
+Get it all out on
+the same page.
+What is the
+clarified target?
+What makes
+this valuable?
+What’s in
+the way?
+What can we
+test & start on?
+
+-- 27 of 108 --
+
+28 | FLOW ENGINEERING
+FIGURE 5.3: A Rapid Outcome Map
+Est. time: Ten minutes to value, clarity, and what’s next.
+Outcome 	Obstacles	Benefits 	Next Steps
+Audit and
+assess
+existing
+solution
+Current state
+flow map
+Future state
+pipeline
+design
+Are there
+faster/async
+feedback
+loops
+available?
+Previous work
+at varying
+levels of
+completion
+Existing
+pieces in
+use by Dev
+Unknown
+future pipeline
+stage pieces
+Scheduling:
+meeting
+delays/
+timings
+Automation
+for
+consistency
+Functional
+Pipeline
+Proof of
+Concept
+Confidence
+in ability
+to ship
+Ensuring
+policies are
+adhered to
+Visibility
+into delivery
+progress
+~10 MIN
+Time
+needed:
+
+-- 28 of 108 --
+
+29 | FLOW ENGINEERING
+TABLE 5.1: Common Situations That Can Be Transformed into
+Actionable Outcomes via Outcome Discovery
+Issues Inside an Organization 	Competitive/External Challenges
+Do not have clear OKRs and KPIs.
+Low organizational performance.
+eNPS stagnant or dropping.
+Cross-organizational misalignment.
+Acting like a “feature factory.”
+Tech debt accumulation.
+Too much WIP.
+Rework or delays.
+Improvement initiatives stalled.
+Difficult to prioritize new activities.
+Financial constraints.
+Lacking strategic direction.
+Lack of clarity around the customer.
+Cannot convince stakeholders to act.
+NPS stagnant or dropping.
+Customers are leaving or complaining.
+Customer journey is suboptimal.
+No data on customer experience.
+Few insights into product usage.
+Sales are down.
+FIGURE 5.4: Five Categories for Outcome Mapping
+The five categories or prompts are context, goals, pains, questions, and ideas.
+Context 	Goals 	Pains 	Questions 	Ideas
+FIGURE 5.5: Stages of Outcome Mapping
+Outcome 	Benefits 	Obstacles 	Next Steps
+
+-- 29 of 108 --
+
+30 | FLOW ENGINEERING
+FIGURE 5.6: Example of the Discovery Stage of Outcome Mapping
+Discovery stage acts to surface the wide variety of active concerns for a group.
+Context 	Goals 	Pains 	Questions 	Ideas
+5 MIN
+You may find that stickies with the same content
+appear in multiple categories. This is by design!
+Time
+needed:
+FIGURE 5.7 Notes Organized into Themes
+Color coding allows us to group themes while retaining the original item type.
+Migration Initiative 	Dev Experience 	Release Throughput 	Technical Debt
+3 MIN
+Time
+needed:
+
+-- 30 of 108 --
+
+31 | FLOW ENGINEERING
+FIGURE 5.8: Example of Voting Using Dots
+Voting allows the group to narrow the focus and align on a single theme to pursue.
+Migration Initiative 	Dev Experience 	Release Throughput 	Technical Debt
+2 MIN
+Time
+needed:
+FIGURE 5.9: A Completed Outcome Map
+Outcome
+What do we want?
+Deliver
+2x Faster
+Maintain
+quality
+Benefits
+Why does it matter?
+Faster
+feedback/
+response
+Waste
+reduction
+Happier
+customers
+Obstacles
+What’s in our way?
+Test
+environments
+Technical
+debt
+Keeping
+the lights
+on
+Next Steps
+Where do we start?
+Mapping
+workshops
+Technical
+audit
+Cross-team
+interviews
+30 MIN
+Time
+needed:
+
+-- 31 of 108 --
+
+32 | FLOW ENGINEERING
+FIGURE 5.10: The Challenge Landscape within Sharon’s Area of Responsibility
+Need to do more with less
+Need to improve quality
+Need to deliver more value 	How?
+The Challenges
+ 	Huge backlog
+of changes
+Constant
+distractions 	Need to keep talent happy
+Business
+objectives
+Improvement
+initiatives
+Tech &
+process debt 	Need to go faster
+Fires &
+defects
+FIGURE 5.11: The Bolt Global Outcome Mapping Process
+Goals
+Happier
+users
+Release
+2x more
+often
+Maintain
+quality
+Pains
+Fire
+fighting
+WIP
+Constant
+inter-
+ruptions
+Questions
+How can
+we get
+faster
+feedback
+Ideas
+Tech
+audit
+Cross-
+team
+survey
+Context
+Fresh
+OKRS
+Refactor
+monolith
+ART
+adoption
+CopiIot
+testing
+Migration
+Initiative
+Dev
+Experience
+Release
+Throughput
+Technical
+Debt
+Discovery
+Stage
+Themes
+&
+Voting
+
+-- 32 of 108 --
+
+33 | FLOW ENGINEERING
+FIGURE 6.1: Value Stream Mapping Primarily Serves to Build Clarity
+Outcome	
+Value Stream	Dependency	Future State	Flow Roadmap	
+Maps
+Identify Value 	Build Clarity 	Enable Flow
+FIGURE 6.2: The Five Stages of Value Stream Mapping
+Pick the stream
+most related to
+your outcome.
+Work backward
+to capture stages.
+Add cycle time
+and wait time.
+Add data that
+relates to your
+outcome.
+Identify the
+greatest flow
+impact.
+Stream
+selection
+Add
+activities
+Add
+timing
+Add
+dimensions
+Highlight
+constraint
+FIGURE 6.3: Simplified Value Stream Map
+The format of a simplified Value Stream Map, highlighting the
+key measurements of cycle time and wait time.
+Measurements
+Cycle Time 	1 hour
+12 weeks 	2 weeks 	3 days
+6 days 	6 days 	3 days
+Wait Time
+[Start]	[Stage]	[Stage]	[Done]
+
+-- 33 of 108 --
+
+34 | FLOW ENGINEERING
+FIGURE 6.4: Customer Journey vs. Value Stream
+Every part of the customer journey is fed by different value
+streams in an organization.
+Customer Journey
+Curiosity 	Discovery 	Sale 	Purchase 	Use 	Review	Need/Want 	Recommend
+Marketing Campaign Value Stream
+Product Development Value Stream
+Plan 	Design 	Develop 	Test 	Deliver 	Enable
+Plan 	Design 	Develop 	Test 	Deliver 	Enable
+
+-- 34 of 108 --
+
+35 | FLOW ENGINEERING
+FIGURE 6.5: The Traditional Form of Representing
+a Value Stream Map for Manufacturing
+Source: Image adapted from Daniel Penfield, “Value Stream Map Parts,”
+Wikimedia Commons, accessed November 2023,
+under Creative Commons Attribution-Share Alike 3.0 Unported license.
+Information
+flows
+Production
+control
+Supplier 	Customer
+Production
+lead time = 14 days
+Processing
+time = 585 sec
+Uptime=80%
+2 Shifts
+27,000 sec available
+Process A
+C/T=300 sec
+C/0=60 min
+6 days 	4 days 	1 day
+45 sec 	240 sec	300 sec
+3 days
+Weekly 	Monthly
+Material
+flows
+Lead time
+ladder
+Weekly
+order
+Monthly
+order
+Process B
+C/T=45 sec
+C/0=10 min
+Uptime=90%
+2 Shifts
+27,000 sec available
+Process C
+C/T=300 sec
+C/0=240 min
+Uptime=100%
+2 Shifts
+27,000 sec available
+Shipping
+Process A 	Process B 	Process C
+
+-- 35 of 108 --
+
+36 | FLOW ENGINEERING
+FIGURE 6.6: A Simple Flow Engineering Value Stream Map
+30% requires rework
+1 Hour 	6 Days 	3 Days	6 Days
+12 Weeks 	2 Weeks 	3 Days 	8 Days
+Request 	Review	Plan 	Develop
+8 Days 	1 Day 	4 Days	9 Days
+9 Days 	1 Day 	4 Days
+Release	Deploy	
+Env
+Setup 	Test	KEY
+= wait time
+= cycle time
+= issue
+
+-- 36 of 108 --
+
+37 | FLOW ENGINEERING
+FIGURE 6.7: Example of a Completed Value Stream Map
+The value stream map is typically laid out in one horizontal flow. We have broken it here
+to better fit the page. Parallel steps are represented inside the dotted line box.
+Goal: Get to 2-week releases.
+Summary Metrics:
+2.5 Hours 	3 Hours
+1.5 Days
+1.5 Hours
+2 Days 	3 Hours
+7 Days
+5 Days 	4.5 Days
+3 Hours
+1 Day
+3 Hours 	5 Days
+4 Hours
+Total Time 	Cycle Time 	Wait Time
+Upstream
+Delays
+Review &
+Validation
+Story
+Creation
+Backlog
+Refinement
+Sprint
+Planning
+PR Review
++ Merge
+CI Build
+40% Fail
+QA
+Validation
+Internal
+UAT
+Validation
+Sprint
+Review
+Dev
+KEY
+= wait time
+= cycle time
+Product Owner
+Developer
+Scrum Master
+Dev Lead
+QA
+Architect
+27
+days
+18
+days
+9
+days
+3.5
+days
+>16
+days
+Parallel Steps
+
+-- 37 of 108 --
+
+38 | FLOW ENGINEERING
+FIGURE 6.8: Identifying a Constraint in the Value Stream
+1 Hour 	2 Days 	5 Days 	1 Week 	2 Days 	1 Day
+2 Days
+Request 	Plan
+1 Hour
+Develop
+3 Days
+Env
+Setup
+2 Days
+Test
+1 Day
+Deploy
+KEY 	= wait time	= cycle time
+Goal: Release twice as often.
+FIGURE 6.9: Example Value Stream Map for Software Development
+Plan 	Design 	Develop	Request
+What happened before that?
+OK, so the release shipped
+Test 	Deliver 	Enable 	Deploy 	Release
+~10 MIN	Time needed:
+FIGURE 6.10: Sample Value Stream Map Showing Cycle Timing and Wait Timing
+1 Hour 	6 Days
+Request 	Plan 	Develop 	Review 	Test 	Deploy 	Release
+	Env
+Setup
+6 Days 	3 Days 	8 Days 	9 Days 	1 Day 	4 Days
+12 Weeks 	2 Weeks 	3 Days 	8 Days 	9 Days 	1 Day 	4 Days
+
+-- 38 of 108 --
+
+39 | FLOW ENGINEERING
+FIGURE 6.11: Annotated Value Stream Map
+This annotated version of the map depicts percent complete and accurate (%C&A)
+for each stage, bold text for particular areas of concern, rework (curved arrows)
+for stages where errors are detected, and totals for cumulative measures.
+80% 	90% 	50% 	90% 	30% 	80% 	80% 	90%
+1 Hour 	6 Days
+Request 	Plan 	Develop 	Review 	Test 	Deploy 	Release
+	Env
+Setup
+6 Days 	3 Days 	8 Days 	9 Days 	1 Day 	4 Days
+12 Weeks 	2 Weeks 	3 Days 	8 Days 	9 Days 	1 Day 	4 Days
+%
+C&A
+Summary Findings:
+Rolled
+%C&A Cycle Time 	Wait Time 	Lead Time
+~2 MIN
+Time
+needed:
+5.6 	37
+days
+131
+days
+168
+days
+
+-- 39 of 108 --
+
+40 | FLOW ENGINEERING
+FIGURE 6.12: Example Small-Scale Value Stream Map
+A small-scale Value Stream Map depicting the target outcome, roles, totals,
+hot spots, and parallel activities.
+Goal: Get to 2-week releases.
+Summary Metrics:
+2.5 Hours 	3 Hours
+1.5 Days
+1.5 Hours
+2 Days 	3 Hours
+7 Days
+5 Days 	4.5 Days
+3 Hours
+1 Day
+3 Hours 	5 Days
+4 Hours
+Total Time 	Cycle Time 	Wait Time
+Upstream
+Delays
+Review &
+Validation
+Story
+creation
+Backlog
+refinement
+Sprint
+planning
+PR Review
++ Merge
+CI Build
+40% Fail
+QA
+Validation
+Internal
+UAT
+Validation
+Sprint
+Review
+Dev
+Product Owner
+Developer
+Scrum Master
+Dev Lead
+QA
+Architect
+27
+days
+18
+days
+9
+days
+3.5
+days
+>16
+days
+Parallel Steps	
+KEY
+= wait time
+= cycle time
+
+-- 40 of 108 --
+
+41 | FLOW ENGINEERING
+FIGURE 6.13: Identifying a Constraint on a Value Stream Map
+1 Hour 	2 Days 	5 Days 	2 Days 	1 Day
+2 Days
+Request 	Plan
+1 Hour
+Develop 	Env
+Setup 	Test
+1 Day
+Deploy
+1 Week
+3 Days 	2 Day
+KEY 	= wait time	= cycle time
+FIGURE 6.14: Value Stream Map with VAT and %C&A
+A simple Value Stream Map showing added dimensions of value-added time (VAT) and
+percent complete and accurate (%C&A) for each stage.
+%
+C&A
+VAT
+1 Hour
+78%
+60% 	50% 	65% 	70%
+67% 	60%	50%
+12 Weeks 	2 Weeks 	3 Days 	8 Days
+Request 	Plan 	Develop 	Review
+6 Days 	6 Days 	3 Days
+%
+C&A
+VAT
+8 Days
+20%
+60% 	50% 	40% 	60%
+60% 	75%	90%
+9 Days 	1 Day 	4 Days
+Env
+Setup Test 	Deploy 	Release
+9 Days 	1 Day 	4 Days
+KEY 	= wait time	= cycle time
+
+-- 41 of 108 --
+
+42 | FLOW ENGINEERING
+FIGURE 6.15: Sample Value Stream Map with Many Notes
+Value Stream Maps can include whatever information is
+necessary to drive progress and improvement.
+Blue
+Purple
+Primarily Value-Adding
+Activity that creates or
+enhances value from a
+customer perspective.
+Testing/Supporting
+Validating and sup-
+porting work—not
+primarily value-adding.
+Pink
+Green
+Primarily Non–
+Value-Adding
+Activity doesn’t primarily
+add customer value.
+Coordinating
+Activity involved in planning,
+organizing & scheduling.
+
+-- 42 of 108 --
+
+43 | FLOW ENGINEERING
+FIGURE 7.1: Dependency Mapping Primarily Serves to Enhance the
+Clarity Built by Value Stream Mapping
+Outcome	Value Stream	
+Dependency	Future State	Flow Roadmap	
+Maps
+Identify Value 	Build Clarity 	Enable Flow
+FIGURE 7.2: Dependency Mapping Targets Only Dependencies
+That Impact the Constraint
+Implementation Teams
+If your constraint
+is here…
+Shared Services Teams
+...don’t bother mapping
+detail here.
+PMO 	Council 	Procure 	Marketing 	Billing 	Finance 	Compliance 	Analytics
+Marketing 	Front End 	Back End 	Tier 1 	Tier 2 	Network 	Notification 	AppSec
+Plan 	Design 	Approve 	Build 	Test 	Validate 	Release 	Market
+
+-- 43 of 108 --
+
+44 | FLOW ENGINEERING
+FIGURE 7.3: Example of the Extent of Dependencies
+Visualizing all of a team’s dependencies can be useful but doesn’t
+identify what might need to improve.
+Form
+technology
++ testing
+Manual PDF
+testing
+Independent:
+Multiple
+finance
+sources
+Epic
+Approval
+Process
+CAS
+upstream,
+EC core
+downstream
+Other
+products
+affecting
+Front-End
+Design
+Team
+All stories
+need an
+assigned
+epic
+Manual
+testing for
+new
+features
+Only
+automation
+for
+regression
+Build
+Schedule
+CI/CD Build
+Pipeline
+Testing
+waiting on
+other teams
+QA Env
+TestInt Env
+ITL Env
+Regression
+test
+coverage
+Environment
+stability
+IT Ops	DevOps
+Team A
+FIGURE 7.4: The Five Stages of Dependency Mapping
+Start from the
+Value Stream
+Map.
+Reveal
+contributions to
+the constraint.
+Highlight the
+problem areas.
+Look at internal
+and external
+contributors.
+Add data to
+drive insights.
+Start with
+Constraints
+Create a
+Sub-Value
+Stream Map
+Identify Hot
+Spots
+Identify Direct
+Causes for
+Hot Spots
+Dig Deeper
+into the
+Constraint
+
+-- 44 of 108 --
+
+45 | FLOW ENGINEERING
+FIGURE 7.5: Dependency Map of the Constraint: Environment Setup
+Sharon’s team has many dependencies. But the ones she needs to focus on
+are those that impact her constraint.
+Request 	Plan 	Develop
+3 Days
+Env
+Setup
+2 Days
+Test
+1 Week	1 Hour 	2 Days 	5 Days 	2 Days 	1 Day
+2 Days 	1 Hour 	1 Day
+Deploy
+Env
+Setup
+KEY 	= wait time	= cycle time
+
+-- 45 of 108 --
+
+46 | FLOW ENGINEERING
+FIGURE 7.6: Gap between Sharon’s Team and Karl’s Team
+Bridging the gap between Sharon and Karl requires sharing value, clarity, and activity.
+“Us”
+“Me”
+Karl
+Group 	Shared
+Value
+Perceive &
+Understand
+Perceive &
+Understand 	“Me”	Target
+Target
+Act
+Act
+Shared
+Clarity
+Shared
+Activity
+Sharon
+FIGURE 7.7: Three Assets for Collaboration
+When you’re addressing cross-team dependencies, it’s helpful to
+take another pass at the Outcome, Value Stream, and Dependency Maps
+together with leaders from those teams to align perspectives.
+Align on value 	Clarify impact 	Clarify constraint
+
+-- 46 of 108 --
+
+47 | FLOW ENGINEERING
+FIGURE 7.8: The Dependency Map Jointly Created by Karl and Sharon
+6 D 	8 D
+Spin
+up
+Infra
+setup
+Data
+setup
+Ticket
+intake
+Missing
+required
+info
+Manual
+email
+ticket
+intake
+Insufficient
+# of
+available
+enviros
+Team
+is over
+capacity
+To much
+manual
+work
+Setup
+is largely
+unscripted
+1 person
+who can
+maintain
+scripts
+Nobody
+else
+writes Go
+Approval
+for new
+enviros
+Tear
+down
+Env
+Setup
+~6 months
+FIGURE 7.10: Example Sub–Value Stream Map
+Illustrate the activities that make up the dependency.
+Env
+Setup
+Spin
+up
+Ticket
+intake
+Tear
+down
+Infra
+setup
+Data
+setup
+FIGURE 7.9: Suspected Constraint Identified in Value Stream Mapping
+x
+Env
+Setup
+
+-- 47 of 108 --
+
+48 | FLOW ENGINEERING
+FIGURE 7.11: A Sub–Value Stream Map to Illustrate the Dependent Workflow
+Env
+Setup
+Spin
+up
+Ticket
+intake
+Tear
+down
+Infra
+setup
+Data
+setup
+6 D 	8 D
+FIGURE 7.12: Direct Causes of Hot Spots
+Identify causes of hot spots and areas beyond the group’s control. Approval to increase
+environment capacity is noted in orange as beyond the group’s immediate ability to influence.
+Spin
+up
+Infra
+setup
+Data
+setup
+Ticket
+intake
+Tear
+down
+Env. Setup identified as constraint
+6 D 	8 D
+Infra.
+automation
+capacity
+missing
+Approval
+for new
+enviros
+Missing
+required
+info
+Manual
+email
+ticket
+intake
+Insufficient
+# of
+available
+enviros
+
+-- 48 of 108 --
+
+49 | FLOW ENGINEERING
+FIGURE 7.13: Practice the Five Whys to Dig Deeper into the Suspected Constraint
+Spin
+up
+Infra
+setup
+Data
+setup
+Ticket
+intake
+Tear
+down
+Infrastructure automation
+capacity missing
+Too much manual work
+Setup is largely unscripted
+Only one person can
+maintain scripts
+Nobody else knows the code
+Why is it
+happening?
+The
+5 Whys?
+Why is that?
+Why is that?
+Why is that?
+Why is that?
+6 Days 	8 Days
+FIGURE 7.14: A Visualization of Dependencies across the
+Flow of the Checkbox Project
+Implementation Teams
+Shared Services Teams
+PMO 	Council 	Procurement 	Data 	Billing 	Finance 	Compliance 	Analytics
+Marketing 	Front end 	Back end 	Tier 1 	Tier 2 	Network 	Notification 	AppSec
+Plan 	Design 	Approve 	Build 	Test 	Validate 	Release 	Market
+
+-- 49 of 108 --
+
+50 | FLOW ENGINEERING
+FIGURE 8.1: Future State Mapping Opens the Door to Enabling Flow
+Outcome	Value Stream	Dependency	
+Future State	Flow Roadmap	
+Maps
+Identify Value 	Build Clarity 	Enable Flow
+FIGURE 8.2: Current, Ideal, and Future State Maps
+Each of these variations of a Value Stream Map represents different
+potential states for the same workflow.
+80 days 	10 days 	40 days
+Current State
+What does it look like today?
+Ideal State
+What could it look like someday?
+Future State
+What can it look like next?
+FIGURE 8.3: Flow Engineering Cycle of Mapping as an Improvement Kata
+Performance
+Today
+Current State &
+Dependency Maps
+Future
+State Map
+Target
+Outcome
++3 Months 	+6 Months
+Flow Roadmap
+1
+2
+4
+3
+
+-- 50 of 108 --
+
+51 | FLOW ENGINEERING
+FIGURE 8.4: The Four Stages of Future State Mapping
+How much
+better is it?
+Measure the
+Future State
+What did we
+discover?
+Revisit
+Findings and
+Outcome
+What are the
+improvements?
+Identify
+Targets
+What does next
+look like?
+Redesign the
+Stream
+FIGURE 8.5: Current State Map with Bottleneck Highlighted
+Step
+1
+Step
+2
+Step
+3
+Step
+4
+Step
+5
+Step
+6
+Step
+7
+Step
+8
+5 MIN
+Time
+needed:
+Identified bottleneck
+Duplicate Current State Map
+to develop Future State Map Goal: Release twice as often.
+
+-- 51 of 108 --
+
+52 | FLOW ENGINEERING
+FIGURE 8.6 Future State Map with Improvement Areas Noted in Green
+Remove the
+approval
+stages
+Automate
+these
+quality
+checks
+Add a
+validation
+step
+Segregate
+work items
+based on
+complexity
+Obsolete
+Step
+Make the
+review a
+standard
+process
+Step
+1
+Step
+2
+Step
+3
+Step
+4a
+Step
+4b
+Step
+5
+Step
+6
+Step
+7
+20 MIN
+Time
+needed:
+Obsolete
+Step
+FIGURE 8.7: Future State Map Reduced to Seven Serial Steps
+and One Parallel Step
+Step
+1
+Step
+2
+Step
+3
+Step
+4a
+Step
+4b
+Step
+5
+Step
+6
+Step
+7
+20 MIN
+Time
+needed:
+
+-- 52 of 108 --
+
+53 | FLOW ENGINEERING
+FIGURE 8.8: Future State Map with Cycle Timings
+Summary:
+Step
+1
+Step
+2
+1 Hour 	6 Days 	1 Day	6 Days 	3 Days
+2 Days
+4 Days 	4 Days
+8 Weeks 	1 Week 	1 Day 	1 Day
+Step
+3
+Step
+4a
+Step
+4b
+Step
+5
+Step
+6
+Step
+7
+15 MIN
+Time
+needed:
+Cycle
+Time:
+24 Days
+Wait
+Time:
+66 Days
+Total
+Time:
+90 Days
+1 Day
+TABLE 8.1: Results of Mapping at a Travel Tech Company
+Baseline Flow 	Optimized Flow
+23 steps 	6 steps (including parallel steps)
+12 stakeholders 	2 stakeholders
+12 contributors 	4 contributors
+8 months 	3 months
+11 meeting stages 	Meetings replaced with decision automation,
+ownership, collaboration, and coworking
+9 call/email steps 	Automated weekly customer touch points;
+relationship calls vs. status calls
+9 embedded subprocesses 	3 embedded subprocesses
+
+-- 53 of 108 --
+
+54 | FLOW ENGINEERING
+FIGURE 9.1: The Flow Roadmap Primarily Serves to Enable Flow
+Outcome	Value Stream	Dependency	Future State	
+Flow Roadmap	
+Maps
+Identify Value 	Build Clarity 	Enable Flow
+FIGURE 9.2: The Three Stages of a Flow Roadmap
+Now 	Next 	Later
+Assign
+ownership.
+Sequence
+activities into
+a roadmap
+Plot importance
+& feasibility.
+Prioritize
+activities
+Assemble experiments
+& actions.
+Identify
+improvement
+opportunities
+
+-- 54 of 108 --
+
+55 | FLOW ENGINEERING
+TABLE 9.1: Issues Transformed into Actions/Experiments to
+Improve Flow at Bolt Global
+Issue Action/Experiment to Improve
+Performance
+Often missing required information. 	→ 	Template for new requests (automate in
+the future).
+Manual email ticket intake. 	→ 	Submit requests via forms into the task
+management system.
+Insufficient number of available
+environments. → 	Consider alternate options. [TBD]
+Team over capacity and constrained. 	→ 	Sharon’s team has a contributor who can
+augment Karl’s team capacity.
+FIGURE 9.3: Sharon’s Completed Flow Roadmap
+The completed Flow Roadmap shows actions across three time horizons,
+measures of progress, and ownership of next steps.
+Now 	Next
+Experiments
+and Actions
+Progress
+Measures
+Progress
+Owners
+Consider
+alt env
+options
+[TBD]
+Found 3
+options
+for more
+capacity
+Isaiah
+Pair with
+Karl’s
+team on
+scripting
+50% of
+env
+changes
+internal
+Dina
+WIP limit
+testing
+5 work
+items
+through
+dev
+Sharon
+Andon
+Cord
+for env
+blockers
+Bot
+message
+via slack
+Sandra
+Submit
+requests
+via
+template
+Viable
+platform
+vision
+Self-
+service
+env mgmt
+Flow
+metrics
+across all
+teams
+Later
+Progress
+Measures
+
+-- 55 of 108 --
+
+56 | FLOW ENGINEERING
+FIGURE 9.4: The Flow Roadmap Board
+Now
+Low
+Later
+1
+1 	8	2 	3	4 	5 	7 	6
+Next 	Now
+High
+Low 	High
+Next 	Later
+Experiments
+and Actions
+Stage 3: The Flow Roadmap	Stage 2: Prioritize each activity
+Stage 1:
+Identify
+improvement
+activities
+Progress
+Measures
+Progress
+Owners
+2 	3
+4
+5	6
+7
+8
+FIGURE 9.5: The Future State Map Showing Improvement Areas
+The Future State Map generated in Chapter 8 forms the basis for Flow Roadmapping.
+The blue sticky notes depict the intended future steps, while the green sticky notes
+represent areas where change is required to achieve that future state.
+Remove the
+approval
+stages
+Automate
+these
+quality
+checks
+Add a
+validation
+step
+Triage
+work items
+based on
+complexity
+Make the
+review a
+standard
+process
+Remove the
+approval
+stages
+Obsolete
+Step
+Step
+1
+Step
+2
+Step
+3
+Step
+4a
+Step
+4b
+Step
+5
+Step
+6
+Step
+7
+Obsolete
+Step
+
+-- 56 of 108 --
+
+57 | FLOW ENGINEERING
+FIGURE 9.6: Improvement Opportunities Broken Down into Actions
+Make the
+review a
+standard
+process
+Remove the
+approval
+stages
+Automate
+these
+quality
+checks
+Add a
+validation
+step
+Triage
+work items
+based on
+complexity
+Improvement
+areas
+Actions
+FIGURE 9.7: Possible Improvements Ranked by Importance
+Importance
+Actions
+1
+2
+3
+4
+5
+6
+7
+8
+High
+Low
+
+-- 57 of 108 --
+
+58 | FLOW ENGINEERING
+FIGURE 9.8: Plot Feasibility along the Horizontal Axis
+Importance
+1
+2
+3
+4
+5
+6
+7
+8
+High
+Low
+Feasibility
+1
+2
+3
+4
+5
+6
+7
+8
+High	Low
+FIGURE 9.9: Indicate Dependencies between Activities
+Importance
+High
+Low
+FeasibilityHigh	Low
+Dependency
+Dependency
+1
+2
+3
+4
+5
+	6
+7
+8
+
+-- 58 of 108 --
+
+59 | FLOW ENGINEERING
+FIGURE 9.10: Improvement Activities Categorized by Time Horizon
+(Now, Next, Later)
+Now is in yellow, next is in blue, and later is in pink.
+Importance
+Later 	Next 	Now
+High
+Low
+Feasibility
+Dependency
+Dependency
+1
+2
+3
+4
+5
+6
+7
+8
+High	Low
+Now
+Next
+Later
+FIGURE 9.11: Items Arranged in Sequential Order: Now, Next, Later
+Now
+Experiments
+& Actions
+Next 	Later
+1	2 	3	4 	5 	6	7 	8
+
+-- 59 of 108 --
+
+60 | FLOW ENGINEERING
+FIGURE 9.12: Identified Measure of Progress
+Progress
+Measures
+Now
+Experiments
+& Actions
+Next 	Later
+1	2 	3	4 	5 	6	7 	8
+TABLE 9.2: Gartner’s Flow Metrics Cover Technical, Product,
+and Business Concerns
+Technical 	Product 	Business
+Code change size 	Lead time 	Product cost
+Code delivery speed 	Cycle time 	Product value
+Code refactoring rate 	Throughput 	Return on investment
+Code review churn 	Work in progress 	Product quality
+Code quality 	Flow efficiency* 	Net Promoter Score
+Technical debt 	Work item profile** 	Customer satisfaction
+* The percentage of lead time an item is actively being worked on
+(total cycle time/total lead time).
+** Also referred to as Flow Distribution3 and includes features, defects, debt, and risk but can also
+include experiments or specific subtypes like rework.
+Source: Gartner, “Analyze Value Stream Metrics to Optimize DevOps Delivery,” August 2020.
+
+-- 60 of 108 --
+
+61 | FLOW ENGINEERING
+FIGURE 9.13: Example of Adding Assigned Owners
+Progress
+Owners
+Progress
+Measures
+Now
+Experiments
+& Actions
+Next 	Later
+1	2 	3	4 	5 	6	7 	8
+FIGURE 9.14: Flow Roadmap Creation Progressing
+from Problem Areas and Concerns to Actions
+Investigations
+Prioritize 	Plan
+Rank Feasibility	Ranking Importance
+Later 	6 months	Next 	3 months	Now 	Today
+Low
+ 
+High
+Low 	High
+What
+How
+Who
+1
+4 	5
+2 	3
+
+-- 61 of 108 --
+
+62 | FLOW ENGINEERING
+FIGURE 10.1: The Five Principles of Lean
+Specify
+Value
+Map the
+Value
+Stream
+Create
+Flow
+Pull
+Don’t
+Push
+Pursue
+Perfection
+FIGURE 10.2: A Simple Outcome Map Representing Diverse Concerns
+Maintain
+quality
+Faster
+feedback/
+response
+Waste
+reduction
+Happier
+customers
+Test
+environments
+Technical
+debt
+Keeping the
+lights on
+Mapping
+workshops
+Technology
+audit
+Cross-team
+interviews
+Deliver 2x
+faster
+Value to
+deliver
+Value to
+protect
+Value to
+stakeholders
+Value to
+business
+Outcome
+What do we
+want?
+Benefits
+Why does it
+matter?
+Obstacles
+What’s in our
+way?
+Next steps
+Where do we
+start?
+
+-- 62 of 108 --
+
+63 | FLOW ENGINEERING
+FIGURE 10.3: A Simple Flow Engineering Value Stream Map
+1 Hour 	6 Days
+Request 	Plan 	Develop 	Review 	Test 	Deploy 	Release	
+Env
+Setup
+6 Days 	3 Days 	8 Days 	9 Days 	1 Day 	4 Days
+12 Weeks 	2 Week 	3 Days 	8 Days 	9 Days 	9 Days 	4 Days
+30% requires rework
+KEY 	= wait time	= cycle time
+FIGURE 10.4: Value Stream Map Highlighting Wait Times
+80% 	90% 	50% 	90% 	30% 	80% 	80% 	90%
+1 Hour 	6 Days
+Request 	Plan 	Develop 	Review 	Test 	Deploy 	Release
+	Env
+Setup
+6 Days 	3 Days 	8 Days 	9 Days 	1 Day 	4 Days
+12 Weeks 	2 Weeks 	3 Days 	8 Days 	9 Days 	9 Days 	4 Days
+%
+C&A
+Summary Findings:
+Rolled
+%C&A Cycle Time 	Wait Time 	Lead Time
+5.6 	37
+days
+131
+days
+168
+days
+
+-- 63 of 108 --
+
+64 | FLOW ENGINEERING
+FIGURE 10.5: The Efficiency Matrix
+The trade-off between resource efficiency and flow efficiency leads to an
+Efficient Frontier: a range of possible utilization options, shown as the dotted line in
+the upper right. The greater the variation in the work, the more that Efficient Frontier is
+pushed down. Source: Modig and Åhlström, This is Lean, 105.
+Resource
+Efficiency
+High
+Efficient
+Frontier
+High
+Low
+Low
+Flow
+Efficiency
+Variation
+
+-- 64 of 108 --
+
+65 | FLOW ENGINEERING
+FIGURE 10.6: Theory of Constraints Step 1: Identify the Constraint
+Env
+Setup 	Test 	Deploy 	Release	Review	Develop
+4 Days 	4 Days	1 Day	8 Days	3 Days
+3 Days 	1 Day 	4 Days	8 Days 	9 Days
+6 Days
+KEY 	= wait time	= cycle time
+FIGURE 10.7: Theory of Constraints Step 2: Exploit the Constraint
+Env
+Setup 	Test 	Deploy 	Release	Review	Develop
+4 Days 	4 Days	1 Day	8 Days	3 Days
+3 Days 	1 Day 	4 Days	8 Days 	9 Days
+6 Days
+Utilization:
+80%
+Utilization:
+80%
+Utilization:
+80%
+Utilization:
+80%
+Utilization:
+80%
+Utilization:
+95%
+FIGURE 10.8: Theory of Constraints Step 3:
+Subordinate Everything Else to the Constraint
+8 Days
+3 Hours 	3 Hours
+Env
+Setup
+Quality: 98%
+Test 	Deploy 	Release	Review	Develop
+4 Days 	4 Days	1 Day	3 Days
+3 Days 	1 Day 	4 Days
+6 Days
+
+-- 65 of 108 --
+
+66 | FLOW ENGINEERING
+FIGURE 10.9: Theory of Constraints Step 4: Elevate the Constraint
+Env Setup
+Env Setup
+Test 	Deploy 	Release	Review	Develop
+4 Days 	4 Days	1 Day	4 Days	3 Days
+3 Day 	1 Day 	4 Days	3 Hours 	3 Hours
+6 Days
+FIGURE 10.10: Excess Work in Progress Is a Sign of Lacking Pull Systems
+Test 	Deploy 	Release	Review 	Env
+Setup
+WIP
+Capacity (WIP) Limit
+Develop
+6 	2	12 	15	8 	5
+
+-- 66 of 108 --
+
+67 | FLOW ENGINEERING
+FIGURE 11.1: A Value Stream Map Depicts Multiple Feedback Loops
+The cycle from customer request (1) to value delivered (2) establishes a system-level
+positive feedback loop (3) that encourages growth and allows the team to learn and
+tune performance. Internal feedback loops (4) are typically negative feedback loops that
+allow for more fine-grained control and learning.
+[Start] 	[Stage] 	[Stage] 	[Done]
+2. Value Delivered
+3. System-Level Feedback Loop
+1. Customer Request
+4. Feedback on Individual Stages
+FIGURE 11.2: Business Frameworks Are Templates for Management
+CMMI, PMBOK, PRINCE2, ITIL
+Prescriptive
+High consistency
+Low adaptability
+High entry cost
+Low context needed
+High ROI delay
+Low ROI delay
+High context needed
+Low entry cost
+High adaptability
+Low consistency
+Generative
+SAFe, TOGAF, RUP, Six Sigma
+Scrum, Lean Software Development, XP
+Domain Driven Design, Team Topologies, Jobs-to-be-Done, Wardley Mapping
+Design Thinking, Liberating Structures, Open Space Technology, Cynefin
+
+-- 67 of 108 --
+
+68 | FLOW ENGINEERING
+FIGURE 11.3: The Constraint on a Value Stream
+This figure illustrates how a constraint has a distinct, measurable impact on
+the flow of work on a value stream.
+Potential
+throughput
+Progress of work through a value stream
+Reduction
+of flow
+Constraint
+Actual throughput
+TABLE 11.1: Examples of Enabling and Governing Constraints
+Enabling 	Governing
+Maps/canvases
+OKR/V2MOM structure
+Technology platforms
+Playbooks
+Principles
+Service level agreement
+Industry regulation
+Organizational structure and hierarchy
+WIP limit
+Security policies
+
+-- 68 of 108 --
+
+69 | FLOW ENGINEERING
+FIGURE 12.1: Outcome Discovery and Outcome Mapping
+Help You Craft a Productive Narrative
+Context 	Goals 	Pains 	Questions 	Ideas 	Outcome 	Benefits Obstacles 	Next
+Steps
+Outcome Discovery:
+Acknowledging the past and present
+Outcome Mapping:
+Crafting a better future
+FIGURE 12.2: Outcome Mapping and Discovery Can Bridge Local Incentives by
+Establishing a Higher-Value Shared Target
+Local
+incentive
+Global target
+outcome
+Local
+incentive
+FIGURE 12.3: Limited Visibility Enables Limited Focus
+Siloed Visibility
+Invisible Upstream 	Invisible Downstream	Visible Midstream
+Flow of work across teams
+
+-- 69 of 108 --
+
+70 | FLOW ENGINEERING
+FIGURE 12.4: Example Value Stream Map with Irrelevant Downstream Precision
+When your constraint adds weeks of delay, a few hours difference isn’t consequential.
+1 Hour
+Constraint
+To small to matter
+6 Days 	3 Days 	8 Days 	9 Days 	11 Minutes
+12 Weeks
+Request 	Plan
+2 Weeks
+Develop
+3 Days
+Env
+Setup
+8 Days
+Test
+1 Days
+Deploy
+KEY 	= wait time	= cycle time
+FIGURE 12.5: The Current State Map Depicting the Full Agile Release Train (ART)
+
+-- 70 of 108 --
+
+71 | FLOW ENGINEERING
+TABLE 12.1: Visual Activity Classification Legend, Depicting Non–Value-Adding,
+Testing, Value-Adding, and Coordinating Activities
+Activity Class 	Definition 	% of Lead Time 	Color
+Non–value-adding 	Doesn’t add stakeholder value to
+the outcome
+58% 	Pink
+Testing 	Validating work (non–value-adding) 	14% 	Purple
+Value-adding 	Creates or enhances value from a
+stakeholder perspective
+18% 	Blue
+Coordinating 	Planning, organizing, schedul-
+ing, not including 3–6 months of
+pre-planning (non–value-adding)
+10% 	Green
+FIGURE 12.6: Example Future State Map Depicting Non-Critical and
+Non–Value-Adding Activities
+The Future State Map depicts non-critical and non–value-adding
+activities executed in parallel rather than blocking flow.
+= Primarily Non-Value Adding 	= Primarily Value Adding 	= Coordinating 	= Testing
+
+-- 71 of 108 --
+
+72 | FLOW ENGINEERING
+TABLE 12.2: Current State Flow Performance vs. Future State
+Current State 	Future State
+Unclear improvement opportunities 	Single constraint to target
+Optimized for edge cases 	Optimized for common cases
+$2M per release 	$1M per release
+64-week lead time 	32-week lead time (with no stage
+modification)
+Non–value-adding stages blocking
+progress
+Non–value-adding stages executed in
+parallel
+Value-adding activity: 17% of lead time 	Value-adding activity: 53% of lead time
+
+-- 72 of 108 --
+
+73 | FLOW ENGINEERING
+FIGURE 13.1: Focus on Project Leads to Ignoring Longer Term Impact
+Largely ignored 	Largely ignored	Project
+Business activity
+FIGURE 13.2: Each Cycle of Continuous Improvement Builds on the Previous One
+Develop Deliver 	Learn
+Develop Deliver 	Learn
+Develop Deliver 	Learn	Capability,
+Capacity,
+Performance
+Value Stream
+FIGURE 13.3: Current State Map: Steps, Timing, Roles, Tools, Artifacts
+Estimate
+Project
+(Upstream)
+5Days
+2 Weeks 	1 Day 	1 Day 	1 Day 	1 Day 	1 Day 	2 Days
+3 Hours 	1 Hour 	1 Hour 	2 Hours 	3 Hours 	4 Days 	1 Hour 	2 Hours	30 Mins
+Sched-
+uling
+Dev. Time
+(Coding)
+Local
+Env.
+Setup
+On-
+boarding
+Code
+Review
+Deploy to
+Staging
+Backlog
+Creation 	Kickoff 	QA
+Project Manager
+QA	Business Analyst
+Developer
+Information Flow: Slack/Breeze/Hubstaff
+1	1	2 	2
+Tool 	Artifact
+KEY
+
+-- 73 of 108 --
+
+74 | FLOW ENGINEERING
+FIGURE 13.4: Project or Product Orientation Lies on a Spectrum
+Project 	Product
+Try to
+capture
+learning for
+next time
+Guilds and
+informal
+networks
+• Initial value bet
+• Bring people to the work
+• Temporary organization
+• Single batch
+• Output oriented
+• Customer validated
+Checklists,
+playbooks
+Experiment
+w/ persistent
+enablement
+structures
+Stable
+structures
+& scale
+Services &
+platform
+catalog
+• Adaptive value bets
+• Bring work to the people
+• Continuous, iterative
+• Small batches
+• Outcome oriented
+• Customer collaborative
+Cross-
+cutting
+value
+stream
+Internal
+marketplace
+network
+
+-- 74 of 108 --
+
+75 | FLOW ENGINEERING
+TABLE 13.1: A Comparison of Value Stream Mapping
+and Value Stream Management
+Value Stream Mapping 	Value Stream Management
+Iterative and periodic practice 	Continuous practice
+Easy to start 	Difficult to start
+Human-centric, storytelling, and
+narrative
+Tool- and data-centric, automated insights
+Value Stream Mapping 	Value Stream Management
+Perspective and qualitative focus 	Perspective and qualitative focus
+Visual collaboration 	Visibility and continuous inspection
+Walls and sticky notes (also virtual) 	Integrations, dashboards, and data
+Creates and recreates business case 	Ongoing incremental optimization
+Highlights waste and assumptions 	Automates for continuous
+compliance
+Defines present and future 	Records past and present
+Facilitates creativity, reinvention 	Facilitates improvement, iteration
+Future opportunity:
+living representation
+Future opportunity: simulation &
+prediction
+Enabling constraint 	Governing constraint
+TABLE 13.1: A Comparison of Value Stream Mapping
+and Value Stream Management cont.
+
+-- 75 of 108 --
+
+76 | FLOW ENGINEERING
+FIGURE 13.5: Phil’s Journey at Parchment
+1999–2014 	Cost Center and Individual Metrics
+• Focus on individual output.
+• Measuring individual development activities, lines of code,
+utilization, and stack ranking based on such metrics.
+• Individuals are treated as units of cost and fungible resources
+being moved from project to project.
+2015–2020 	Focus Shift to Teams
+• Focus on team outcomes and capabilities.
+• Recognized as knowledge workers creating solutions in a world
+of known- and unknown-unknowns.
+• Collaborative, cross-functional teams, non-fungible, having
+long-lived team members.
+2021–today 	Team Metrics
+• Insights into team performance and the flow of work.
+• System-measurable metrics that foster team conversations and
+empower teams to review and experiment with improvements.
+• Incorporated surveys to capture team sentiments.
+Phil’s metrics journey includes eleven years with Parchment. It showcases a
+twenty-four-year evolution from individual metrics to a combination of team
+and system metrics, along with team sentiment.
+More Gamification
+Less Gamification
+
+-- 76 of 108 --
+
+77 | FLOW ENGINEERING
+TABLE 13.2: The Parchment Measurement Journey
+Individual Scrutiny 	Collective Flow
+Lines of code
+Utilization
+Comparing individuals based on
+individual output
+Outcomes over output
+Team metrics
+Projects to products
+Value Stream Management
+System metrics: Flow, DORA
+Sentiment metrics: SPACE, DX, etc.
+FIGURE 13.6: Waiting for Data Availability and Quality Means Uncertainty
+Remains High for Longer and Outcomes Are Later to Arrive
+Flow
+Engineering
+Initiated
+Metrics &
+Visualization
+Implemented
+Metrics &
+Visualization
+Implemented
+Metrics &
+Visualization
+Trusted
+Metrics &
+Visualization
+Trusted
+Positive
+Retrospective
+or Review
+Positive
+Retrospective
+or Review
+Positive
+Retrospective
+or Review
+Positive
+Retrospective
+or Review
+Uncertainty
+Performance
+Uncertainty
+Performance
+Team B Performance Improvement Journey
+Team A Performance Improvement Journey
+
+-- 77 of 108 --
+
+78 | FLOW ENGINEERING
+FIGURE 14.1: Value Streams Sharing a Common Constraint
+Many value streams share common constraints. Once a common constraint is identified,
+it can be improved for all dependent streams.
+Common Constraint/Dependency
+Stream A 	Stream A 	Stream N 	Stream N++
+FIGURE 14.2: The Spectrum of Flow Investment
+Activity/Measurement/Attention Focus Spectrum
+Stream A 	Stream B
+Operational
+More focus on efficiency
+Developmental
+More focus on effectiveness
+
+-- 78 of 108 --
+
+79 | FLOW ENGINEERING
+TABLE 14.1: Developmental and Operational Focus Implications
+Enabling 	Developmental 	Operational
+Focused on:
+Effectiveness
+Design
+Innovation
+Novelty
+Value creation
+Efficiency
+Execution
+Stability
+Maintenance
+Value maximization
+Characterized
+by:
+Variation
+Uncertainty
+Investigation
+Experimentation
+Consistency
+Certainty
+Measurement
+Optimization
+Function of
+constraints: Enablement 	Governance
+FIGURE 14.3: Interdependence of Core and Supportive Value Streams
+Web App Stream (Core)
+Infra Platform Stream (Supportive)
+Enables
+Enables	Feature
+Initiated
+Feature
+Delivered
+Internal
+Customer
+Internal
+Customer
+External
+Customer
+Build Pipeline Stream (Supportive)
+
+-- 79 of 108 --
+
+80 | FLOW ENGINEERING
+FIGURE 14.4: A Value Stream Network Map
+The value stream network can represent interconnected streams at macro scale.
+Network
+Core
+Stream
+Supportive
+Stream
+Core Stream
+Supportive Stream
+Streams
+FIGURE 14.5: The Y Axis of a Value Stream Network Map
+Supportive to core denotes proximity to external customers.
+Product Stream	Core
+Supportive
+Customer Success Team
+Infrastructure Platform Team
+
+-- 80 of 108 --
+
+81 | FLOW ENGINEERING
+FIGURE 14.6: The X Axis of the Value Stream Network Map
+Developmental to operational denotes the performance focus of the stream.
+Product Stream	Core
+Supportive
+Developmental 	Operational
+Customer Success Team
+Infrastructure
+Platform Team
+FIGURE 14.7: Connections Show Dependencies between Value Streams
+Product Stream
+External Customer
+Core
+Supportive
+Developmental 	Operational
+Customer Success Team
+Infrastructure
+Platform Team
+
+-- 81 of 108 --
+
+82 | FLOW ENGINEERING
+FIGURE 14.8: Example Value Stream Network Map Showing Shift
+in Internal Dev Platform
+Streams can shift performance focus to respond to needs or conditions,
+such as an increase in stability or cost reduction.
+Product Stream
+Internal Dev
+Platform Team
+External Customer
+Core
+Supportive
+Developmental 	Operational
+Customer Success Team
+Infrastructure
+Platform Team
+Operational Shift
+FIGURE 14.9: Example Value Stream Network Map Showing Developmental Shift
+Streams can shift to focus more on innovation or new capabilities, which has
+implications for how they’re measured and managed.
+Product Stream
+Internal Dev
+Platform Team
+External Customer
+Core
+Supportive
+Developmental 	Operational
+Customer Success Team
+Infrastructure
+Platform Team
+Developmental
+Shift
+
+-- 82 of 108 --
+
+83 | FLOW ENGINEERING
+FIGURE 14.10: Flow Enabling Team Interactions with Product Streams
+A flow-enabling team works with value stream aligned teams to help them learn, map,
+and address flow issues. It can support either reactively (A) or proactively (B).
+Flow of work
+B2B App Stream
+Product Value Streams 	Flow-Enabling Teams
+B2C App Stream
+A
+B
+FIGURE 14.11: The Flywheel of Flow Engineering
+Catalyst Effort 	Flow Flywheel
+1: Initial
+investment
+2: Quick
+wins
+3: Improved
+performance
+5: Further
+investment
+4: Increased
+capacity
+7: Sustained
+momentum
+6: Scaling
+up & out
+
+-- 83 of 108 --
+
+84 | FLOW ENGINEERING
+Appendix
+Value, Clarity, and Flow Detail
+Figure A.1 presents a more detailed view of the three elements of action:
+value, clarity, and flow.
+FIGURE A.1: Value, Clarity, and Flow
+Enable
+Flow
+Build
+Clarity
+More
+measuring,
+focus,
+understanding
+Less
+opinion,
+distraction,
+fragmentation
+More
+autonomy,
+enablement,
+capability
+Less
+friction,
+queuing, WIP,
+interruption
+Orientation
+(Compass)
+Target
+Adaptation
+(Navigation)
+Act
+Combine a clear
+target with
+current state
+visualizations
+and measurement
+to build clarity.
+Connect to
+customers,
+build feedback
+loops, and use
+measurement to
+identify value.
+Act on constraints
+and dependencies
+with confidence
+to enable flow.
+Identify
+Value
+Outcome
+Orientation
+Systems
+Thinking
+Continuous
+Learning
+More
+collaboration,
+alignment,
+visualization
+Less
+waste,
+noise,
+assumption
+Evaluation
+(Map)
+Sense
+
+-- 84 of 108 --
+
+85 | FLOW ENGINEERING
+Applying Little’s Law
+Little’s Law is a principle from queue theory that provides a simple calculation
+to evaluate flow in value streams. It helps you understand, for example, how
+long you can expect to wait for items in your backlog to be delivered based
+on current performance. Little’s Law relates the number of items waiting to
+be processed (L) to the average arrival/departure rate (λ) and the average wait
+time of an item within the system (W). The law is expressed as L = λW.
+In knowledge work, it can be used to relate the amount of work in progress
+(WIP) to the time to complete this work. It can help you calculate optimal WIP
+throughout your value streams by showing the combined impact of ingress
+work, WIP, and throughput. To calculate this correctly, you must ensure you
+are familiar with the average values for your value stream prior to performing
+calculations: lead time (W), work in progress (L), and throughput (λ).
+As Daniel Vacanti pointed out, being able to use it reliably requires con-
+sistent measurement and “looks at the past, not the future.”1 Little’s Law
+represents a mathematical ideal that depends on a number of assumptions:
+• This law holds only for value streams operating at a relatively steady
+state. As an example, the WIP at the start of the week should match the
+WIP at the week’s end.
+• The average rates of both incoming and outgoing work through the
+value stream should be equal, otherwise throughput can’t be accurately
+quantified, i.e., work items can’t be injected or abandoned midstream.
+Due to the high amount of variability in knowledge work, these assump-
+tions rarely hold true. But the general relationship between WIP, lead time,
+and throughput is directionally correct: if you want to increase throughput,
+work to reduce WIP and/or lead time.
+Components of Little’s Law
+• L: Average number (load) of work items (features, bugs, improvements,
+etc.) in process (WIP) in the value stream.
+• λ: Throughput of work items through (initiated and completed) the
+value stream.
+
+-- 85 of 108 --
+
+86 | FLOW ENGINEERING
+• W: Average time a task spends in the value stream, from being initiated
+to being enabled for use. You can think of W here as customer wait from
+request to fulfillment.
+Scenario: Applying Little’s Law in a Value Stream Context
+• Observation Period: 1 month.
+• Work Items Completed: 60 work items.
+• Work in Progress: On average, 15 work items are in different stages of
+the value stream at any given time.
+STEPS
+• Calculate the arrival rate (λ): If 60 items are completed in a month, the
+arrival rate λ is 60 items/month.
+• Calculate the average time an item spends in the system (W): Little’s
+Law can be rearranged to W = L/λ. With (load) L = 15 items and (arrival) λ
+= 60 items/month. W = 15/60 months = 0.25 months.
+• This means, on average, a work item takes about 0.25 months (or about
+7.5 days) from start to finish in the system.
+INSIGHTS AND ACTIONS
+• Backlog Completion: Knowing throughput can help you think about a
+backlog in terms of when it could be delivered: If each work item takes
+60 days to be delivered (W), and you have five items in progress at a time
+(L), it will take you 6.5 years to clear out a 200-item backlog.
+• Bottlenecks: If the team finds the average time (W) too long, they can
+investigate the constraint in the process. Are items getting stuck in code
+review? Is there a delay in testing?
+• Capacity: If W is high, it might indicate a need for more capacity or a
+change in the development process.
+• Predictability: Knowing W helps predict delivery times, improving
+the team’s ability to make commitments, but only if flow remains
+consistent.
+• Process Improvement: If the team aims to reduce W, they can experi-
+ment with different approaches, like limiting work in progress, to see
+how it affects the average completion time.
+
+-- 86 of 108 --
+
+87 | FLOW ENGINEERING
+Applying Metrics to Value Stream Management
+FIGURE A.2: Calculating Speed: Lead, Wait, and Active Times
+Lead time is the most critical metric in flow improvement for three key
+reasons seldom discussed:
+• Time is the one dimension of work you have the least control over. Lead
+time is the most complete representation of the fact that time is always
+passing, for you and your customers.
+• Lead time encourages collaboration. It encompasses every cross-
+functional group involved in value creation, unifying each individual
+contributor under a collective metric.
+• Lead time represents the most complete closed loop of learning from
+customers. It allows you to understand the earliest point you could
+deliver value based on an insight gained from your last customer-
+impacting change.
+The biggest misconception of lead time is that it’s just the total time that
+you spend doing the work, which is incorrect. Lead time, by standard defini-
+tion, actually includes the time that the work waited plus the cycle time for
+each stage that you worked on that item. So, if you had a user story that was
+waiting for eight months, and you only spent two months actually developing
+it, your total lead time ends up being ten months, because we are taking the
+wait time and the cycle time of each stage together to give you the actual lead
+time because we are thinking in terms of customer outcomes.
+Efficiency
+Time
+Overall Lead Time
+Value
+Waiting
+Active
+Lead time=
+Wait Time
++
+Active Time	Planning 	Building 	Testing 	Deploying
+Cycle Time 	Cycle Time
+Cycle Time
+Cycle Time
+
+-- 87 of 108 --
+
+88 | FLOW ENGINEERING
+FIGURE A.3: Cycle Time Includes All Value-Added and Non–Value-Added
+Time Composing Each Stage
+Cycle time actually includes the time actively developing the work item
+along with all the delays, rework, distractions, and operational activities con-
+ducted in the course of each stage. A lot of waste can hide in there, but we
+rarely invest in zooming in to that detail because it’s not necessary or valu-
+able. We simply ask contributors what percentage of the time in each stage is
+value-added time. Time they’re able to actively develop the value of the work
+item.
+It’s not uncommon for this percentage to be very low, and it should be
+expected to be low at first. The reason to measure it isn’t to evaluate it at its
+current level but to establish a baseline for improvement and an understand-
+ing of the ROI potential of improvement.
+FIGURE A.4: Calculating Quality: Percent Complete & Accurate
+The image above illustrates how we calculate quality, which is the percent
+that is complete and accurate. If we break down the definition of this metric,
+it’s really how complete and accurate the work was that passed through the
+Cycle time
+Ramp
+up
+Slack
+Msg
+Slack
+Req
+Status
+Update
+Value-
+Added
+Time
+Unblock
+someone
+else
+Rework
+on
+prev task
+Value-
+Added
+Time
+Re-Ramp
+up
+Efficiency
+Time
+Actual	KEY
+% Complete & Accurate: How many items passed through
+one stage without needing to be returned for rework or clarification?
+Planning 	Building 	Testing 	Deploying
+Potential
+90%
+C/A
+50%
+C/A
+70%
+C/A
+“Rolled” %C&A
+90%* 50%* 70%* = 31.5%
+Potential
+Potential
+Potential
+
+-- 88 of 108 --
+
+89 | FLOW ENGINEERING
+various stages, or how many items passed through one stage without needing
+to be returned for rework or clarification.
+At the very beginning of the development process, a product owner or
+business analyst is typically responsible for gathering requirements and writing
+user stories. These become work items, which are what the development team
+then ends up working on. Even an excellent business analyst may only manage
+to write a user story that hits about 95% of all of the various scenarios and edge
+cases that need to be addressed. It then gets handed off to a developer. About
+5% of the time there are not enough requirements or there’s information that is
+fundamentally missing from the story. At that point, the developer is blocked,
+and the work actually has to go back to the business analyst.
+This happens very often in the DevOps space. The problem that we have
+is how to measure that and keep track of how often work is being sent back.
+That scenario can take place not only in the development stage but some-
+times even at the testing phase, where someone’s completed development,
+but from a testing perspective, there have been major issues found, so the
+work gets sent back.
+That is where percent complete and accurate (%C&A) comes into the
+picture and why it is so important. This measure shows what percentage of
+the work in each of your stages was completed correctly and accurately and
+did not need to be returned. Ideally, each piece of work would pass from one
+stage to the next without introducing a defect, but we know that in real-life
+scenarios and in practice, defects can be introduced at any stage.
+The later stages are dependent on the quality of the work in the ear-
+lier stages, which means that business analysts really need to be writing clear
+user stories, including all of the various edge cases. The developer then has to
+make sure that they are developing the story accurately so that when it gets
+to testing there are no major issues. As such, we need to make sure that the
+quality of work is up to par at every single stage.
+Let’s take one more look at that last image (Figure A.4). You’ll see we have
+our actual percent complete and accurate for planning, which is about 90%;
+for building, it’s at 50%; and then for testing, it’s at 70%. So, how do we read
+that number, which indicates the likelihood that a single piece of work will
+never have to be reworked in its journey? We can see that our final complete
+and accurate metric is 31.5%, which is the product of the actual complete and
+accurate metrics of the planning, building, and testing stages.
+
+-- 89 of 108 --
+
+90 | FLOW ENGINEERING
+With customers who are effectively using Value Stream Maps today,
+that final number lives somewhere around 15% to 20%, although it’s not
+uncommon to see teams new to Value Stream Management with rolled
+%C&A under 5%.
+Calculating the ROI of Flow Engineering
+If you don’t currently have clear performance data on your workflow, a clear
+picture of what it looks like, and a clear path to better, wouldn’t you like to
+have that ASAP? Let’s say after mapping you identify three high-priority, rela-
+tively simple improvements to implement right away. It will likely take at least
+three months to see measurable progress. Then, with three more months of
+progress and operation, you’ll have enough data and experience with the
+current state that you can map it again and look to a new outcome. In six
+months, you’ll have made enough progress that you’ll have a new desired out-
+come, and will have found new bottlenecks to identify and tackle.
+FIGURE A.5: Example Map Board in Progress
+In practice, Outcome Mapping requires at least one two-hour session to
+go from scratch to a fully formed map ready for action. We can see in Figure A.5
+a very extensive Outcome Map, which covers goals and pains, values and
+principles, prioritization, and experiment definition. As you go from the raw
+input toward insight, you can rearrange the maps as you like and easily export
+them to be shared throughout the organization.
+
+-- 90 of 108 --
+
+91 | FLOW ENGINEERING
+Since knowledge work is increasingly done across time zones rather than
+shared offices, collaborative online mapping has moved from a bonus to a
+necessity. With Flow Engineering we’re concerned with improving the flow of
+work in the next three to six months within a specific value stream. Our aim
+is to not only improve operations but outcomes. Common desired outcomes
+we’ve seen in Flow Engineering efforts with clients and partners include:
+• Deliver software three times more often.
+• Deploy changes to test environments ten times faster.
+• Recover from production issues five times faster.
+• Reduce production defects by half.
+• Reduce variability by half.
+One reason that teams (especially remote teams) may hesitate to carve
+out time for a mapping exercise is that they are afraid to set aside or request
+sufficient time for the teams to meet. This is a perfect example of false econ-
+omies, and we need to counter that tendency clearly.
+The highest-paid members of any organization are the executive leader-
+ship team. But those are also often the teams that most regularly have long
+team off-sites for thinking and planning and multi-hour meetings each week
+to plan and strategize. Thinking takes time. Communication takes time. Time
+costs money. But the cost of inadequate thinking and communication vastly
+outweighs the up-front cost of thinking correctly from the outset.
+The amount of time, money, energy, and goodwill that are burned
+through ineffective organizational activity is certainly hundreds of billions,
+if not trillions, of dollars globally. This effect is often described as expending
+organizational energy as heat instead of as work. Terms like “thrashing” are
+also used to describe the activity of staying busy without having an optimal
+impact.
+A perfect example of thrashing is people whose calendars are filled with
+thirty-minute meetings pertaining to a huge number of parallel initiatives.
+Such meetings leave little time to accomplish real work, and even with buffer
+time, it takes an average of twenty-three minutes and fifteen seconds to effec-
+tively “get back to work.”2 Parallel projects invariably drag on for far longer
+and yield far lower quality than selectively taking up projects and completing
+them as quickly as possible before taking on new work.
+
+-- 91 of 108 --
+
+92 | FLOW ENGINEERING
+We can estimate direct and indirect costs of a member in an IT organi-
+zation being brought into a meeting at $125 an hour (opportunity cost could
+be higher). For the mapping exercises described in this book, it’s reasonable
+that they might involve eight people each. Some exercises, like Dependency
+Mapping, may not be required depending on what’s discovered in the ear-
+lier stages. This allows us to estimate a cost of $1,000 per hour of Flow
+Engineering exercises.
+To estimate the benefits, we can imagine that we are influencing the
+activities of twenty knowledge workers who are each doing work valued at
+$200,000 per year (value delivered should be greater than salaries paid). Our
+goals in Flow Engineering are to help the team increase their throughput,
+improve quality, reduce attrition by increasing job satisfaction, and reduce
+the chances of a project being unsuccessful. Assuming they are all working
+full time, that team should be bringing $4 million of value per year.
+TABLE A.1: Estimated Costs of Flow Engineering Exercises
+Activity Typical Initial
+Duration
+Subsequent
+Time Required
+Estimated
+Annual Cost
+Outcome Mapping 	3 hours 	1 hour 	$4,000
+Current State Mapping 	3 hours 	1 hour 	$4,000
+Dependency Mapping 	2 hours 	1 hour 	$3,000
+Future State Mapping 	2 hours 	1 hour 	$3,000
+Flow Roadmap 	3 hours 	1 hour 	$4,000
+Total 	13 hours 	5 hours 	$18,000
+If we can help the team to increase their throughput by 20% (the com-
+mon average improvement impact delivered by mapping3), that $18,000
+investment brings an equivalent of $800,000 benefit per year. Similarly, if we
+can prevent 20% of their work from being wasted or ineffective, that’s worth
+$800,000 per year. Reducing attrition also brings financial benefits by avert-
+ing the need to rehire, retrain, and burden the team with disruption.
+
+-- 92 of 108 --
+
+93 | FLOW ENGINEERING
+That back-of-the-envelope estimate shows a 44x benefit from these
+activities. This cost accounting approach is obviously an oversimplification,
+but it can be a useful way to illustrate the cost benefit. What’s also notable
+is that improvement in one stream is typically replicable across multiple
+streams, magnifying the impact for far less investment. Even if the costs were
+scaled by several times or the benefits reduced significantly, this represents a
+remarkably positive effect from investing this time.
+
+-- 93 of 108 --
+
+94 | FLOW ENGINEERING
+Glossary
+The most critical aspect of language is that everyone involved uses and under-
+stands it the same. We encourage you to discuss what critical terms mean in
+your context and adjust them as needed. These are provided from our context
+and can serve as a baseline if you need a reference.
+Customer: An entity that receives and perceives value from the value stream’s
+outputs. This encompasses a broad range of recipients, including exter-
+nal clients, internal stakeholders, and partners, highlighting the diverse
+perspectives of value reception.
+Cycle Time: The duration a stage requires for completion, including any
+inherent delays or waiting periods.
+Flow Efficiency: The proportion of active time (or touch time) compared to
+overall lead time within the value stream, offering a gauge for assessing
+the stream’s operational efficiency. This metric should be placed in the
+context of blocks, interruptions, rework, and other detrimental factors
+affecting performance. It can be refined to emphasize the contribution of
+direct value-generating activities to the stream’s performance.
+Lead Time (or Flow Time): The comprehensive duration required for a
+work item to traverse the value stream from start to finish. This metric
+encapsulates all stages, including production, pauses, and corrections,
+summarized simply as “hypothesis-to-happiness,” signifying the journey
+from initiation to customer satisfaction.
+Percent Complete and Accurate (%C&A): A quality metric indicating the
+proportion of work that progresses through a stage that meets require-
+ments, without the need for rework or clarification.
+
+-- 94 of 108 --
+
+95 | FLOW ENGINEERING
+Stage: A single distinct activity within the value stream, typically bounded
+by handoffs. For our purposes, analogous to step, process, or set of tasks.
+Segment: A subset of the value stream consisting of multiple stages.
+Throughput (or Flow Velocity): The measure of a value stream’s output over
+a given period, indicating the efficiency of delivery to customers. The
+Theory of Constraints places this in relation to costs. Little’s Law places
+this in the context of input relative to output.
+Value: Ultimately defined by the recipient. The benefit that a product or ser-
+vice provides to the customer.
+Value-Added Time: The duration spent on activities that directly contribute
+to the final product or service’s value from the customer’s perspective.
+Value Stream: An integrated series of activities designed to deliver a specific
+outcome for a customer who might be the final consumer, stakeholder, or
+user. This stream encapsulates the journey of work from initial need to
+the delivery of value.
+Wait Time: The interval of inactivity between stages, characterized by delays
+and queuing.
+Waste: Activities within the value stream that consume resources without
+enhancing the product or service’s value.
+Work in Progress (WIP, Flow Load, or Work in Process): The quantity of
+work items currently under process within the value stream, from the
+inception of effort to completion. This is often tracked per stage to high-
+light accumulation and reveal a constraint.
+Work Item Profile (or Flow Distribution): The classification of work items
+within the value stream, aiding in the assessment of work type distri-
+bution and flow characteristics. Common profiles include features,
+experiments, bug fixes and issue remediation, flow improvement, tech-
+nical debt payment, and risk mitigation.
+
+-- 95 of 108 --
+
+96 | FLOW ENGINEERING
+Bibliography
+“A Brief History of AWS.” Media Temple (blog). August 31, 2017. https://origin-blog
+.mediatemple.net/cloud-hosting/brief-history-aws/.
+“Accelerating Change.” The Natural Step (website). Accessed December 8, 2023.
+https://thenaturalstep.org/approach/.
+“Amazon: Number of Employees 2010-2023 | AMZN.” Macrotrends. Accessed November
+30, 2023. https://www.macrotrends.net/stocks/charts/AMZN/amazon/number-of
+-employees.
+“The Biggest Startup: Eric Ries and GE Team Up to Transform Manufacturing.” GE News
+(website). December 9, 2013. https://www.ge.com/news/reports/the-biggest-startup
+-eric-ries-and-ge-team-up-to.
+“Churchill and the Commons Chamber.” UK Parliament. Accessed December 1, 2023.
+https://www.parliament.uk/about/living-heritage/building/palace/architecture
+/palacestructure/churchill/.
+“Peter F. Drucker Quotes.” QuoteFancy. Accessed November 29, 2023.
+https://quotefancy.com/quote/888106/Peter-F-Drucker-The-purpose-of-an
+-organization-is-to-enable-ordinary-humans-beings-to-do.
+Ackoff, Russel L. The Democratic Corporation: A Radical Prescription for Recreating
+Corporate American and Rediscovering Success. Oxford: Oxford University Press, 1994.
+Anderson, David, Mark McCann, and Michael O’Reilly. The Value Flywheel Effect: Power the
+Future and Accelerate Your Organization to the Modern Cloud. Portland, OR: IT
+Revolution, 2022.
+Anderson, Katie. Learning to Lead, Leading to Learn: Lessons from Toyota Leader Isao
+Yoshino on a Lifetime of Continuous Learning. Integrand Press, 2020.
+Arnold, J. J., and Ö. Yüce. “Black Swan Farming Using Cost of Delay: Discover, Nurture
+and Speed Up Delivery of Value.” Paper presented at the 2013 Agile Conference,
+Nashville, TN, 2013. https://ieeexplore.ieee.org/document/6612885.
+Atkinson, John. “Manpower Strategies for Flexible Organisations.” Personnel Management 16,
+no. 8 (August 1984): 28–31. https://www.stonebridge.uk.com/uploads/courses/566.pdf.
+Barry, Quintin. Moltke and His Generals: A Study in Leadership. Solihull: Helion
+& Company Limited, 2015.
+Beck, Kent et al., “Manifesto for Agile Software Development.” AgileManifesto.org
+(website). Accessed December 20, 2023. https://agilemanifesto.org/.
+Blanchard, Ken. “No One of Us Is as Smart as All of Us.” Ken Blanchard Books. May 25,
+2022. https://www.kenblanchardbooks.com/no-one-of-us-is-as-smart-as-all-of-us/.
+Bongers, F. J., W. A. Kosters, and B. G. Husslage. “How Long Does It Take To Refocus After
+Being Interrupted? A Systematic Review and Meta-Analysis of Resumption Lag In
+Complex Cognitive Activities.” Human Factors, 61 no. 3 (2019): 420-439.
+
+-- 96 of 108 --
+
+97 | FLOW ENGINEERING
+Boston Consulting Group. “Flipping the Odds of Digital Transformation Success.”
+October 2020. https://web-assets.bcg.com/c7/20/907821344bbb8ade98cbe10fc2b8
+/bcg-flipping-the-odds-of-digital-transformation-success-oct-2020.pdf.
+Brooks, Frederick P. The Mythical Man-Month,: Essays on Software Engineering. Boston:
+Addison-Wesley Professional, 2010.
+Bryar, Colin, and Bill Carr. Working Backwards: Insights, Stories, and Secrets from Inside
+Amazon. New York: St. Martin’s Press, 2021.
+Buckingham, Marcus, and Curt Coffman. First, Break All the Rules: What the World’s
+Greatest Managers Do Differently. Washington, DC: Gallup Press, 2016.
+Burrows, Mike. “#2MBM: Meaning before Metric, Measure before Method.” Agendashift.
+July 2, 2020. https://blog.agendashift.com/2020/07/02/2mbm-meaning-before
+-metric-measure-before-method.
+Capra, Fritjof, and Pier Luigi Luisi. The Systems View of Life: A Unifying Vision. New York:
+Cambridge University Press, 2016.
+Carpentier, Chantal Line. “New Economics for Sustainable Development Attention
+Economy.” United Nations Economist Network. Accessed December 1, 2023.
+https://www.un.org/sites/un2.un.org/files/attention_economy_feb.pdf.
+Clanton, Ross, et al. Getting Started with Dojos. Portland, OR: IT Revolution, 2019.
+https://itrevolution.com/product/getting-started-with-dojos/.
+Clanton, Ross, et al. The Project to Product Transformation: Practical Guidance from
+Fourteen Enterprise Journeys. Portland OR: IT Revolution, 2019.
+https://itrevolution.com/product/project-to-product-transformation/.
+Clark, Phil. “Inspect.” Presentation at the 2023 Flowtopia Conference in Las Vegas.
+Cote, Michael. Monolithic Transformation. O’Reilly Media, April 2019.
+Cottmeyer, Mike. “LK2009 Anderson, Scotland, and Hathaway.” Leading Agile (website).
+2009. https://www.leadingagile.com/2009/05/lk2009-anderson-scotland-and
+-hathaway/.
+Covey, Stephen. The 7 Habits of Highly Effective People: Powerful Lessons in Personal Change.
+New York: Free Press, 2004.
+Criscuolo, Paola, Ammon Salter, and Anne Ter Wal. “The Role of Proximity in Shaping
+Knowledge Sharing in Professional Services Firms.” Paper presented at the Summer
+Conference 2010 on “Opening Up Innovation: Strategy, Organization and
+Technology” at Imperial College London Business School, June 16-18, 2010.
+https://www.researchgate.net/publication/228681027_The_role_of_proximity
+_in_shaping_knowledge_sharing_in_professional_services_firms.
+Cutler, John. “TBM 7/52: Two Bets.” The Beautiful Mess (blog). January 26, 2023.
+https://cutlefish.substack.com/p/tbm-752-two-bets.
+Cutler, John. “TBM 34/52: Words Matter—Strategy & Certainty.” The Beautiful Mess (blog).
+August 3, 2022. https://cutlefish.substack.com/p/tbm-3452-words-matterstrategy-and.
+Cutler, John. “TBM 245: The Magic Prioritization Trick.” The Beautiful Mess (blog).
+September 30, 2023. https://cutlefish.substack.com/p/tbm-245-the-magic-prioritization.
+Cynefin.io. “Constraints.” Accessed December 20, 2023. https://cynefin.io/wiki
+/Constraints.
+DeGrandis, Dominica. Making Work Visible: Exposing Time Theft to Optimize Work & Flow.
+Portland, OR: IT Revolution Press, 2017.
+
+-- 97 of 108 --
+
+98 | FLOW ENGINEERING
+Deming, W. Edwards. Out of the Crisis. MIT Press, 1982.
+Duhigg, Charles. “What Google Learned from Its Quest to Build the Perfect Team.”
+New York Times. February 25, 2016. https://www.nytimes.com/2016/02/28/magazine
+/what-google-learned-from-its-quest-to-build-the-perfect-team.html.
+Forsgren, Nicole PhD, Jez Humble, and Gene Kim. Accelerate: The Science of Lean
+Software and DevOps: Building and Scaling High Performing Technology Organizations.
+Portland, OR: IT Revolution, 2018.
+Gabbert, Fiona, Lorraine Hope, and Ronald P. Fisher. “Protecting Eyewitness Evidence:
+Examining the Efficacy of a Self-Administered Interview Tool.” Law and Human
+Behavior 33, no. 4 (August 2009): 298–307. https://doi.org/10.1007/s10979-008-9146-8.
+Gallup. “Employee Engagement.” Accessed October 14, 2023. https://www.gallup.com
+/394373/indicator-employee-engagement.aspx.
+Gallup. “State of the Global Workplace: 2023 Report.” Accessed November 7, 2023.
+https://www.gallup.com/workplace/349484/state-of-the-global-workplace.aspx.
+Gilbreth, Frank, and L. M. Gilbreth. Process Charts. New York: The American Society of
+Mechanical Engineers, 1921. https://www.thegilbreths.com/resources/Gilbreth
+-Process-Charts-1921.pdf.
+Goldratt, Eliyahu. The Goal: A Process of Ongoing Improvement. North River Press, 2012.
+Goldratt, Eliyahu. The Haystack Syndrom: Sifting Information Out of the Data Ocean.
+North River Press, 2006.
+Grant, Adam. “Are You a Giver or a Taker?” TED Talk. Posted on January 24, 2017. 13:28.
+https://www.youtube.com/watch?v=YyXRYgjQXX0.
+Greene, Jay. “Amazon’s Big Holiday Shopping Advantage: An In-House Shipping Network
+Swollen by Pandemic-Fueled Growth.” Washington Post. November 27, 2020. https://
+www.washingtonpost.com/technology/2020/11/27/amazon-shipping-competitive
+-threat/.
+Hagemann, Bonnie, et al. Trends in Executive Development 2021–2024: A Benchmark Report.
+EDA Inc., 2024.
+Hagger, M. S., et al. “Autonomous and Controlled Motivational Regulations for Multiple
+Health-Related Behaviors: Between- and Within-Participants Analyses.” Health
+Psychology and Behavioral Medicine 2, no. 1 (2014): 565–601. https://doi.org/10.1080
+/21642850.2014.912945.
+Hern, Alex. “The Two-Pizza Rule and the Secret of Amazon’s Success.” The Guardian.
+April 24, 2018. https://www.theguardian.com/technology/2018/apr/24/the-two
+-pizza-rule-and-the-secret-of-amazons-success.
+Hines, Peter. “Value Stream Management.” The International Journal of Logistics
+Management 9, no. 1 ( January 1998): 25–42.
+Humble, Jez, Joanne Molesky, and Barry O’Reilly. Lean Enterprise: How High Performance
+Organizations Innovate at Scale. Sebastopol, CA: O’Reilly Media, 2015.
+Kalbach, Jim. Mapping Experiences: A Complete Guide to Customer Alignment Through
+Journeys, Blueprints, and Diagrams. O’Reilly Media, 2021.
+Katz, Judith H., and Frederick A. Miller. Opening Doors to Teamwork and Collaboration:
+4 Keys That Change Everything. San Francisco: Berrett-Koehler Publishers, 2013.
+
+-- 98 of 108 --
+
+99 | FLOW ENGINEERING
+Kazempour, Kamran, et al. “The Checkbox Project: Learnings for Organizing for
+Outcomes.” The DevOps Enterprise Journal 5, no. 2 (Fall 2023). https://itrevolution.com
+/product/the-devops-enterprise-journal-fall-2023/.
+Kersten, Mik. Project to Product: How to Survive and Thrive in the Age of Digital Disruption
+with the Flow Framework. Portland, OR: IT Revolution Press, 2018.
+Kim, Gene. The Unicorn Project, A Novel about Developers, Digital Disruption, and Thriving
+in the Age of Data. Portland, OR: IT Revolution, 2019.
+Kim, Gene, and Steven J. Spear. Wiring the Winning Organization: Liberating Our Collective
+Greatness Through Slowification, Simplification, and Amplification. Portland, OR:
+IT Revolution Press, 2023.
+Kniberg, Henrik, and Anders Ivarsson. Scaling Agile @ Spotify with Tribes, Squads, Chapters
+& Guilds. October 2012. https://blog.crisp.se/wp-content/uploads/2012/11
+/SpotifyScaling.pdf.
+Lewis, Michael. Moneyball: The Art of Winning an Unfair Game. New York: W.W. Norton
+& Company, 2003.
+Liker, Jeffrey, and Gary Convis. The Toyota Way to Lean Leadership: Achieving and
+Sustaining Excellence through Leadership Development. McGraw Hill, 2011.
+Lipmanowicz, Henri, and Keith McCandless. “15% Solutions: Discover and Focus
+on What Each Person Has the Freedom and Resources to Do Now (20 min.).”
+Liberating Structures (website). Accessed December 9, 2023. https://www
+.liberatingstructures.com/7-15-solutions/.
+Magennis, Troy. “How Does Utilization Impact Lead-Time of Work?” Observable HQ
+(blog). November 9, 2020. https://observablehq.com/@troymagennis/how-does
+-utilization-impact-lead-time-of-work
+Magennis, Troy. “Impact of Multiple Team Dependencies in Software Development.”
+Observable HQ (blog). July 29, 2019. https://observablehq.com/@troymagennis
+/impact-of-multiple-team-dependencies-in-software-developm.
+Mao, Andrew, et al. “An Experimental Study of Team Size and Performance on a Complex
+Task.” PLoS ONE 11, no. 4 (April 2016). https://doi.org/10.1371/journal.pone.0153048.
+Mangot, Dave. “Make the Right Way the Easy Way.” CIO. October 24, 2019.
+https://www.cio.com/article/217754/make-the-right-way-the-easy-way.html.
+Mark, Gloria, Victor Gonzalez, and Justin Harris. “No Task Left Behind? Examining the
+Nature of Fragmented Work.” CHI ’05: Proceedings of the SIGCHI Conference on Human
+Factors in Computing Systems (April 2005): 321–330. https://doi.org/10.1145/1054972
+.105501710.1145/1054972.1055017.
+Martin, James. The Great Transition: Using the Seven Disciplines of Enterprise Engineering to
+Align People, Technology, and Strategy. New York: AMACOM Books, 1995.
+Martin, Karen. Clarity First: How Smart Leaders and Organizations Achieve Outstanding
+Performance. New York: McGraw-Hill Education, 2018.
+Martin, Karen, and Mike Osterling. Value Stream Mapping: How to Visualize Work and Align
+Leadership for Organizational Transformation. New York: McGraw-Hill Education, 2013.
+Matts, Chris. “Constraints that Enable.” The IT Risk Manager (website).
+December 9, 2018. https://theitriskmanager.com/2018/12/09/constraints-that-enable/.
+Maxwell, John C. The 21 Irrefutable Laws of Leadership. Thomas Nelson, 2007.
+
+-- 99 of 108 --
+
+100 | FLOW ENGINEERING
+McGilchrist, Iain. The Master and His Emissary: The Divided Braise and the Making of the
+Western World. New Haven, CT: Yale University Press, 2019.
+Modig, Niklas, and Par Ahlstrom. This is Lean: Resolving the Efficiency Paradox. Rheologica
+Publishing, 2012.
+Panagiotopoulos, Georgios, Constantine Zogopoulos, and Zoe Karanikola. “The Learning
+Organization According to Senge: Recording and Validation of the Park Research Tool
+in Primary Education Schools in the Prefecture of Ilia.” Global Journal of Human
+Resource Management 6, no.5 (November 2018): 1–19. https://www.eajournals.org
+/wp-content/uploads/The-Learning-Organization-According-to-Senge.pdf.
+Parkinson, Northcote. “Parkinson’s Law.” The Economist. November 19, 1955.
+https://www.economist.com/news/1955/11/19/parkinsons-law.
+Pereira, Steve. “Principles of Value Stream Identification.” Value Stream Management
+Consortium (website). May 22, 2023. https://www.vsmconsortium.org/blog
+/principles-of-value-stream-identification.
+Pink, Daniel H. Drive: The Surprising Truth About What Motivates Us. Edinburgh:
+Canongate Books, 2010.
+Reinertsen, Donald G. The Principles of Product Development Flow: Second Generation Lean
+Product Development. Redondo Beach, CA: Celeritas Publishing, 2009.
+Ring, Matt, et al. “Measuring Value: Navigating Uncertainty to Build the Right Thing for
+Our Customers and Our Business,” DevOps Enterprise Journal 5, no. 2 (2023).
+https://itrevolution.com/product/the-devops-enterprise-journal-fall-2023/.
+Romanukha, Andriy. “Stop Starting, Start Finishing with Agile.” ReadWrite. Last modified
+March 23, 2023. https://readwrite.com/stop-starting-start-finishing-with-agile.
+R0senblueth, A., and N. Wiener, “The Role of Models in Science,” Philosophy of Science 12
+(1945).
+Rother, Mike. Toyota Kata: Managing People for Improvement, Adaptiveness, and Superior
+Results. New York: McGraw-Hill, 2009.
+Rother, Mike, and John Shook. Learning to See: Value Stream Mapping to Add Value and
+Eliminate Muda. Cambridge, MA: Lean Enterprise Institute, 2003.
+Saldanha, Tony. Why Digital Transformations Fail: The Surprising Disciplines of How to Take
+Off and Stay Ahead. Oakland, CA: Berrett-Koehler Publishers, 2019.
+Senge, Peter M. The Fifth Discipline: The Art & Practice of the Learning Organization.
+New York: Doubleday, 2006.
+Sheth, Bhavin R., and Ryan Young, “Two Visual Pathways in Primates Based on Sampling
+of Space: Exploitation and Exploration of Visual Information.” Frontiers in Integrative
+Neuroscience 10, no. 37 (November 2016). https://doi.org/10.3389/fnint.2016.00037.
+Schulz, Kathryn. Being Wrong: Adventures in the Margin of Error. Ecco, 2011.
+Sipser, Michael. Introduction to the Theory of Computation. 3rd ed. Boston: Cengage
+Learning, 2012.
+Skelton, Matthew, and Manuel Pais. Team Topologies: Organizing Business and Technology
+Teams for Fast Flow. Portland, OR: IT Revolution, 2019.
+Slater, Daniel. “Powering Innovation and Speed with Amazon’s Two-Pizza Teams.”
+Amazon Web Services Executive Insights. 2023. https://d1.awsstatic.com/executive
+-insights/en_US/two_pizza_teams_eBook.pdf.
+
+-- 100 of 108 --
+
+101 | FLOW ENGINEERING
+Smith, Adam. The Wealth of Nations. Edited by Andrew Skinner. New York: Penguin
+Publishing Group, 1999.
+Spear, Steven J. The High-Velocity Edge: How Market Leaders Leverage Operational Excellence
+to Beat the Competition. New York: McGraw Hill, 2010.
+Spiegel, Alix. “Teachers’ Expectation Can Influence How Students Perform.” NPR.
+September 17, 2012. https://www.npr.org/sections/health-shots/2012/09/18/161159263
+/teachers-expectations-can-influence-how-students-perform.
+Sproule, Michael J. “Organizational Rhetoric and the Public Sphere.” Communication
+Studies 40, no. 4 (1989): 258–265. https://doi.org/10.1080/10510978909368279.
+Stickdorn, Mark, et al. This Is Service Design Doing: Applying Service Design Thinking in the
+Real World. Sebastopol, CA: O’Reilly Media, 2018.
+Sussna, Jeff. Designing Delivery: Rethinking IT in the Digital Service Economy. Sebastopol,
+CA: O’Reilly Media, 2015.
+Thrasher, Paula. “Interactive Virtual Value Stream Mapping - Visualizing Flow in a
+Virtual World.” Presentation at the 2020 DevOps Enterprise Summit in 2020. 35:54.
+https://videos.itrevolution.com/watch/466912411/.
+Vacanti, Daniel. “Little’s Law and System Stability.” Interview by Klaus Leopold.
+LEANability, June 8, 2017. https://www.leanability.com/en/blog/2017/08/littles
+-law-and-system-stability/.
+van der Kolk, Berend. “Can Performance Metrics Harm Performance?” Insights. November
+9, 2018. https://www.ie.edu/insights/articles/can-performance-metrics
+-harm-performance/.
+van der Kolk, B., and W. Kaufmann. “Performance Measurement, Cognitive Dissonance
+and Coping Strategies: Exploring Individual Responses to NPM-Inspired Output
+Control.” Journal of Management Control 29 (2018): 93–113.
+Vas, Zsófia. “Role of Proximity in Regional Clusters: Evidence from the Software
+Industry.” In Regional Competitiveness, Innovation and Environment, edited by Zoltán
+Bajmócy and Imre Lengyel, 162–182. Szeged: JATEPress, 2009.
+West, Geoffrey B. Scale: The Universal Laws of Growth, Innovation, Sustainability, and the Pace
+of Life in Organisms, Cities, Economies, and Companies. New York: Penguin Books, 2017.
+Wiener, Norbert. Cybernetics: Or Control and Communication in the Animal and the
+Machine. Cambridge, MA: MIT Press, 1948.
+Wiener, Norbert. The Human Use of Human Beings: Cybernetics and Society. New York:
+Hachette Books, 1988.
+Wikipedia. “Abilene paradox.” Accessed December 1, 2023. https://en.wikipedia.org/wiki
+/Abilene_paradox#cite_note-Harvey-3.
+Wikipedia. “IKEA effect.” Accessed December 1, 2023. https://en.wikipedia.org/wiki
+/IKEA_effect.
+Wikipedia. “Metcalfe’s law.” Accessed December 1, 2023. https://en.wikipedia.org/wiki
+/Metcalfe%27s_law.
+Wikipedia. “Ringelmann effect.” Accessed December 1, 2023. https://en.wikipedia.org
+/wiki/Ringelmann_effect.
+Wikipedia. “Six sigma.” Accessed December 8, 2020. https://en.wikipedia.org/wiki/Six_
+Sigma
+
+-- 101 of 108 --
+
+102 | FLOW ENGINEERING
+Wikipedia. “Teleology.” Accessed December 8, 2020. https://en.wikipedia.org/wiki
+/Teleology.
+Wikipedia. “Time and motion study.” Accessed December 1, 2023. https://en.wikipedia
+.org/wiki/Time_and_motion_study.
+Womack, James P., and Daniel T. Jones. Lean Thinking: Banish Waste and Create Wealth
+in Your Organization. New York: Simon & Schuster, 1996.
+Womack, James P., Daniel T. Jones, and Daniel Roos. The Machine That Changed the
+World. New York: Free Press, 2007.
+
+-- 102 of 108 --
+
+103 | FLOW ENGINEERING
+Notes
+Introduction
+1. 	Blanchard, “No One of Us Is as Smart as All of Us.”
+2. 	Sheth and Young, “Two Visual Pathways in Primates Based on Sampling of Space.”
+3. 	Saldanha, Why Digital Transformations Fail.
+4. 	Martin, Clarity First.
+Chapter 1
+1. 	“Peter F. Drucker Quotes.”
+2. 	West, Scale, 32.
+3. 	“Amazon: Number of Employees”; Greene, “Amazon’s Big Holiday Shopping Advantage.”
+4. 	Mark, Gonzalez, and Harris, “No Task Left Behind?”
+5. 	Katz and Miller, Opening Doors to Teamwork and Collaboration, 87.
+6. 	“Employee Engagement.”
+7. 	Gallup, “State of the Global Workplace: 2023 Report.”
+8. 	Pink, Drive.
+9. 	Duhigg, “What Google Learned from Its Quest to Build the Perfect Team.”
+10. Criscuolo, Salter, and Wal, “The Role of Proximity.”
+11. Vas, “Role of Proximity in Regional Clusters,” 162–182.
+12. Kim and Spear, Wiring the Winning Organization, xxviii.
+13. Wikipedia, “Ringelmann effect.”
+14. Mao et al., “An Experimental Study of Team Size.”
+15. Mao et al., “An Experimental Study of Team Size.”
+16. Slater, “Powering Innovation and Speed with Amazon’s Two-Pizza Teams.”
+17. Hern, “The Two-Pizza Rule and the Secret of Amazon’s Success.”
+18. Sproule, “Organizational Rhetoric and the Public Sphere.”
+19. Sipser, Introduction to the Theory of Computation, 348.
+20. Carpentier, “New Economics for Sustainable Development Attention Economy.”
+21. Atkinson, “Manpower Strategies for Flexible Organisations.”
+22. Wikipedia, “Metcalfe’s law.”
+23. Brooks, The Mythical Man-Month, 25.
+24. “Churchill and the Commons Chamber.”
+25. Kazempour et al., “The Checkbox Project.”
+26. DeGrandis, Making Work Visible, 43.
+27. Wikipedia, “Time and motion study.”
+28. Brooks, Mythical Man-Month, 7.
+
+-- 103 of 108 --
+
+104 | FLOW ENGINEERING
+Chapter 2
+1. 	Wikipedia, “IKEA effect.”
+2. 	Martin, The Great Transition, 16.
+3. 	Martin, The Great Transition, 104.
+4. 	Rother, Toyota Kata, 18.
+Chapter 4
+1. 	Wikipedia, “Abilene paradox.”
+Chapter 5
+1. 	Wikipedia, “Teleology.”
+2. 	Rosenblueth and Wiener, “The Role of Models in Science,” 320.
+3. 	Boston Consulting Group, “Flipping the Odds of Digital Transformation Success.”
+4. 	Bryar and Carr, Working Backwards, 98–120.
+5. 	Lewis, Moneyball, 59.
+6. 	“Accelerating Change.”
+7. 	Grant, “Are You a Giver or a Taker?”
+8. 	Hagger et al., “Autonomous and Controlled Motivational Regulations.”
+Chapter 6
+1. 	Rother and Shook, Learning to See, 26.
+2. 	Pereira, “Principles of Value Stream Identification.”
+3. 	Gilbreth and Gilbreth, Process Charts, 4.
+4. 	Rother and Shook, Learning to See, 13.
+5. 	Thrasher, “Interactive Virtual Value Stream Mapping.”
+6. 	Womack and Jones, Lean Thinking, 29.
+7. 	Reinertsen, The Principles of Product Development Flow, 35.
+8. 	Kalbach, Mapping Experiences.
+9. 	Gabbert, Hope, and Fisher, “Protecting Eyewitness Evidence.”
+10. Cutler, “TBM 34/52.”
+11. Martin and Osterling, Value Stream Mapping, 72.
+12. Jim Benson, personal conversation with the authors, 2023.
+13. Lipmanowicz and McCandless, “15% Solutions.”
+Chapter 7
+1. 	Parkinson, “Parkinson’s Law.”
+2. 	Covey, The 7 Habits of Highly Effective People, 66.
+Chapter 8
+1. 	DeGrandis, Making Work Visible, 2.
+2. 	Romanukha, “Stop Starting, Start Finishing with Agile.”
+Chapter 9
+1. 	Stickdorn et al., This Is Service Design Doing, 139.
+2. 	Martin and Osterling, Value Stream Mapping, 27.
+3. 	Kersten, Project to Product, 90.
+
+-- 104 of 108 --
+
+105 | FLOW ENGINEERING
+4. 	Burrows, “#2MBM: Meaning before Metric, Measure before Method.”
+5. 	Cutler, “TBM 245.”
+Chapter 10
+1. 	Capra and Luisi, The Systems View of Life, 316.
+2. 	As quoted in Kim, The Unicorn Project, 3.
+3. 	Beck et al. “Manifesto for Agile Software Development.”
+4. 	Cottmeyer, “LK2009 Anderson, Scotland, and Hathaway.”
+5. 	Womack and Jones, Lean Thinking, 29–90.
+6. 	Ring et al. “Measuring Value.”
+7. 	Ring et al. “Measuring Value.”
+8. 	McGilchrist, The Master and His Emissary, 47.
+9. 	Deming, Out of the Crisis, 22.
+10. Sheth and Young, “Two Visual Pathways in Primates.”
+11. Liker and Convis, The Toyota Way, 149.
+12. Liker and Convis, The Toyota Way, vi.
+13. Modig and Ahlstrom, This is Lean, 9.
+14. Ackoff, The Democratic Corporation, 23.
+15. Magennis, “How Does Utilization Impact Lead-Time of Work?” This site provides
+an excellent calculator to illustrate the mathematics of high utilization.
+16. Deming, Out of the Crisis, Chapter 2.
+17. Wikipedia, “Six sigma.”
+18. Goldratt, The Goal, Chapter 17.
+19. Goldratt, The Haystack Syndrome.
+20. Spear, The High-Velocity Edge, 183.
+21. Deming, Out of the Crisis, Chapter 8.
+22. Schulz, Being Wrong, 5.
+Chapter 11
+1. 	Maxwell, The 21 Irrefutable Laws of Leadership, 11.
+2. 	Quote is commonly attributed to Peter Drucker.
+3. 	Cynefin.io, “Constraints.”
+4. 	Mangot, “Make the Right Way the Easy Way.”
+5. 	Matts, “Constraints that Enable.”
+6. 	Panagiotopoulos, Zogopoulos, and Karanikola, “The Learning Organization
+According to Senge.”
+7. 	Senge, The Fifth Discipline, 12
+8. 	Spiegel, “Teachers’ Expectation Can Influence How Students Perform.”
+9. 	Liker and Convis, The Toyota Way to Lean Leadership, 41.
+10. Hagemann et al., Trends in Executive Development.
+Chapter 12
+1. 	“The Biggest Startup.”
+2. 	Anderson, Learning to Lead, Leading to Learn, 171.
+3. 	Forsgren, Humble, and Kim, Accelerate, Chapter 3.
+
+-- 105 of 108 --
+
+106 | FLOW ENGINEERING
+Chapter 13
+1. 	Hines, “Value Stream Management.”
+2. 	Goldratt, The Haystack Syndrome, 26.
+3. 	van der Kolk and Kaufmann, “Performance Measurement, Cognitive Dissonance and
+Coping Strategies.”
+4. 	van der Kolk, “Can Performance Metrics Harm Performance?”
+5. 	Reinertsen, The Principles of Product Development Flow, 33.
+6. 	Clark, “Inspect.”
+7. 	Inspired by Cutler, “TBM 7/52: Two Bets.”
+Chapter 14
+1. 	Martin, The Great Transition, 63.
+2. 	Kersten, Project to Product, 111.
+3. 	“A Brief History of AWS.”
+4. 	Anderson, McCann, and O’Reilly, The Value Flywheel Effect.
+5. 	Clanton et al., Getting Started with Dojos, 4.
+6. 	Ross Clanton, as quoted in Cote, Monolithic Transformation
+7. 	Kniberg and Ivarsson, Scaling Agile @ Spotify.
+8. 	Skelton and Pais, Team Topologies, 130.
+9. 	Covey, The 7 Habits of Highly Effective People, 38.
+10. Magennis, “Impact of Multiple Team Dependencies.”
+Conclusion
+1. 	Arnold and Yüce, “Black Swan Farming Using Cost of Delay.”
+2. 	Clanton et al., The Project to Product Transformation.
+3. 	Womack and Jones, Lean Thinking, 320.
+Appendix
+1. 	Vacanti, interview.
+2. 	Bongers et al., “How Long Does It Take To Refocus,” 420–439.
+3. 	Based on personal experience reports and from multiple practitioners we’ve spoken to.
+
+-- 106 of 108 --
+
+107 | FLOW ENGINEERING
+Acknowledgments
+We’re incredibly grateful to so many who have inspired, informed, and
+improved the ideas and practices collected in this book. We’ve been tremen-
+dously fortunate to leverage the collective learning of great thinkers from
+across the Lean, cybernetics, systems thinking, collaboration, Agile, and
+DevOps communities. We’ve also been lucky to have the opportunity to test
+and implement the material in this book across organizations large and small,
+with leaders who were courageous and trusting enough to try something
+different.
+Thanks to our friends Karen Martin, Dominica DeGrandis, Jez Humble,
+and Mik Kersten for their pioneering contributions to our understanding of
+mapping and improving flow, sharing their experience and their generosity
+as guides. To our friends Adam Hawkins, Carmen DeArdo, Courtney Kissler,
+Fritjof Capra, Gary Gruver, Gene Kim, Helen Beal, Jeremy Akers, Jim Benson,
+João Rosa, John Cutler, John Willis, Jon Smart, Manuel Pais, Matthew Skelton,
+Mixel Kiemen, Nicole Helmerich, Patrick Debois, Paula Thrasher, Peter
+Maddison, Steve Spear, and Vera Hofmann for sharing experience, support,
+and brilliant thinking to improve this book and its practices.
+Andrew owes a special debt to Meredith Bell and Sandrine Olivencia
+for helping and inspiring AutoRABIT on the journey to becoming a lean
+organization.
+Thank you to our patient and supportive families for making space and
+energy for this book to grow.
+Thank you to our Flow Collective community and to all the other people
+who inspired and collaborated with us on so many ideas, concepts, and prac-
+tices over the years.
+Finally, huge thanks to our editorial team, Anna Noak and Leah Brown,
+who shepherded us through this journey with incredible skill and patience.
+
+-- 107 of 108 --
+
+108 | FLOW ENGINEERING
+About the Authors
+Steve Pereira has spent over two decades improving the flow of work across
+organizations. He’s worked through tech support, IT management, platform
+and infrastructure engineering, product management, and as a founding
+CTO for enterprise SaaS. He serves as CEO of Visible Consulting, as COO
+to the Value Stream Management Consortium, Chair of the OASIS VSM
+Interoperability technical committee, and co-founder of the Flow Collective
+to bring flow-focused professionals together. Since 2017, he has been devel-
+oping and facilitating Flow Engineering to make flow improvement in large
+organizations accessible, collaborative, and actionable.
+Andrew Davis is Chief Product Officer at AutoRABIT and the author of
+Mastering Salesforce DevOps. He’s a Salesforce architect, developer, and prod-
+uct leader with a focus on the human side of software development. He’s been
+the leading figure in introducing DevOps concepts to the Salesforce world.
+Trained as an engineer, he spent fifteen years as a Buddhist monk, teaching
+meditation and personal transformation and helping develop communities
+of practice. These days he studies the intersection of business, technology,
+and psychology through systems thinking. He is co-founder of the Center
+for Harmonious Living with his wife, Ashley, to promote healthier ways of
+approaching work and life.
+
+-- 108 of 108 --
+

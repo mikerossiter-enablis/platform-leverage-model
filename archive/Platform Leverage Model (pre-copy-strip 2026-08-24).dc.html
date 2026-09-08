@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="colors_and_type.css">
+<script src="image-slot.js"></script>
+<style>
+  html, body { margin: 0; background: #000; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+</style>
+</helmet>
+<x-import component-from-global-scope="deck-stage" from="./deck-stage.js" width="1920" height="1080" hint-size="100%,100%" data-uneditable="">
+
+  <!-- ===================== 01 · TITLE ===================== -->
+  <section data-label="Title" data-screen-label="01 Title" data-speaker-notes="Evening, everyone. Quick intro - who I am, what I do, and that this comes out of trying to measure infrastructure work honestly on real engagements. The promise for the next half hour: DevOps still holds up, but not every metric built on top of it fits the people running the platforms underneath. I'll show you where it breaks, and a simple model - plus a way to use it on Monday morning - that I built to fix it." style="background:radial-gradient(44% 44% at 12% 118%, rgba(235,81,96,0.55) 0%, transparent 60%), radial-gradient(70% 70% at 82% 0%, rgba(91,192,190,0.45) 0%, transparent 55%), radial-gradient(80% 80% at 50% 50%, rgba(121,137,243,0.35) 0%, transparent 55%), linear-gradient(145deg, #0b0a18 0%, #15102a 50%, #07131a 100%);padding:96px 120px;display:flex;flex-direction:column;justify-content:space-between;font-family:var(--font-sans);color:#fff;box-sizing:border-box;">
+    <div style="display:flex;justify-content:space-between;align-items:flex-start;">
+      <span style="font-family:var(--font-mono);font-weight:500;font-size:25px;letter-spacing:0.16em;text-transform:uppercase;color:var(--sea-green);max-width:980px;line-height:1.4;">Measuring infrastructure, SRE &amp; platform teams on their own terms</span>
+      <div style="display:flex;align-items:flex-end;">
+        <span style="font-family:var(--font-sans);font-weight:800;font-size:30px;letter-spacing:-0.04em;color:#fff;line-height:1;">enablis</span>
+        <span style="width:10px;height:10px;background:var(--coral-beach);border-radius:0 0 100% 0;margin-left:3px;margin-bottom:3px;"></span>
+      </div>
+    </div>
+    <div>
+      <h1 style="font-weight:800;font-size:140px;line-height:0.96;letter-spacing:-0.045em;margin:0;">
+        <span>The Platform</span><br>
+        <span style="background:linear-gradient(80deg, var(--coral-beach) 0%, var(--lavender) 50%, var(--sea-green) 100%);-webkit-background-clip:text;background-clip:text;color:transparent;">Leverage</span><span> Model</span><span style="color:var(--coral-beach);">.</span>
+      </h1>
+      <p style="font-size:40px;font-weight:330;line-height:1.42;color:rgba(255,255,255,0.82);max-width:1220px;margin:44px 0 0;">DevOps still holds up. But not every metric built on top of it fits the people running the platforms underneath.</p>
+    </div>
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;">
+      <span style="font-family:var(--font-mono);font-weight:500;font-size:24px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.5);white-space:nowrap;">enablis · Yorkshire DevOps</span>
+      <span style="font-family:var(--font-mono);font-weight:500;font-size:24px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.5);">Leeds · September 2026</span>
+    </div>
+  </section>
+
+    <!-- ===================== 02 · ABOUT ME ===================== -->
+  <section data-label="About me" data-screen-label="02 About me" data-speaker-notes="Quick word on me before we dig in. I'm Mike Rossiter - a platform and DevOps consultant at Enablis. I did my MSc - Digital and Technology Specialist, the DevOps pathway - at Northumbria, came out with a distinction, and I've spent years since going back and forth between software delivery teams and the infrastructure underneath - which is exactly where tonight's talk comes from. And off the clock, you'll usually find me with a guitar. Right - let's get into it." style="background:#000;padding:56px 96px 56px;display:flex;flex-direction:column;font-family:var(--font-sans);color:#fff;box-sizing:border-box;">
+    <div style="display:flex;align-items:center;gap:24px;flex-shrink:0;">
+      <div style="display:flex;align-items:flex-end;"><span style="font-weight:800;font-size:25px;letter-spacing:-0.04em;color:#fff;line-height:1;">enablis</span><span style="width:9px;height:9px;background:var(--coral-beach);border-radius:0 0 100% 0;margin-left:2px;margin-bottom:2px;"></span></div>
+      <span style="font-family:var(--font-mono);font-weight:500;font-size:24px;letter-spacing:0.14em;text-transform:uppercase;color:var(--sea-green);white-space:nowrap;">About the speaker</span>
+      <div style="flex:1;height:1px;background:var(--hairline);"></div>
+      <span style="font-family:var(--font-mono);font-weight:500;font-size:24px;letter-spacing:0.14em;color:rgba(255,255,255,0.4);">02</span>
+    </div>
+    <div style="flex:1;display:flex;gap:84px;align-items:center;min-height:0;">
+      <div style="flex:1.5;min-width:0;">
+        <h1 style="font-weight:800;font-size:98px;line-height:0.95;letter-spacing:-0.045em;margin:0;">Mike Rossiter<span style="color:var(--coral-beach);">.</span></h1>
+        <div style="font-family:var(--font-mono);font-weight:500;font-size:25px;letter-spacing:0.1em;text-transform:uppercase;color:var(--sea-green);margin:24px 0 0;">Platform &amp; DevOps Consultant · Enablis</div>
+        <p style="font-size:32px;font-weight:330;line-height:1.5;color:rgba(255,255,255,0.82);margin:32px 0 0;max-width:980px;">Years moving between <span style="color:#fff;">software delivery teams</span> and the <span style="color:#fff;">infrastructure underneath</span> — which is exactly where tonight's talk comes from.</p>
+        <div style="margin-top:30px;">
+          <div style="font-family:var(--font-mono);font-weight:500;font-size:20px;letter-spacing:0.12em;text-transform:uppercase;color:var(--sea-green);">Education</div>
+          <div style="font-weight:700;font-size:29px;letter-spacing:-0.02em;line-height:1.2;color:#fff;margin-top:10px;">MSc Digital &amp; Technology Specialist (DevOps)</div>
+          <div style="font-family:var(--font-mono);font-weight:500;font-size:20px;letter-spacing:0.06em;color:rgba(255,255,255,0.6);margin-top:9px;">Northumbria University · Computer Science · Distinction · 2023–2025</div>
+        </div>
+        <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:30px;">
+          <span style="font-family:var(--font-mono);font-weight:500;font-size:21px;letter-spacing:0.1em;text-transform:uppercase;color:var(--sea-green);border:1px solid var(--sea-40);border-radius:4px;padding:10px 16px;white-space:nowrap;">Delivery + Infrastructure</span>
+          <span style="font-family:var(--font-mono);font-weight:500;font-size:21px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.75);border:1px solid var(--hairline);border-radius:4px;padding:10px 16px;white-space:nowrap;">Off the clock · guitar</span>
+        </div>
+      </div>
+      <div style="flex:1;position:relative;">
+        <span style="position:absolute;top:-16px;left:-16px;width:60px;height:60px;background:var(--coral-beach);border-radius:0 0 100% 0;z-index:2;"></span>
+        <image-slot id="mike-rossiter-photo" style="display:block;width:100%;height:566px;box-shadow:0 24px 60px rgba(0,0,0,0.55);" shape="rounded" radius="8" fit="cover" position="50% 35%" src="uploads/Enablis%20Headshots%2027.11.2025-14.jpg" placeholder="Drop your headshot"></image-slot>
+      </div>
+    </div>
+    <div style="display:flex;align-items:center;gap:36px;border-top:1px solid var(--hairline);padding-top:26px;flex-shrink:0;">
+      <span style="font-family:var(--font-mono);font-weight:500;font-size:22px;letter-spacing:0.12em;text-transform:uppercase;color:var(--sea-green);white-space:nowrap;">Connect</span>
+      <a href="https://www.linkedin.com/in/mike-rossiter" target="_blank" rel="noopener noreferrer" style="display:flex;align-items:center;gap:10px;font-family:var(--font-mono);font-weight:500;font-size:22px;letter-spacing:0.06em;text-transform:uppercase;color:rgba(255,255,255,0.82);text-decoration:none;" style-hover="color:#fff;"><span>LinkedIn · /in/mike-rossiter</span><span style="color:var(--sea-green);">↗</span></a>
+      <span style="font-family:var(--font-mono);font-weight:500;font-size:22px;letter-spacing:0.06em;color:rgba(255,255,255,0.55);">mike.rossiter@enablis.co</span>
+    </div>
+  </section>
+
+  <!-- ===================== 03 · ABOUT ENABLIS ===================== -->
+  <section data-label="About Enablis" data-screen-label="03 About Enablis" data-speaker-notes="And a quick word on who I work for, to set the scene. Enablis is a strategic technology consultancy - the line we use is 'we don't take over, we take your business further, faster.' We embed senior, onshore consultants straight into client teams to design, build and deliver. AI-native - AI isn't a feature we bolt on, it's how we work. We've done this for the likes of Flutter, TransUnion, Sky Bet and Novuna. And if any of tonight lands for you: there's a free DevOps health-check tool on our site, and we run a full DevOps assessment - scan the code or head to enablis.co/devops. Right - back to it." style="background:#000;padding:50px 96px 50px;display:flex;flex-direction:column;font-family:var(--font-sans);color:#fff;box-sizing:border-box;">
+    <div style="display:flex;align-items:center;gap:24px;flex-shrink:0;">
+      <div style="display:flex;align-items:flex-end;"><span style="font-weight:800;font-size:25px;letter-spacing:-0.04em;color:#fff;line-height:1;">enablis</span><span style="width:9px;height:9px;background:var(--coral-beach);border-radius:0 0 100% 0;margin-left:2px;margin-bottom:2px;"></span></div>
+      <span style="font-family:var(--font-mono);font-weight:500;font-size:24px;letter-spacing:0.14em;text-transform:uppercase;color:var(--sea-green);white-space:nowrap;">About Enablis · who I work for</span>
+      <div style="flex:1;height:1px;background:var(--hairline);"></div>
+      <span style="font-family:var(--font-mono);font-weight:500;font-size:24px;letter-spacing:0.14em;color:rgba(255,255,255,0.4);">03</span>
+    </div>
+    <div style="margin-top:32px;flex-shrink:0;">
+      <h1 style="font-weight:800;font-size:64px;line-height:1.05;letter-spacing:-0.04em;margin:0;max-width:1580px;">We don't take over — we take your business <span style="background:var(--gradient-text);-webkit-background-clip:text;background-clip:text;color:transparent;">further, faster</span><span style="color:var(--coral-beach);">.</span></h1>
+      <p style="font-size:28px;font-weight:330;line-height:1.45;color:rgba(255,255,255,0.8);margin:20px 0 0;max-width:1520px;">A strategic technology consultancy. We embed senior, onshore consultants straight into your teams to <span style="color:#fff;">design, build and deliver</span> — with AI-native delivery: <span style="color:#fff;">AI isn't a feature, it's how we operate</span>.</p>
+    </div>
+    <div style="display:flex;align-items:stretch;border-top:1px solid var(--hairline);border-bottom:1px solid var(--hairline);margin-top:30px;flex-shrink:0;">
+      <div style="flex:1;padding:24px 0;">
+        <div style="font-weight:800;font-size:60px;letter-spacing:-0.03em;line-height:1;">150+</div>
+        <div style="font-family:var(--font-mono);font-weight:500;font-size:19px;letter-spacing:0.1em;text-transform:uppercase;color:var(--sea-green);margin-top:12px;">Consultants deployed</div>
+      </div>
+      <div style="width:1px;background:var(--hairline);"></div>
+      <div style="flex:1;padding:24px 0 24px 44px;">
+        <div style="font-weight:800;font-size:60px;letter-spacing:-0.03em;line-height:1;">93%</div>
+        <div style="font-family:var(--font-mono);font-weight:500;font-size:19px;letter-spacing:0.1em;text-transform:uppercase;color:var(--sea-green);margin-top:12px;">Customer CSAT</div>
+      </div>
+      <div style="width:1px;background:var(--hairline);"></div>
+      <div style="flex:1;padding:24px 0 24px 44px;">
+        <div style="font-weight:800;font-size:60px;letter-spacing:-0.03em;line-height:1;">20+</div>
+        <div style="font-family:var(--font-mono);font-weight:500;font-size:19px;letter-spacing:0.1em;text-transform:uppercase;color:var(--sea-green);margin-top:12px;">Active projects</div>
+      </div>
+      <div style="width:1px;background:var(--hairline);"></div>
+      <div style="flex:1;padding:24px 0 24px 44px;">
+        <div style="font-weight:800;font-size:60px;letter-spacing:-0.03em;line-height:1;">6+</div>
+        <div style="font-family:var(--font-mono);font-weight:500;font-size:19px;letter-spacing:0.1em;text-transform:uppercase;color:var(--sea-green);margin-top:12px;">Years of impact</div>
+      </div>
+    </div>
+    <div style="flex:1;display:flex;gap:60px;align-items:stretch;margin-top:30px;min-height:0;">
+      <div style="flex:1.45;display:flex;flex-direction:column;min-height:0;">
+        <div style="font-family:var(--font-mono);font-weight:500;font-size:21px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.5);">Why Enablis</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px 44px;margin-top:22px;">
+          <div style="display:flex;gap:14px;align-items:baseline;"><span style="color:var(--sea-green);font-weight:700;font-size:24px;flex-shrink:0;line-height:1;">✓</span><span style="font-size:27px;font-weight:330;line-height:1.3;color:#fff;">Unashamedly onshore</span></div>
+          <div style="display:flex;gap:14px;align-items:baseline;"><span style="color:var(--sea-green);font-weight:700;font-size:24px;flex-shrink:0;line-height:1;">✓</span><span style="font-size:27px;font-weight:330;line-height:1.3;color:#fff;">No dependency — built to leave capability</span></div>
+          <div style="display:flex;gap:14px;align-items:baseline;"><span style="color:var(--sea-green);font-weight:700;font-size:24px;flex-shrink:0;line-height:1;">✓</span><span style="font-size:27px;font-weight:330;line-height:1.3;color:#fff;">Talent we vouch for</span></div>
+          <div style="display:flex;gap:14px;align-items:baseline;"><span style="color:var(--sea-green);font-weight:700;font-size:24px;flex-shrink:0;line-height:1;">✓</span><span style="font-size:27px;font-weight:330;line-height:1.3;color:#fff;">AI-enabled delivery</span></div>
+        </div>
+        <div style="flex:1;min-height:20px;"></div>
+        <div style="border-top:1px solid var(--hairline);padding-top:22px;">
+          <div style="font-family:var(--font-mono);font-weight:500;font-size:20px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.45);">Trusted by</div>
+          <div style="font-size:26px;font-weight:600;line-height:1.5;color:rgba(255,255,255,0.82);margin-top:12px;">Flutter · TransUnion · Sky Betting &amp; Gaming · Novuna · Great Rail Journeys · Starling · Yoti</div>
+        </div>
+      </div>
+      <div style="flex:1;display:flex;align-items:center;min-width:0;">
+        <div style="width:100%;background:#fff;border-radius:8px;padding:28px 30px;display:flex;gap:26px;align-items:center;color:#000;box-shadow:0 24px 60px rgba(0,0,0,0.55);">
+          <div style="width:156px;height:156px;flex-shrink:0;border-radius:6px;overflow:hidden;background:#fff;">
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=320x320&amp;margin=0&amp;data=https%3A%2F%2Fenablis.co%2Fdevops" alt="Scan for enablis.co/devops" style="width:100%;height:100%;display:block;">
+          </div>
+          <div style="min-width:0;">
+            <div style="font-family:var(--font-mono);font-weight:700;font-size:18px;letter-spacing:0.08em;text-transform:uppercase;color:var(--coral-beach);">Free DevOps health-check</div>
+            <div style="font-weight:700;font-size:28px;letter-spacing:-0.02em;line-height:1.15;color:#000;margin-top:10px;">Try the tool — or book a full DevOps assessment.</div>
+            <div style="font-family:var(--font-mono);font-weight:500;font-size:21px;letter-spacing:0.04em;color:rgba(0,0,0,0.6);margin-top:14px;">enablis.co/devops</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 04 · THE THREE WAYS ===================== -->
+  <section data-label="The Three Ways" data-screen-label="04 The Three Ways" data-speaker-notes="Let's start at the bedrock. Quick show of hands - who can name the Three Ways of DevOps? This is a DevOps meetup, so I'm expecting a sea of hands here. For anyone keeping me honest: Flow - work moving smoothly left to right. Feedback - fast signals back the other way. And the third one the canon calls continual learning and experimentation - I file it under Findings: you're always running experiments and keeping what they teach - getting better at getting better. Three Fs: flow, feedback, findings. I'm not here to tear any of this down. Everything tonight stays loyal to these three. They're the philosophy. My argument is only about the measurements we've bolted on top." style="background:#000;padding:56px 96px 64px;display:flex;flex-direction:column;font-family:var(--font-sans);color:#fff;box-sizing:border-box;">
+    <div style="display:flex;align-items:center;gap:24px;flex-shrink:0;">
+      <div style="display:flex;align-items:flex-end;"><span style="font-weight:800;font-size:25px;letter-spacing:-0.04em;color:#fff;line-height:1;">enablis</span><span style="width:9px;height:9px;background:var(--coral-beach);border-radius:0 0 100% 0;margin-left:2px;margin-bottom:2px;"></span></div>
+      <span style="font-family:var(--font-mono);font-weight:500;font-size:24px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.4);white-space:nowrap;">Act I · The canon</span>
+      <div style="flex:1;height:1px;background:var(--hairline);"></div>
+      <span style="font-family:var(--font-mono);font-weight:500;font-size:24px;letter-spacing:0.14em;color:rgba(255,255,255,0.4);">04</span>
+    </div>
+    <div style="font-family:var(--font-mono);font-weight:500;font-size:25px;letter-spacing:0.16em;text-transform:uppercase;color:var(--sea-green);margin:44px 0 0;flex-shrink:0;">Audience check — who can name them?</div>
+    <h1 style="font-weight:800;font-size:96px;line-height:1;letter-spacing:-0.04em;margin:20px 0 0;flex-shrink:0;">The Three Ways<span style="color:var(--coral-beach);">.</span></h1>
+    <div style="flex:1;display:grid;grid-template-columns:repeat(3,1fr);gap:64px;margin-top:56px;min-height:0;">
+      <div style="display:flex;flex-direction:column;border-top:2px solid var(--sea-green);padding-top:30px;">
+        <div style="font-weight:800;font-size:44px;letter-spacing:-0.03em;">Flow</div>
+        <p style="font-size:30px;line-height:1.45;font-weight:330;color:rgba(255,255,255,0.82);margin:22px 0 0;">Work moving smoothly through the system.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;border-top:2px solid var(--sea-green);padding-top:30px;">
+        <div style="font-weight:800;font-size:44px;letter-spacing:-0.03em;">Feedback</div>
+        <p style="font-size:30px;line-height:1.45;font-weight:330;color:rgba(255,255,255,0.82);margin:22px 0 0;">Fast signals back the other way.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;border-top:2px solid var(--sea-green);padding-top:30px;">
+        <div style="font-weight:800;font-size:44px;letter-spacing:-0.03em;">Findings</div>
+        <p style="font-size:30px;line-height:1.45;font-weight:330;color:rgba(255,255,255,0.82);margin:22px 0 0;">Experiments run, lessons kept. Getting better at getting better.</p>
+        <div style="font-family:var(--font-mono);font-weight:500;font-size:20px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.45);margin-top:16px;">The canon: continual learning &amp; experimentation</div>
+      </div>
+    </div>
+    <p style="font-size:27px;font-weight:330;line-height:1.45;color:rgba(255,255,255,0.6);margin:40px 0 0;flex-shrink:0;max-width:1500px;">Flow, feedback, findings — three Fs you can carry. Not here to tear any of this down: the philosophy stays — my argument is only about the <span style="color:#fff;">measurements</span> we've bolted on top.</p>
+  </section>
+
+  <!-- ===================== 05 · WHERE I STARTED ===================== -->
+  <section data-label="Where I started" data-screen-label="05 Where I started" data-speaker-notes="These shaped how I think, and I'd recommend them to anyone here as starting points - The Phoenix Project if you want the story in your bones, The DevOps Handbook for the how. And the newest on the pile: Platform Engineering, by Camille Fournier and Ian Nowland - the first proper text for the field this talk lives in. Remember the name, because it comes back before the close: leverage, the word in tonight's title, is their stated goal for a platform team. So I'm not coming at this as a contrarian. I came up through the canon. The rest of the talk is what happened when I took it seriously and then went somewhere it didn't quite fit." style="background:#000;padding:56px 96px 64px;display:flex;flex-direction:column;font-family:var(--font-sans);color:#fff;box-sizing:border-box;">
+    <div style="display:flex;align-items:center;gap:24px;flex-shrink:0;">
+      <div style="display:flex;align-items:flex-end;"><span style="font-weight:800;font-size:25px;letter-spacing:-0.04em;color:#fff;line-height:1;">enablis</span><span style="width:9px;height:9px;background:var(--coral-beach);border-radius:0 0 100% 0;margin-left:2px;margin-bottom:2px;"></span></div>
+      <span style="font-family:var(--font-mono);font-weight:500;font-size:24px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.4);white-space:nowrap;">Act I · The canon</span>
+      <div style="flex:1;height:1px;background:var(--hairline);"></div>
+      <span style="font-family:var(--font-mono);font-weight:500;font-size:24px;letter-spacing:0.14em;color:rgba(255,255,255,0.4);">05</span>
+    </div>
+    <div style="font-family:var(--font-mono);font-weight:500;font-size:25px;letter-spacing:0.16em;text-transform:uppercase;color:var(--sea-green);margin:44px 0 0;flex-shrink:0;">Where I started</div>
+    <h1 style="font-weight:800;font-size:90px;line-height:1;letter-spacing:-0.04em;margin:20px 0 0;flex-shrink:0;">I came up through the canon<span style="color:var(--coral-beach);">.</span></h1>
+    <div style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:0;min-height:0;margin-top:24px;">
+      <div style="display:flex;gap:44px;align-items:baseline;padding:32px 0;border-top:1px solid var(--hairline);">
+        <span style="font-family: var(--font-mono); font-weight: 500; font-size: 26px; color: rgba(255, 255, 255, 0.45); flex-shrink: 0; width: 56px;">01</span>
+        <span style="font-weight: 700; font-size: 46px; letter-spacing: -0.02em; flex: 0 0 600px;"><span style="position:relative;display:inline-block;">The Phoenix Project<span style="position:absolute;left:-24px;right:-26px;top:-14px;bottom:-16px;border:3px solid var(--coral-beach);border-radius:50%;transform:rotate(-2.5deg);pointer-events:none;"></span></span></span>
+        <span style="font-size: 30px; font-weight: 330; line-height: 1.4; color: rgba(255, 255, 255, 0.74);">The DevOps adoption story. Zero to Hero.</span>
+      </div>
+      <div style="display:flex;gap:44px;align-items:baseline;padding:32px 0;border-top:1px solid var(--hairline);">
+        <span style="font-family:var(--font-mono);font-weight:500;font-size:26px;color:rgba(255,255,255,0.45);flex-shrink:0;width:56px;">02</span>
+        <span style="font-weight:700;font-size:46px;letter-spacing:-0.02em;flex:0 0 600px;">The DevOps Handbook</span>
+        <span style="font-size:30px;font-weight:330;line-height:1.4;color:rgba(255,255,255,0.74);">The very detailed how.</span>
+      </div>
+      <div style="display:flex;gap:44px;align-items:baseline;padding:32px 0;border-top:1px solid var(--hairline);border-bottom:1px solid var(--hairline);">
+        <span style="font-family:var(--font-mono);font-weight:500;font-size:26px;color:rgba(255,255,255,0.45);flex-shrink:0;width:56px;">03</span>
+        <span style="font-weight:700;font-size:46px;letter-spacing:-0.02em;flex:0 0 600px;">Platform Engineering</span>
+        <span style="font-size:30px;font-weight:330;line-height:1.4;color:rgba(255,255,255,0.74);">Fournier &amp; Nowland — the field's main text.</span>
+      </div>
+    </div>
+    <p style="font-size:27px;font-weight:330;line-height:1.45;color:rgba(255,255,255,0.6);margin:36px 0 0;flex-shrink:0;max-width:1500px;">The first two built the worldview. The third gives platform work its own text — <span style="color:#fff;">it comes back before the close</span>.</p>
+  </section>
+
+  <!-- ===================== 06 · THE FIRST CRACK ===================== -->
+  <section data-label="The first crack" data-screen-label="06 The first crack" data-speaker-notes="During my MSc — the DevOps pathway — I went properly down the rabbit hole. For project work I'd still point you straight at Accelerate and the DORA research - genuinely rigorous stuff. But then I got into Forsgren's SPACE framework, and that's where the nagging started. By then I'd spent years flitting between software delivery teams and straight-up IT infrastructure - sometimes building for dev teams, sometimes not - and the framework and what I was seeing on the ground had drifted apart. Something didn't line up, and I couldn't unsee it." style="background:#000;padding:56px 96px 64px;display:flex;flex-direction:column;font-family:var(--font-sans);color:#fff;box-sizing:border-box;">
+    <div style="display:flex;align-items:center;gap:24px;flex-shrink:0;">
+      <div style="display:flex;align-items:flex-end;"><span style="font-weight:800;font-size:25px;letter-spacing:-0.04em;color:#fff;line-height:1;">enablis</span><span style="width:9px;height:9px;background:var(--coral-beach);border-radius:0 0 100% 0;margin-left:2px;margin-bottom:2px;"></span></div>
+      <span style="font-family:var(--font-mono);font-weight:500;font-size:24px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.4);white-space:nowrap;">Act I · The canon</span>
+      <div style="flex:1;height:1px;background:var(--hairline);"></div>
+      <span style="font-family:var(--font-mono);font-weight:500;font-size:24px;letter-spacing:0.14em;color:rgba(255,255,255,0.4);">06</span>
+    </div>
+    <h1 style="font-weight:800;font-size:78px;line-height:1.02;letter-spacing:-0.035em;margin:40px 0 0;flex-shrink:0;">The deep dive — and the <span style="color:var(--coral-beach);">disparity</span>.</h1>
+    <div style="flex:1;display:flex;align-items:center;gap:48px;min-height:0;margin-top:8px;">
+      <div style="flex:1;background:var(--surface);border:1px solid var(--hairline);border-radius:8px;padding:44px 46px;display:flex;flex-direction:column;gap:18px;">
+        <div style="font-family:var(--font-mono);font-weight:500;font-size:24px;letter-spacing:0.14em;text-transform:uppercase;color:var(--sea-green);">Master's deep dive</div>
+        <div style="font-weight:800;font-size:64px;letter-spacing:-0.03em;line-height:1;">Accelerate · DORA</div>
+        <p style="font-size:28px;line-height:1.45;font-weight:330;color:rgba(255,255,255,0.78);margin:6px 0 0;">Rigorous. Brilliant. Still where I'd point you for project work.</p>
+      </div>
+      <div style="flex-shrink:0;display:flex;flex-direction:column;align-items:center;gap:10px;">
+        <span style="font-family:var(--font-mono);font-weight:500;font-size:22px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.45);">then</span>
+        <span style="font-weight:330;font-size:72px;color:rgba(255,255,255,0.55);line-height:1;">→</span>
+      </div>
+      <div style="flex:1;background:rgba(235,81,96,0.06);border:1px solid var(--coral-40);border-radius:8px;padding:44px 46px;display:flex;flex-direction:column;gap:18px;">
+        <div style="font-family:var(--font-mono);font-weight:500;font-size:24px;letter-spacing:0.14em;text-transform:uppercase;color:var(--coral-beach);">Forsgren's framework</div>
+        <div style="font-weight:800;font-size:64px;letter-spacing:-0.03em;line-height:1;">SPACE</div>
+        <p style="font-size:28px;line-height:1.45;font-weight:330;color:rgba(255,255,255,0.78);margin:6px 0 0;">…and the nagging started.</p>
+      </div>
+    </div>
+    <p style="font-size:30px;font-weight:330;line-height:1.5;color:rgba(255,255,255,0.78);margin:40px 0 0;flex-shrink:0;max-width:1560px;">Years flitting between delivery teams and raw infrastructure. The framework and what I saw on the ground had drifted apart — and I couldn't unsee it.</p>
+  </section>
+
+  <!-- ===================== 07 · EVERY COMPANY IS A TECH COMPANY ===================== -->
+  <section data-label="Every company is tech" data-screen-label="07 Every company is a tech company" data-speaker-notes="Here's the backdrop. Every company is a tech company now - there's a server room, or its cloud equivalent, behind every bank, every charity, every retailer. So you've got people invested in what gets built across all sorts of realms, not just product squads. DevEx - developer experience - is a big part of that, and it matters. But it's not the full picture. There's a whole world sat closer to the metal than the app teams, and of all those worlds, platform is the one nearest to DevOps in spirit - and, in my experience, the most often neglected." style="background:#000;padding:56px 96px 72px;display:flex;flex-direction:column;font-family:var(--font-sans);color:#fff;box-sizing:border-box;">
+    <div style="display:flex;align-items:center;gap:24px;flex-shrink:0;">
+      <div style="display:flex;align-items:flex-end;"><span style="font-weight:800;font-size:25px;letter-spacing:-0.04em;color:#fff;line-height:1;">enablis</span><span style="width:9px;height:9px;background:var(--coral-beach);border-radius:0 0 100% 0;margin-left:2px;margin-bottom:2px;"></span></div>
+      <span style="font-family:var(--font-mono);font-weight:500;font-size:24px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.4);white-space:nowrap;">Act II · The mismatch</span>
+      <div style="flex:1;height:1px;background:var(--hairline);"></div>
+      <span style="font-family:var(--font-mono);font-weight:500;font-size:24px;letter-spacing:0.14em;color:rgba(255,255,255,0.4);">07</span>
+    </div>
+    <div style="flex:1;display:flex;flex-direction:column;justify-content:center;min-height:0;">
+      <h1 style="font-weight:800;font-size:104px;line-height:0.98;letter-spacing:-0.045em;margin:0;max-width:1560px;">Every company is a tech company<span style="color: var(--coral-beach);">.</span></h1>
+      <p style="font-size:34px;font-weight:330;line-height:1.5;color:rgba(255,255,255,0.78);margin:44px 0 0;max-width:1440px;">A server room — or its cloud equivalent — sits behind every bank, charity and retailer. People are invested in what gets built across <span style="color:#fff;">all sorts of realms</span>, not just product squads.</p>
+    </div>
+    <div style="display:flex;gap:28px;align-items:flex-start;border-top:1px solid var(--hairline);padding-top:32px;flex-shrink:0;">
+      <span style="font-family:var(--font-mono);font-weight:500;font-size:25px;letter-spacing:0.12em;text-transform:uppercase;color:var(--sea-green);white-space:nowrap;padding-top:6px;">DevEx matters</span>
+      <p style="font-size:30px;font-weight:330;line-height:1.45;color:rgba(255,255,255,0.82);margin:0;">— but it isn't the whole picture. Platform sits closest to DevOps in spirit and, in my experience, is the one most often overlooked.</p>
+    </div>
+  </section>
+
+  <!-- ===================== 08 · THE ORG CHART NOBODY DRAWS ===================== -->
+  <section data-label="The org chart nobody draws" data-screen-label="08 The org chart nobody draws" data-speaker-notes="Before the people bit - the picture. Team Topologies draws the platform as a nice calm slab at the bottom. But look at how orgs actually treat it - the dev teams live up in the light, keep them happy, and the platform is down there in the dark. The unknown. And this trope is everywhere once you see it: the iceberg meme with infra below the waterline, the IT Crowd basement, xkcd's whole internet resting on one project some person in Nebraska has thanklessly maintained since 2003, the BOFH server-dungeon folklore. Here be dragons. And honestly? Fairly close to the truth. Experience down there ranges from big-iron Unix veterans to first-jobbers. Sometimes the laggards of the space - they actively dodge the terminology and the methodologies. Happy in their bubbles. But they want to do good work, they want to be effective, and they are genuinely the most fun teams I have ever worked in. The rest of tonight is about turning the lights on down there - without ruining what makes it work." style="background:#000;padding:56px 96px 56px;display:flex;flex-direction:column;font-family:var(--font-sans);color:#fff;box-sizing:border-box;">
+    <div style="display:flex;align-items:center;gap:24px;flex-shrink:0;">
+      <div style="display:flex;align-items:flex-end;"><span style="font-weight:800;font-size:25px;letter-spacing:-0.04em;color:#fff;line-height:1;">enablis</span><span style="width:9px;height:9px;background:var(--coral-beach);border-radius:0 0 100% 0;margin-left:2px;margin-bottom:2px;"></span></div>
+      <span style="font-family:var(--font-mono);font-weight:500;font-size:24px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.4);white-space:nowrap;">Act II · The mismatch</span>
+      <div style="flex:1;height:1px;background:var(--hairline);"></div>
+      <span style="font-family:var(--font-mono);font-weight:500;font-size:24px;letter-spacing:0.14em;color:rgba(255,255,255,0.4);">08</span>
+    </div>
+    <h1 style="font-weight:800;font-size:76px;line-height:1.02;letter-spacing:-0.04em;margin:34px 0 0;flex-shrink:0;">The org chart nobody draws<span style="color:var(--coral-beach);">.</span></h1>
+    <div style="flex:1;display:grid;grid-template-columns:1.08fr 0.92fr;gap:74px;align-items:stretch;min-height:0;margin-top:34px;">
+      <div style="display:flex;flex-direction:column;min-height:0;">
+        <div style="display:flex;align-items:center;justify-content:center;height:62px;border:1px solid var(--hairline);border-radius:6px;flex-shrink:0;">
+          <span style="font-family:var(--font-mono);font-weight:500;font-size:21px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.45);">The business</span>
+        </div>
+        <div style="height:118px;background:rgba(91,192,190,0.14);border:1px solid var(--sea-40);border-radius:6px;margin-top:14px;display:flex;align-items:center;justify-content:space-between;padding:0 36px;flex-shrink:0;">
+          <span style="font-weight:700;font-size:34px;letter-spacing:-0.02em;">Product &amp; dev teams</span>
+          <span style="font-family:var(--font-mono);font-weight:500;font-size:21px;letter-spacing:0.12em;text-transform:uppercase;color:var(--sea-green);">Keep them happy ☀</span>
+        </div>
+        <div style="display:flex;align-items:center;justify-content:center;gap:26px;height:76px;flex-shrink:0;">
+          <span style="font-family:var(--font-mono);font-weight:500;font-size:20px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.45);">Tickets go down ↓</span>
+          <span style="height:100%;border-left:2px dashed rgba(255,255,255,0.25);"></span>
+          <span style="font-family:var(--font-mono);font-weight:500;font-size:20px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.45);">↑ Magic comes up</span>
+        </div>
+        <div style="flex:1;position:relative;border:1px dashed rgba(255,255,255,0.3);border-radius:6px;min-height:240px;background-color:#030303;background-image:radial-gradient(rgba(255,255,255,0.07) 1.5px, transparent 1.5px);background-size:26px 26px;overflow:hidden;">
+          <span style="position:absolute;top:22px;right:26px;font-family:var(--font-mono);font-weight:500;font-size:21px;letter-spacing:0.12em;text-transform:uppercase;color:var(--coral-beach);border:1px solid var(--coral-40);border-radius:4px;padding:8px 14px;background:rgba(0,0,0,0.6);">Here be dragons</span>
+          <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center;">
+            <div style="font-family:var(--font-mono);font-weight:700;font-size:44px;letter-spacing:0.22em;text-transform:uppercase;color:rgba(255,255,255,0.55);">The platform</div>
+            <div style="font-family:var(--font-mono);font-weight:500;font-size:20px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.3);margin-top:14px;">Status: unknown · Map: none</div>
+          </div>
+          <div style="position:absolute;bottom:24px;left:28px;display:flex;align-items:center;gap:18px;">
+            <span style="display:flex;gap:10px;"><span style="width:10px;height:10px;border-radius:50%;background:var(--sea-green);box-shadow:0 0 16px rgba(91,192,190,0.9);"></span><span style="width:10px;height:10px;border-radius:50%;background:var(--sea-green);box-shadow:0 0 16px rgba(91,192,190,0.9);"></span><span style="width:10px;height:10px;border-radius:50%;background:var(--sea-green);box-shadow:0 0 16px rgba(91,192,190,0.9);"></span></span>
+            <span style="font-family:var(--font-mono);font-weight:500;font-size:20px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.5);">A small crew of outlaws — they know where everything is</span>
+          </div>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;min-height:0;">
+        <div style="font-family:var(--font-mono);font-weight:500;font-size:23px;letter-spacing:0.14em;text-transform:uppercase;color:var(--sea-green);flex-shrink:0;">The honest bit</div>
+        <div style="font-weight:800;font-size:46px;letter-spacing:-0.03em;line-height:1.05;margin-top:16px;flex-shrink:0;">Fairly close to the truth<span style="color:var(--coral-beach);">.</span></div>
+        <div style="flex:1;display:flex;flex-direction:column;justify-content:center;min-height:0;">
+          <div style="display:flex;gap:18px;align-items:baseline;padding:20px 0;border-top:1px solid var(--hairline);"><span style="color:var(--sea-green);font-weight:700;font-size:24px;flex-shrink:0;line-height:1;">✓</span><p style="font-size:27px;font-weight:330;line-height:1.35;color:rgba(255,255,255,0.84);margin:0;">Experience for days — big-iron veterans to first-jobbers, one team.</p></div>
+          <div style="display:flex;gap:18px;align-items:baseline;padding:20px 0;border-top:1px solid var(--hairline);"><span style="color:var(--sea-green);font-weight:700;font-size:24px;flex-shrink:0;line-height:1;">✓</span><p style="font-size:27px;font-weight:330;line-height:1.35;color:rgba(255,255,255,0.84);margin:0;">Allergic to ceremony and buzzwords — by choice, not ignorance.</p></div>
+          <div style="display:flex;gap:18px;align-items:baseline;padding:20px 0;border-top:1px solid var(--hairline);"><span style="color:var(--sea-green);font-weight:700;font-size:24px;flex-shrink:0;line-height:1;">✓</span><p style="font-size:27px;font-weight:330;line-height:1.35;color:rgba(255,255,255,0.84);margin:0;">Happy in their bubbles — they want to do good work, effectively.</p></div>
+          <div style="display:flex;gap:18px;align-items:baseline;padding:20px 0;border-top:1px solid var(--hairline);border-bottom:1px solid var(--hairline);"><span style="color:var(--sea-green);font-weight:700;font-size:24px;flex-shrink:0;line-height:1;">✓</span><p style="font-size:27px;font-weight:330;line-height:1.35;color:rgba(255,255,255,0.84);margin:0;">Genuinely the most fun teams to be in.</p></div>
+        </div>
+        <p style="font-size:28px;font-weight:330;line-height:1.4;color:rgba(255,255,255,0.7);margin:0;flex-shrink:0;">The rest of tonight is about <span style="color:#fff;">turning the lights on down there</span> — without ruining what makes it work.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 09 · THE PEOPLE, AND THE LEGACY SKILLS ===================== -->
+  <section data-label="The people" data-screen-label="09 The people and legacy skills" data-speaker-notes="A quick word on people, because it matters to me. A lot of the best infrastructure knowledge in any org sits with the folks who run the legacy on-prem equipment, networks, the legacy systems. That experience is an asset, not a problem to migrate away from. So any model worth having has to work for them too, not just the cloud-native crowd — and this one does: it's about good method on whatever kit you've got, not about being in the cloud." style="background:#000;padding:56px 96px 72px;display:flex;flex-direction:column;font-family:var(--font-sans);color:#fff;box-sizing:border-box;">
+    <div style="display:flex;align-items:center;gap:24px;flex-shrink:0;">
+      <div style="display:flex;align-items:flex-end;"><span style="font-weight:800;font-size:25px;letter-spacing:-0.04em;color:#fff;line-height:1;">enablis</span><span style="width:9px;height:9px;background:var(--coral-beach);border-radius:0 0 100% 0;margin-left:2px;margin-bottom:2px;"></span></div>
+      <span style="font-family:var(--font-mono);font-weight:500;font-size:24px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.4);white-space:nowrap;">Act II · The mismatch</span>
+      <div style="flex:1;height:1px;background:var(--hairline);"></div>
+      <span style="font-family:var(--font-mono);font-weight:500;font-size:24px;letter-spacing:0.14em;color:rgba(255,255,255,0.4);">09</span>
+    </div>
+    <div style="flex:1;display:grid;grid-template-columns:1.25fr 1fr;gap:80px;align-items:center;min-height:0;">
+      <div>
+        <h1 style="font-weight:800;font-size:88px;line-height:1.0;letter-spacing:-0.04em;margin:0;">Build on experience<span style="color: var(--coral-beach);">.</span></h1>
+        <p style="font-size:32px;font-weight:330;line-height:1.5;color:rgba(255,255,255,0.78);margin:40px 0 0;max-width:780px;">New delivery methods <span style="color:#fff;">and</span> hard-won legacy skills — on-prem, networks, the old iron. Still genuinely useful. The goal was never to replace that experience.</p>
+      </div>
+      <div style="background:var(--surface);border:1px solid var(--hairline);border-radius:8px;padding:46px 48px;">
+        <div style="font-family:var(--font-mono);font-weight:500;font-size:24px;letter-spacing:0.12em;text-transform:uppercase;color:var(--sea-green);margin-bottom:18px;">The test</div>
+        <p style="font-size:34px;font-weight:330;line-height:1.45;color:#fff;margin:0;">Whatever model we land on has to work for <span style="font-weight:600;">them</span> too — not just the cloud-native crowd.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 10 · WHERE DORA DIVERGES ===================== -->
+  <section data-label="DORA diverges" data-screen-label="10 Where DORA diverges" data-speaker-notes="So here's the crux. The DORA metrics — five now, the research has moved on — were built to measure software delivery, and they don't all fit a platform team equally.
+The real misfit is deployment frequency. For a delivery team, shipping more often is a healthy sign; for a platform team it isn't a goal at all — you can run a rock-solid platform and deploy to it rarely. More isn't better when you're the foundation." style="background:#000;padding:56px 96px 64px;display:flex;flex-direction:column;font-family:var(--font-sans);color:#fff;box-sizing:border-box;">
+    <div style="display:flex;align-items:center;gap:24px;flex-shrink:0;">
+      <div style="display:flex;align-items:flex-end;"><span style="font-weight:800;font-size:25px;letter-spacing:-0.04em;color:#fff;line-height:1;">enablis</span><span style="width:9px;height:9px;background:var(--coral-beach);border-radius:0 0 100% 0;margin-left:2px;margin-bottom:2px;"></span></div>
+      <span style="font-family:var(--font-mono);font-weight:500;font-size:24px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.4);white-space:nowrap;">Act II · The mismatch</span>
+      <div style="flex:1;height:1px;background:var(--hairline);"></div>
+      <span style="font-family:var(--font-mono);font-weight:500;font-size:24px;letter-spacing:0.14em;color:rgba(255,255,255,0.4);">10</span>
+    </div>
+    <div style="font-family:var(--font-mono);font-weight:500;font-size:25px;letter-spacing:0.16em;text-transform:uppercase;color:var(--coral-beach);margin:40px 0 0;flex-shrink:0;">Where DORA starts to diverge</div>
+    <div style="flex:1;display:grid;grid-template-columns:0.95fr 1.05fr;gap:80px;align-items:center;min-height:0;margin-top:8px;">
+      <div>
+        <div style="font-weight:800;font-size:158px;line-height:0.9;letter-spacing:-0.04em;background:var(--gradient-text);-webkit-background-clip:text;background-clip:text;color:transparent;">1 of 5</div>
+        <div style="font-size:32px;font-weight:330;line-height:1.4;color:rgba(255,255,255,0.82);margin-top:18px;">One metric is the real misfit — it rewards <span style="color:#fff;font-weight:600;">activity</span>.</div>
+        <div style="font-family:var(--font-mono);font-weight:500;font-size:24px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-top:16px;">DEPLOYMENT FREQUENCY</div>
+      </div>
+      <div style="display:flex;gap:40px;align-items:stretch;">
+        <div style="width:3px;background:var(--coral-beach);flex-shrink:0;"></div>
+        <div>
+          <p style="font-size:44px;font-weight:330;line-height:1.32;color:#fff;margin:0;">We ship constantly too — but deployment frequency describes your <span style="font-weight:700;">customers'</span> success, not yours.</p>
+          <p style="font-size:28px;font-weight:330;line-height:1.5;color:rgba(255,255,255,0.74);margin:30px 0 0;">Deployment frequency was built to score product delivery. You can run a rock-solid platform and deploy to it rarely — more isn't better when you're the foundation. The wrong ruler for the layer underneath.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 11 · A GOOD DAY IS A QUIET DAY ===================== -->
+  <section data-label="A quiet day" data-screen-label="11 A good day is a quiet day" data-speaker-notes="This is the reframe I want you to leave with. For an infrastructure team, a great day is a quiet one. No incidents. Systems steady. Space to learn, to maintain, and to build the platform the dev teams deploy onto. And I need to be precise, because it's easy to overstate: we do deploy fast and often - IaC, config, automation, patches, platform features, shipped constantly - and we're frequently the team providing the pipeline everyone else deploys through. So this isn't 'infra doesn't do continuous delivery' - we absolutely do. What's different is what that speed is for: moving fast to give other teams leverage, to recover when something breaks, to patch when we must - not to push features out the door. So measure us by the leverage others get and by the floor holding, not by a deploy count. Do that well and the result is calm - and we move fast precisely so things can stay quiet. Quiet isn't idle. Quiet is winning." style="background:#000;padding:56px 96px 72px;display:flex;flex-direction:column;font-family:var(--font-sans);color:#fff;box-sizing:border-box;">
+    <div style="display:flex;align-items:center;gap:24px;flex-shrink:0;">
+      <div style="display:flex;align-items:flex-end;"><span style="font-weight:800;font-size:25px;letter-spacing:-0.04em;color:#fff;line-height:1;">enablis</span><span style="width:9px;height:9px;background:var(--coral-beach);border-radius:0 0 100% 0;margin-left:2px;margin-bottom:2px;"></span></div>
+      <span style="font-family:var(--font-mono);font-weight:500;font-size:24px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.4);white-space:nowrap;">Act II · The mismatch</span>
+      <div style="flex:1;height:1px;background:var(--hairline);"></div>
+      <span style="font-family:var(--font-mono);font-weight:500;font-size:24px;letter-spacing:0.14em;color:rgba(255,255,255,0.4);">11</span>
+    </div>
+    <div style="flex:1;display:flex;flex-direction:column;justify-content:center;min-height:0;">
+      <div style="font-family:var(--font-mono);font-weight:500;font-size:25px;letter-spacing:0.16em;text-transform:uppercase;color:var(--sea-green);margin-bottom:26px;">The reframe to take home</div>
+      <h1 style="font-weight:800;font-size:96px;line-height:0.99;letter-spacing:-0.045em;margin:0;max-width:1600px;">For us, a good day is a quiet one<span style="color:var(--coral-beach);">.</span></h1>
+      <p style="font-size:33px;font-weight:330;line-height:1.5;color:rgba(255,255,255,0.8);margin:42px 0 0;max-width:1480px;">No incidents. Systems steady. Space to <span style="color:#fff;font-weight:600;">learn</span>, to <span style="color:#fff;font-weight:600;">maintain</span>, and to <span style="color:#fff;font-weight:600;">build</span> the platform that dev teams deploy onto.</p>
+    </div>
+    <div style="display:flex;align-items:flex-end;gap:64px;flex-shrink:0;border-top:1px solid var(--hairline);padding-top:32px;">
+      <div style="flex:1;">
+        <div style="font-family:var(--font-mono);font-weight:500;font-size:23px;letter-spacing:0.12em;text-transform:uppercase;color:var(--sea-green);margin-bottom:14px;">Quiet isn't idle</div>
+        <p style="font-size:27px;font-weight:330;line-height:1.45;color:rgba(255,255,255,0.7);margin:0;max-width:1120px;">We still ship constantly — IaC, config, automation, patches. We move fast precisely <span style="color:#fff;">so things can stay quiet</span>.</p>
+      </div>
+      <div style="font-weight:800;font-size:62px;letter-spacing:-0.035em;white-space:nowrap;line-height:1;"><span style="background:var(--gradient-text);-webkit-background-clip:text;background-clip:text;color:transparent;">Quiet is winning</span><span style="color:var(--coral-beach);">.</span></div>
+    </div>
+  </section>
+
+  <!-- ===================== 12 · SRE-SHAPED, MOVED ON ===================== -->
+  <section data-label="SRE-shaped" data-screen-label="12 SRE-shaped, moved on" data-speaker-notes="There's a hangover from the SRE days in how a lot of us work - and that's no bad thing, because SRE gave us operational thinking: SLOs, error budgets, treating toil as the enemy. We keep all of that. But we've moved on. What I'm describing isn't SRE renamed - it's its own discipline that carries the best of SRE forward and wraps it in a platform mindset: you're not just keeping systems up, you're building something other teams actively choose to use. And my honest gripe alongside that: plenty of organisations are keen to 'adopt DevOps' without really understanding what it means or entails - they take the label, not the substance. A DevOps approach genuinely makes teams more effective. I just think the ideals look different in an infra and platform team, and nobody had written that down in a way you can actually use." style="background:#000;padding:56px 96px 72px;display:flex;flex-direction:column;font-family:var(--font-sans);color:#fff;box-sizing:border-box;">
+    <div style="display:flex;align-items:center;gap:24px;flex-shrink:0;">
+      <div style="display:flex;align-items:flex-end;"><span style="font-weight:800;font-size:25px;letter-spacing:-0.04em;color:#fff;line-height:1;">enablis</span><span style="width:9px;height:9px;background:var(--coral-beach);border-radius:0 0 100% 0;margin-left:2px;margin-bottom:2px;"></span></div>
+      <span style="font-family:var(--font-mono);font-weight:500;font-size:24px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.4);white-space:nowrap;">Act II · The mismatch</span>
+      <div style="flex:1;height:1px;background:var(--hairline);"></div>
+      <span style="font-family:var(--font-mono);font-weight:500;font-size:24px;letter-spacing:0.14em;color:rgba(255,255,255,0.4);">12</span>
+    </div>
+    <div style="flex:1;display:flex;flex-direction:column;justify-content:center;min-height:0;">
+      <div style="font-family:var(--font-mono);font-weight:500;font-size:25px;letter-spacing:0.16em;text-transform:uppercase;color:var(--sea-green);margin-bottom:26px;">Keep the best of SRE — leave the rest behind</div>
+      <h1 style="font-weight:800;font-size:90px;line-height:0.98;letter-spacing:-0.045em;margin:0;max-width:1480px;">SRE-shaped. But we've moved on<span style="color:var(--coral-beach);">.</span></h1>
+      <div style="display:flex;align-items:center;gap:28px;margin:38px 0 0;flex-wrap:wrap;">
+        <span style="font-weight:700;font-size:46px;letter-spacing:-0.025em;color:#fff;">SRE-style operations</span>
+        <span style="font-weight:330;font-size:42px;color:var(--sea-green);">+</span>
+        <span style="font-weight:700;font-size:46px;letter-spacing:-0.025em;color:#fff;">a platform mindset</span>
+      </div>
+      <p style="font-size:31px;font-weight:330;line-height:1.5;color:rgba(255,255,255,0.78);margin:36px 0 0;max-width:1480px;">SRE gave us the best operational thinking we've got — SLOs, error budgets, toil as the enemy. We keep all of that. But this isn't SRE renamed: it's its own discipline. You're not just keeping systems up — you're building something teams actively <span style="color:#fff;">choose</span> to use.</p>
+    </div>
+    <div style="display:flex;align-items:baseline;gap:28px;flex-shrink:0;">
+      <div style="flex:1;height:1px;background:var(--hairline);"></div>
+      <span style="font-weight:800;font-size:60px;letter-spacing:-0.035em;white-space:nowrap;">So I did<span style="color:var(--coral-beach);">.</span></span>
+    </div>
+  </section>
+
+  <!-- ===================== 13 · THREE ALTITUDES ===================== -->
+  <section data-label="Three altitudes" data-screen-label="13 Three altitudes" data-speaker-notes="I'm going to give you three things, at three different heights - and the trick is they don't repeat each other. At the top: values - why we work this way. The Three Ways. In the middle: the model - the scoreboard we steer by. At the bottom: triage - the bit you actually do on Monday morning: find your worst pain and take one step. Values tell you why, the model tells you what good looks like, the triage tells you what to do next. " style="background:#000;padding:56px 96px 64px;display:flex;flex-direction:column;font-family:var(--font-sans);color:#fff;box-sizing:border-box;">
+    <div style="display:flex;align-items:center;gap:24px;flex-shrink:0;">
+      <div style="display:flex;align-items:flex-end;"><span style="font-weight:800;font-size:25px;letter-spacing:-0.04em;color:#fff;line-height:1;">enablis</span><span style="width:9px;height:9px;background:var(--coral-beach);border-radius:0 0 100% 0;margin-left:2px;margin-bottom:2px;"></span></div>
+      <span style="font-family:var(--font-mono);font-weight:500;font-size:24px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.4);white-space:nowrap;">Act III · The answer</span>
+      <div style="flex:1;height:1px;background:var(--hairline);"></div>
+      <span style="font-family:var(--font-mono);font-weight:500;font-size:24px;letter-spacing:0.14em;color:rgba(255,255,255,0.4);">13</span>
+    </div>
+    <div style="display:flex;align-items:flex-end;gap:30px;margin:38px 0 4px;flex-shrink:0;">
+      <h1 style="font-weight:800;font-size:84px;line-height:1;letter-spacing:-0.04em;margin:0;">Three altitudes<span style="color:var(--coral-beach);">.</span></h1>
+      <p style="font-size:27px;font-weight:330;line-height:1.4;color:rgba(255,255,255,0.62);margin:0 0 12px;max-width:880px;">Three things, at three different heights — and the trick is they don't repeat each other.</p>
+    </div>
+    <div style="flex:1;display:flex;flex-direction:column;min-height:0;margin-top:18px;">
+      <div style="flex:1;display:flex;align-items:center;gap:56px;border-top:1px solid var(--hairline);">
+        <div style="width:190px;flex-shrink:0;display:flex;flex-direction:column;gap:6px;">
+          <span style="font-family:var(--font-mono);font-weight:500;font-size:22px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.4);">Top ↑</span>
+          <span style="font-family:var(--font-mono);font-weight:500;font-size:22px;letter-spacing:0.14em;text-transform:uppercase;color:var(--sea-green);">Why</span>
+        </div>
+        <div style="font-weight:800;font-size:76px;letter-spacing:-0.035em;line-height:1;color:var(--sea-green);width:420px;flex-shrink:0;">Values<span style="color:rgba(255,255,255,0.25);">.</span></div>
+        <p style="font-size:31px;font-weight:330;line-height:1.4;color:rgba(255,255,255,0.82);margin:0;"><span style="color:#fff;font-weight:600;">Why we work this way.</span> The Three Ways — the philosophy underneath.</p>
+      </div>
+      <div style="flex:1;display:flex;align-items:center;gap:56px;border-top:1px solid var(--hairline);">
+        <div style="width:190px;flex-shrink:0;display:flex;flex-direction:column;gap:6px;">
+          <span style="font-family:var(--font-mono);font-weight:500;font-size:22px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.4);">Middle</span>
+          <span style="font-family:var(--font-mono);font-weight:500;font-size:22px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.75);">What good looks like</span>
+        </div>
+        <div style="font-weight:800;font-size:76px;letter-spacing:-0.035em;line-height:1;color:#fff;width:420px;flex-shrink:0;">Model<span style="color:var(--coral-beach);">.</span></div>
+        <p style="font-size:31px;font-weight:330;line-height:1.4;color:rgba(255,255,255,0.82);margin:0;"><span style="color:#fff;font-weight:600;">The scoreboard we steer by.</span> One line, five things.</p>
+      </div>
+      <div style="flex:1;display:flex;align-items:center;gap:56px;border-top:1px solid var(--hairline);border-bottom:1px solid var(--hairline);">
+        <div style="width:190px;flex-shrink:0;display:flex;flex-direction:column;gap:6px;">
+          <span style="font-family:var(--font-mono);font-weight:500;font-size:22px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.4);">Bottom ↓</span>
+          <span style="font-family:var(--font-mono);font-weight:500;font-size:22px;letter-spacing:0.14em;text-transform:uppercase;color:var(--coral-beach);">What to do</span>
+        </div>
+        <div style="font-weight:800;font-size:76px;letter-spacing:-0.035em;line-height:1;color:var(--coral-beach);width:420px;flex-shrink:0;">Triage<span style="color:rgba(255,255,255,0.25);">.</span></div>
+        <p style="font-size:31px;font-weight:330;line-height:1.4;color:rgba(255,255,255,0.82);margin:0;"><span style="color:#fff;font-weight:600;">What you do Monday.</span> Pick the worst pain — take one step.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 14 · VALUES — CALMS ===================== -->
+  <section data-label="Values · CALMS" data-screen-label="14 Values and CALMS" data-speaker-notes="Top altitude: values. This all sits on the Three Ways - Flow, Feedback, Findings - which come straight out of Lean and the Toyota Production System. That's the philosophy, and we're not changing it. If you like CALMS as your checklist - Culture, Automation, Lean, Measurement, Sharing - here's the neat bit: the model I'm about to show you is the M, the Measurement piece, built for platform teams. And using it quietly pulls the other letters along - you cut toil, that's Automation; you protect flow, that's Lean; you share paved paths and docs to cut cognitive load, that's Sharing; and the whole improvement loop is the Culture. One model, and the rest look after themselves. I won't labour CALMS beyond that - the values are the Three Ways." style="background:#000;padding:56px 96px 60px;display:flex;flex-direction:column;font-family:var(--font-sans);color:#fff;box-sizing:border-box;">
+    <div style="display:flex;align-items:center;gap:24px;flex-shrink:0;">
+      <div style="display:flex;align-items:flex-end;"><span style="font-weight:800;font-size:25px;letter-spacing:-0.04em;color:#fff;line-height:1;">enablis</span><span style="width:9px;height:9px;background:var(--coral-beach);border-radius:0 0 100% 0;margin-left:2px;margin-bottom:2px;"></span></div>
+      <span style="font-family:var(--font-mono);font-weight:500;font-size:24px;letter-spacing:0.14em;text-transform:uppercase;color:var(--sea-green);white-space:nowrap;">Altitude 1 · Values</span>
+      <div style="flex:1;height:1px;background:var(--hairline);"></div>
+      <span style="font-family:var(--font-mono);font-weight:500;font-size:24px;letter-spacing:0.14em;color:rgba(255,255,255,0.4);">14</span>
+    </div>
+    <div style="font-family:var(--font-mono);font-weight:500;font-size:24px;letter-spacing:0.13em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin:36px 0 0;flex-shrink:0;">Sits on the Three Ways — from Lean &amp; the Toyota Production System</div>
+    <h1 style="font-weight:800;font-size:72px;line-height:1.02;letter-spacing:-0.035em;margin:16px 0 0;flex-shrink:0;">CALMS is the checklist. This model is the <span style="background:var(--gradient-text);-webkit-background-clip:text;background-clip:text;color:transparent;">M</span>.</h1>
+    <div style="flex:1;display:grid;grid-template-columns:repeat(5,1fr);gap:0;margin-top:46px;min-height:0;">
+      <div style="display:flex;flex-direction:column;padding:0 30px 0 0;">
+        <div style="font-weight:800;font-size:128px;line-height:0.82;letter-spacing:-0.04em;color:rgba(255,255,255,0.16);">C</div>
+        <div style="font-family:var(--font-mono);font-weight:500;font-size:23px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.92);margin-top:18px;">Culture</div>
+        <p style="font-size:24px;line-height:1.4;font-weight:330;color:rgba(255,255,255,0.6);margin:12px 0 0;">The whole improvement loop.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;padding:0 30px;border-left:1px solid var(--hairline);">
+        <div style="font-weight:800;font-size:128px;line-height:0.82;letter-spacing:-0.04em;color:rgba(255,255,255,0.16);">A</div>
+        <div style="font-family:var(--font-mono);font-weight:500;font-size:23px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.92);margin-top:18px;">Automation</div>
+        <p style="font-size:24px;line-height:1.4;font-weight:330;color:rgba(255,255,255,0.6);margin:12px 0 0;">You cut toil.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;padding:0 30px;border-left:1px solid var(--hairline);">
+        <div style="font-weight:800;font-size:128px;line-height:0.82;letter-spacing:-0.04em;color:rgba(255,255,255,0.16);">L</div>
+        <div style="font-family:var(--font-mono);font-weight:500;font-size:23px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.92);margin-top:18px;">Lean</div>
+        <p style="font-size:24px;line-height:1.4;font-weight:330;color:rgba(255,255,255,0.6);margin:12px 0 0;">You protect flow.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;padding:30px 28px;background:rgba(91,192,190,0.08);border:1px solid var(--sea-40);border-radius:8px;margin:-8px 0;">
+        <div style="display:flex;align-items:flex-start;justify-content:space-between;">
+          <div style="font-weight:800;font-size:128px;line-height:0.82;letter-spacing:-0.04em;color:var(--sea-green);">M</div>
+          <span style="font-family:var(--font-mono);font-weight:500;font-size:18px;letter-spacing:0.12em;text-transform:uppercase;color:var(--sea-green);border:1px solid var(--sea-40);border-radius:4px;padding:5px 10px;margin-top:8px;white-space:nowrap;">The model</span>
+        </div>
+        <div style="font-family:var(--font-mono);font-weight:500;font-size:23px;letter-spacing:0.1em;text-transform:uppercase;color:#fff;margin-top:18px;">Measurement</div>
+        <p style="font-size:24px;line-height:1.4;font-weight:330;color:rgba(255,255,255,0.86);margin:12px 0 0;">This model — built for platform teams.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;padding:0 0 0 30px;border-left:1px solid var(--hairline);">
+        <div style="font-weight:800;font-size:128px;line-height:0.82;letter-spacing:-0.04em;color:rgba(255,255,255,0.16);">S</div>
+        <div style="font-family:var(--font-mono);font-weight:500;font-size:23px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.92);margin-top:18px;">Sharing</div>
+        <p style="font-size:24px;line-height:1.4;font-weight:330;color:rgba(255,255,255,0.6);margin:12px 0 0;">Paved paths &amp; docs cut load.</p>
+      </div>
+    </div>
+    <div style="display:flex;align-items:baseline;gap:24px;border-top:1px solid var(--hairline);padding-top:28px;margin-top:36px;flex-shrink:0;">
+      <span style="font-family:var(--font-mono);font-weight:500;font-size:23px;letter-spacing:0.12em;text-transform:uppercase;color:var(--sea-green);white-space:nowrap;">Steer by the M</span>
+      <p style="font-size:28px;font-weight:330;line-height:1.4;color:rgba(255,255,255,0.78);margin:0;">Steer well by the Measurement piece and you pull the other letters along. <span style="color:#fff;">One model — and the rest look after themselves.</span></p>
+    </div>
+  </section>
+
+  <!-- ===================== 15 · MODEL — THE REVEAL ===================== -->
+  <section data-label="The reveal" data-screen-label="15 The model — the reveal" data-speaker-notes="Middle altitude: the mental model. And notice the important move: leverage is the output here, not an input. Leverage is the whole point of a platform team - a few of us multiplying the many - so it's the thing that comes out, not a box you tick. It comes from four things, gated by a fifth. The value you create is reach times depth - how widely you're used, times how much more teams can do because you exist. From that you subtract the friction you add - the cognitive load you put on others, plus the toil you carry yourselves. And the whole lot is multiplied by reliability (the no brainer), nought to one: if trust collapses, it drags everything towards zero. And reliability is in here for a reason - it is a DORA metric. It was added as the fifth one, the operational-performance measure alongside the four throughput and stability metrics. So this isn't me inventing a term: the one DORA metric that fits us squarely is the one I've made the gate on everything else. Grow two, shrink two, never breach the floor. And to be clear - it's a mental model, not a sum. Don't go plugging numbers in. It's there to shape judgement." style="background:var(--gradient-bg);padding:52px 96px 56px;display:flex;flex-direction:column;font-family:var(--font-sans);color:#fff;box-sizing:border-box;">
+    <div style="display:flex;align-items:center;gap:24px;flex-shrink:0;">
+      <div style="display:flex;align-items:flex-end;"><span style="font-weight:800;font-size:25px;letter-spacing:-0.04em;color:#fff;line-height:1;">enablis</span><span style="width:9px;height:9px;background:var(--coral-beach);border-radius:0 0 100% 0;margin-left:2px;margin-bottom:2px;"></span></div>
+      <span style="font-family:var(--font-mono);font-weight:500;font-size:24px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.55);white-space:nowrap;">Altitude 2 · Model — the reveal</span>
+      <div style="flex:1;height:1px;background:rgba(255,255,255,0.18);"></div>
+      <span style="font-family:var(--font-mono);font-weight:500;font-size:24px;letter-spacing:0.14em;color:rgba(255,255,255,0.55);">15</span>
+    </div>
+    <div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:0;gap:0;">
+      <div style="font-family:var(--font-mono);font-weight:500;font-size:24px;letter-spacing:0.16em;text-transform:uppercase;color:var(--sea-green);white-space:nowrap;">Leverage is the output — not an input</div>
+      <div style="display:flex;align-items:baseline;justify-content:center;gap:26px;margin-top:34px;flex-wrap:wrap;">
+        <span style="font-weight: 800; font-size: 104px; letter-spacing: -0.04em; line-height: 1; background: var(--gradient-text); -webkit-background-clip: text; background-clip: text; color: transparent; width: 460px; height: 119px">Leverage</span>
+        <span style="font-weight:330;font-size:76px;color:rgba(255,255,255,0.55);line-height:1;">=</span>
+        <span style="font-weight:800;font-size:84px;letter-spacing:-0.03em;line-height:1;color:#fff;">Reliability</span>
+        <span style="font-weight:330;font-size:62px;color:rgba(255,255,255,0.55);line-height:1;">×</span>
+      </div>
+      <div style="display:flex;align-items:baseline;justify-content:center;gap:16px;margin-top:22px;flex-wrap:wrap;">
+        <span style="font-weight:330;font-size:84px;color:rgba(255,255,255,0.4);line-height:1;">[</span>
+        <span style="font-weight:800;font-size:66px;letter-spacing:-0.03em;line-height:1;color:var(--sea-green);">Reach</span>
+        <span style="font-weight:330;font-size:50px;color:rgba(255,255,255,0.5);line-height:1;">×</span>
+        <span style="font-weight:800;font-size:66px;letter-spacing:-0.03em;line-height:1;color:var(--sea-green);">Depth</span>
+        <span style="font-weight:330;font-size:54px;color:rgba(255,255,255,0.55);line-height:1;margin:0 6px;">−</span>
+        <span style="font-weight:330;font-size:66px;color:rgba(255,255,255,0.4);line-height:1;">(</span>
+        <span style="font-weight:800;font-size:60px;letter-spacing:-0.03em;line-height:1;color:var(--coral-beach);">Cognitive Load</span>
+        <span style="font-weight:330;font-size:50px;color:rgba(255,255,255,0.5);line-height:1;">+</span>
+        <span style="font-weight:800;font-size:66px;letter-spacing:-0.03em;line-height:1;color:var(--coral-beach);">Toil</span>
+        <span style="font-weight:330;font-size:66px;color:rgba(255,255,255,0.4);line-height:1;">)</span>
+        <span style="font-weight:330;font-size:84px;color:rgba(255,255,255,0.4);line-height:1;">]</span>
+      </div>
+      <div style="display:flex;gap:18px;margin-top:44px;flex-wrap:wrap;justify-content:center;">
+        <span style="font-family:var(--font-mono);font-weight:500;font-size:21px;letter-spacing:0.1em;text-transform:uppercase;color:var(--sea-green);border:1px solid var(--sea-40);border-radius:4px;padding:10px 18px;white-space:nowrap;">GROW ↑</span>
+        <span style="font-family:var(--font-mono);font-weight:500;font-size:21px;letter-spacing:0.1em;text-transform:uppercase;color:var(--coral-beach);border:1px solid var(--coral-40);border-radius:4px;padding:10px 18px;white-space:nowrap;">SHRINK ↓</span>
+        <span style="font-family:var(--font-mono);font-weight:500;font-size:21px;letter-spacing:0.1em;text-transform:uppercase;color:#fff;border:1px solid rgba(255,255,255,0.25);border-radius:4px;padding:10px 18px;white-space:nowrap;">The floor · Reliability 0→1</span>
+      </div>
+    </div>
+    <div style="text-align:center;flex-shrink:0;">
+      <div style="font-weight:800;font-size:46px;letter-spacing:-0.03em;"><span style="color:var(--sea-green);">Grow these.</span> <span style="color:var(--coral-beach);">Shrink these.</span> Never breach the floor.</div>
+      <p style="font-size:26px;font-weight:330;line-height:1.45;color:rgba(255,255,255,0.7);margin:16px auto 0;max-width:1180px;">A mental model, not a sum. Don't plug numbers in — it's there to shape judgement.</p>
+    </div>
+  </section>
+
+  <!-- ===================== 16 · THE FIVE THINGS ===================== -->
+  <section data-label="The five things" data-screen-label="16 The five things" data-speaker-notes="Quickly, the five, with examples. Reach - how widely it's genuinely used. One backbone everyone builds on. And reach only counts if people actually choose it - for the things they can't opt out of, like the network, watch for shadow kit springing up around you; that's reach leaking away. Depth - and this is the real prize, not consolidation. How much more can a team do because you exist? Standing up a production-ready service used to take six weeks and the help of three other teams; the platform makes it self-service in an afternoon. The win isn't the six weeks saved once - it's that starting something now costs almost nothing, so the org tries ten times the ideas and finds more winners. You can't get there by tidying up pipelines. That's depth. Cognitive load - the weight you put on the people you serve. Measure the friction: time-to-provision, steps to get something done, how much is self-service. And credit where it's due - cognitive load comes straight out of Team Topologies, Matt Skelton and Manuel Pais' book. Matt's Leeds-based, same as me, so that one counts as local research. Toil - the manual grind on your own team. Keep it under half your time. Reliability - the multiplier. SLOs and error budgets. None of the rest counts if you're not trusted. And the warning the maths carries: if the friction - load plus toil - outweighs the value, the result goes negative. A platform can be a net drain - so painful to use and so heavy to run that the org would be better off without it. That's the thing to never become." style="background:#000;padding:52px 72px 56px;display:flex;flex-direction:column;font-family:var(--font-sans);color:#fff;box-sizing:border-box;">
+    <div style="display:flex;align-items:center;gap:24px;flex-shrink:0;">
+      <div style="display:flex;align-items:flex-end;"><span style="font-weight:800;font-size:25px;letter-spacing:-0.04em;color:#fff;line-height:1;">enablis</span><span style="width:9px;height:9px;background:var(--coral-beach);border-radius:0 0 100% 0;margin-left:2px;margin-bottom:2px;"></span></div>
+      <span style="font-family:var(--font-mono);font-weight:500;font-size:24px;letter-spacing:0.14em;text-transform:uppercase;color:var(--sea-green);white-space:nowrap;">Altitude 2 · Model</span>
+      <div style="flex:1;height:1px;background:var(--hairline);"></div>
+      <span style="font-family:var(--font-mono);font-weight:500;font-size:24px;letter-spacing:0.14em;color:rgba(255,255,255,0.4);">16</span>
+    </div>
+    <div style="display:flex;align-items:flex-end;gap:28px;margin:30px 0 0;flex-shrink:0;">
+      <h1 style="font-weight:800;font-size:60px;line-height:1;letter-spacing:-0.035em;margin:0;">The five things<span style="color:var(--coral-beach);">.</span></h1>
+      <span style="font-size:26px;font-weight:330;line-height:1.4;color:rgba(255,255,255,0.6);margin-bottom:6px;">What each one means — with an example.</span>
+    </div>
+    <div style="flex:1;display:flex;align-items:stretch;margin-top:34px;min-height:0;">
+      <div style="flex:1;display:flex;flex-direction:column;gap:14px;padding-right:30px;">
+        <div style="font-weight:800;font-size:56px;line-height:1;letter-spacing:-0.03em;color:var(--sea-green);">01</div>
+        <div style="font-weight:700;font-size:32px;letter-spacing:-0.02em;line-height:1.05;">Reach</div>
+        <span style="align-self:flex-start;font-family:var(--font-mono);font-weight:500;font-size:21px;letter-spacing:0.1em;text-transform:uppercase;color:var(--sea-green);border:1px solid var(--sea-40);border-radius:4px;padding:4px 11px;white-space:nowrap;">Grow ↑</span>
+        <p style="font-size:25px;line-height:1.38;font-weight:330;color:rgba(255,255,255,0.84);margin:6px 0 0;">How widely it's genuinely used.</p>
+        <p style="font-size:22px;line-height:1.38;font-weight:330;color:rgba(255,255,255,0.55);margin:0;"><span style="color:var(--sea-green);">e.g.</span> one backbone everyone builds on.</p>
+      </div>
+      <div style="width:1px;align-self:stretch;background:var(--hairline);"></div>
+      <div style="flex:1;display:flex;flex-direction:column;gap:14px;padding:0 30px;">
+        <div style="font-weight:800;font-size:56px;line-height:1;letter-spacing:-0.03em;color:var(--sea-green);">02</div>
+        <div style="display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;"><div style="font-weight:700;font-size:32px;letter-spacing:-0.02em;line-height:1.05;">Depth</div><span style="font-family:var(--font-mono);font-weight:500;font-size:17px;letter-spacing:0.1em;text-transform:uppercase;background:var(--gradient-text);-webkit-background-clip:text;background-clip:text;color:transparent;white-space:nowrap;">the real prize</span></div>
+        <span style="align-self:flex-start;font-family:var(--font-mono);font-weight:500;font-size:21px;letter-spacing:0.1em;text-transform:uppercase;color:var(--sea-green);border:1px solid var(--sea-40);border-radius:4px;padding:4px 11px;white-space:nowrap;">Grow ↑</span>
+        <p style="font-size:25px;line-height:1.38;font-weight:330;color:rgba(255,255,255,0.84);margin:6px 0 0;">How much <span style="color:#fff;font-weight:600;">more</span> a team can do because you exist.</p>
+        <p style="font-size:22px;line-height:1.38;font-weight:330;color:rgba(255,255,255,0.55);margin:0;"><span style="color:var(--sea-green);">e.g.</span> 6 weeks + 3 teams → an afternoon.</p>
+      </div>
+      <div style="width:1px;align-self:stretch;background:var(--hairline);"></div>
+      <div style="flex:1;display:flex;flex-direction:column;gap:14px;padding:0 30px;">
+        <div style="font-weight:800;font-size:56px;line-height:1;letter-spacing:-0.03em;color:var(--coral-beach);">03</div>
+        <div style="font-weight:700;font-size:32px;letter-spacing:-0.02em;line-height:1.05;">Cognitive load</div>
+        <span style="align-self:flex-start;font-family:var(--font-mono);font-weight:500;font-size:21px;letter-spacing:0.1em;text-transform:uppercase;color:var(--coral-beach);border:1px solid var(--coral-40);border-radius:4px;padding:4px 11px;white-space:nowrap;">Shrink ↓</span>
+        <p style="font-size:25px;line-height:1.38;font-weight:330;color:rgba(255,255,255,0.84);margin:6px 0 0;">The weight you put on those you serve.</p>
+        <p style="font-size:22px;line-height:1.38;font-weight:330;color:rgba(255,255,255,0.55);margin:0;"><span style="color:var(--sea-green);">measure:</span> time-to-provision · steps · self-service.</p>
+        <p style="font-size:22px;line-height:1.38;font-weight:330;color:rgba(255,255,255,0.55);margin:0;"><span style="color:var(--sea-green);">source:</span> Team Topologies — Skelton &amp; Pais.</p>
+      </div>
+      <div style="width:1px;align-self:stretch;background:var(--hairline);"></div>
+      <div style="flex:1;display:flex;flex-direction:column;gap:14px;padding:0 30px;">
+        <div style="font-weight:800;font-size:56px;line-height:1;letter-spacing:-0.03em;color:var(--coral-beach);">04</div>
+        <div style="font-weight:700;font-size:32px;letter-spacing:-0.02em;line-height:1.05;">Toil</div>
+        <span style="align-self:flex-start;font-family:var(--font-mono);font-weight:500;font-size:21px;letter-spacing:0.1em;text-transform:uppercase;color:var(--coral-beach);border:1px solid var(--coral-40);border-radius:4px;padding:4px 11px;white-space:nowrap;">Shrink ↓</span>
+        <p style="font-size:25px;line-height:1.38;font-weight:330;color:rgba(255,255,255,0.84);margin:6px 0 0;">The manual grind on your own team.</p>
+        <p style="font-size:22px;line-height:1.38;font-weight:330;color:rgba(255,255,255,0.55);margin:0;"><span style="color:var(--sea-green);">SRE:</span> keep it under half your time.</p>
+      </div>
+      <div style="width:1px;align-self:stretch;background:var(--hairline);"></div>
+      <div style="flex:1;display:flex;flex-direction:column;gap:14px;padding-left:30px;">
+        <div style="font-weight:800;font-size:56px;line-height:1;letter-spacing:-0.03em;color:#fff;">05</div>
+        <div style="font-weight:700;font-size:32px;letter-spacing:-0.02em;line-height:1.05;">Reliability</div>
+        <span style="align-self:flex-start;font-family:var(--font-mono);font-weight:500;font-size:21px;letter-spacing:0.1em;text-transform:uppercase;color:#fff;border:1px solid rgba(255,255,255,0.25);border-radius:4px;padding:4px 11px;white-space:nowrap;">The multiplier</span>
+        <p style="font-size:25px;line-height:1.38;font-weight:330;color:rgba(255,255,255,0.84);margin:6px 0 0;">SLOs and error budgets — 0 to 1.</p>
+        <p style="font-size:22px;line-height:1.38;font-weight:330;color:rgba(255,255,255,0.55);margin:0;">None of it counts if you're not trusted.</p>
+      </div>
+    </div>
+    <div style="display:flex;gap:24px;align-items:baseline;border-top:1px solid var(--coral-40);padding-top:26px;margin-top:8px;flex-shrink:0;">
+      <span style="font-family:var(--font-mono);font-weight:500;font-size:23px;letter-spacing:0.12em;text-transform:uppercase;color:var(--coral-beach);white-space:nowrap;">It can go negative</span>
+      <p style="font-size:26px;font-weight:330;line-height:1.4;color:rgba(255,255,255,0.78);margin:0;">If load + toil outweigh reach × depth, leverage turns <span style="color:var(--coral-beach);font-weight:600;">negative</span> — a platform so painful and so heavy the org would be better off without it. <span style="color:#fff;">Never become that.</span></p>
+    </div>
+  </section>
+
+  <!-- ===================== 17 · A LENS, NOT A TARGET ===================== -->
+  <section data-label="A lens, not a target" data-screen-label="17 A lens not a target" data-speaker-notes="Same caveat the DORA folks give about their own metrics: don't turn these into targets. The moment a measure becomes a target, it stops being a good measure - that's Goodhart's Law. Start gaming reach, or chasing a toil percentage, and you've lost the point. Keep them in mind to guide decisions. Don't put them on a leaderboard, and don't beat anyone with them." style="background:#000;padding:56px 96px 72px;display:flex;flex-direction:column;font-family:var(--font-sans);color:#fff;box-sizing:border-box;">
+    <div style="display:flex;align-items:center;gap:24px;flex-shrink:0;">
+      <div style="display:flex;align-items:flex-end;"><span style="font-weight:800;font-size:25px;letter-spacing:-0.04em;color:#fff;line-height:1;">enablis</span><span style="width:9px;height:9px;background:var(--coral-beach);border-radius:0 0 100% 0;margin-left:2px;margin-bottom:2px;"></span></div>
+      <span style="font-family:var(--font-mono);font-weight:500;font-size:24px;letter-spacing:0.14em;text-transform:uppercase;color:var(--sea-green);white-space:nowrap;">Altitude 2 · Model</span>
+      <div style="flex:1;height:1px;background:var(--hairline);"></div>
+      <span style="font-family:var(--font-mono);font-weight:500;font-size:24px;letter-spacing:0.14em;color:rgba(255,255,255,0.4);">17</span>
+    </div>
+    <div style="font-family:var(--font-mono);font-weight:500;font-size:25px;letter-spacing:0.16em;text-transform:uppercase;color:var(--coral-beach);margin:40px 0 0;flex-shrink:0;">Keep them in mind — don't chase them</div>
+    <div style="flex:1;display:flex;flex-direction:column;justify-content:center;min-height:0;">
+      <h1 style="font-weight:800;font-size:108px;line-height:0.98;letter-spacing:-0.045em;margin:0;">A lens, not a target<span style="color:var(--coral-beach);">.</span></h1>
+      <div style="display:flex;gap:40px;align-items:stretch;margin-top:46px;max-width:1500px;">
+        <div style="width:3px;background:var(--sea-green);flex-shrink:0;"></div>
+        <div>
+          <p style="font-size:40px;font-weight:330;line-height:1.34;color:#fff;margin:0;">When a measure becomes a target, it stops being a good measure.</p>
+          <div style="font-family:var(--font-mono);font-weight:500;font-size:24px;letter-spacing:0.14em;text-transform:uppercase;color:var(--sea-green);margin-top:20px;">Goodhart's Law</div>
+        </div>
+      </div>
+    </div>
+    <p style="font-size:29px;font-weight:330;line-height:1.45;color:rgba(255,255,255,0.7);margin:0;flex-shrink:0;max-width:1560px;">Game your reach number or chase a toil percentage and you've missed the point. A lens to guide judgement, not replace it — <span style="color:#fff;">not a scoreboard, and never a stick to beat anyone with.</span></p>
+  </section>
+
+  <!-- ===================== 18 · STARTING FROM LEGACY ===================== -->
+  <section data-label="Triage — Monday" data-screen-label="18 Triage — what you do Monday" data-speaker-notes="Bottom altitude - the bit you actually do on Monday morning. A lot of what I've said assumes you've already got CI/CD, telemetry, SLOs - the standard DevOps furniture. Plenty of teams haven't. You might be entirely on legacy, entirely on-prem, only just starting to think about DevOps or a move to the cloud. This model is for you too - arguably especially you. The key point: it's a compass, not a finish line. It tells you which direction is better - not that you've failed for not being there yet. So where do you start? Don't boil the ocean - pick the single thing where the pain is worst and take one step. Drowning in manual work? That's toil; automate one repetitive job. Teams waiting days on you? That's cognitive load; make one thing self-service. No idea whether you're even reliable? Put one SLO on one service. And often the first move isn't a number at all - if you've no ticketing, step one is simply starting to see the work. And to be clear, because I feel strongly about it: the cloud is a tool, not the goal. It has real advantages, but 'move to the cloud' is not step one and it's not the point. Good method on the kit you already have beats bad method on shiny kit every time. Start where you are." style="background:#000;padding:52px 96px 56px;display:flex;flex-direction:column;font-family:var(--font-sans);color:#fff;box-sizing:border-box;">
+    <div style="display:flex;align-items:center;gap:24px;flex-shrink:0;">
+      <div style="display:flex;align-items:flex-end;"><span style="font-weight:800;font-size:25px;letter-spacing:-0.04em;color:#fff;line-height:1;">enablis</span><span style="width:9px;height:9px;background:var(--coral-beach);border-radius:0 0 100% 0;margin-left:2px;margin-bottom:2px;"></span></div>
+      <span style="font-family:var(--font-mono);font-weight:500;font-size:24px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.4);white-space:nowrap;">Altitude 3 · Triage — what you do Monday</span>
+      <div style="flex:1;height:1px;background:var(--hairline);"></div>
+      <span style="font-family:var(--font-mono);font-weight:500;font-size:24px;letter-spacing:0.14em;color:rgba(255,255,255,0.4);">18</span>
+    </div>
+    <div style="display:flex;align-items:flex-end;gap:40px;margin:30px 0 0;flex-shrink:0;">
+      <h1 style="font-weight:800;font-size:74px;line-height:1;letter-spacing:-0.04em;margin:0;">Pick the worst pain. Take one step<span style="color:var(--coral-beach);">.</span></h1>
+      <p style="font-size:27px;font-weight:330;line-height:1.4;color:rgba(255,255,255,0.66);margin:0 0 10px;max-width:760px;">A compass, not a finish line — and no cloud, or full platform, required to start.</p>
+    </div>
+    <div style="font-family:var(--font-mono);font-weight:500;font-size:22px;letter-spacing:0.12em;text-transform:uppercase;color:var(--sea-green);margin:34px 0 0;flex-shrink:0;">Find yourself here on Monday morning → do this one thing</div>
+    <div style="flex:1;display:flex;flex-direction:column;justify-content:center;min-height:0;margin-top:6px;">
+      <div style="display:grid;grid-template-columns:1fr 1.05fr 300px;gap:48px;align-items:baseline;padding:24px 0;border-top:1px solid var(--hairline);">
+        <span style="font-weight:700;font-size:31px;letter-spacing:-0.02em;color:#fff;">Drowning in manual work</span>
+        <span style="font-size:27px;font-weight:330;color:rgba(255,255,255,0.74);">Automate one repetitive job.</span>
+        <span style="font-family:var(--font-mono);font-weight:500;font-size:22px;letter-spacing:0.1em;text-transform:uppercase;color:var(--coral-beach);text-align:right;">Toil ↓</span>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1.05fr 300px;gap:48px;align-items:baseline;padding:24px 0;border-top:1px solid var(--hairline);">
+        <span style="font-weight:700;font-size:31px;letter-spacing:-0.02em;color:#fff;">Teams waiting days on you</span>
+        <span style="font-size:27px;font-weight:330;color:rgba(255,255,255,0.74);">Make one thing self-service.</span>
+        <span style="font-family:var(--font-mono);font-weight:500;font-size:22px;letter-spacing:0.1em;text-transform:uppercase;color:var(--coral-beach);text-align:right;">Cognitive load ↓</span>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1.05fr 300px;gap:48px;align-items:baseline;padding:24px 0;border-top:1px solid var(--hairline);">
+        <span style="font-weight:700;font-size:31px;letter-spacing:-0.02em;color:#fff;">No idea if you're reliable</span>
+        <span style="font-size:27px;font-weight:330;color:rgba(255,255,255,0.74);">Put one SLO on one service.</span>
+        <span style="font-family:var(--font-mono);font-weight:500;font-size:22px;letter-spacing:0.1em;text-transform:uppercase;color:#fff;text-align:right;">Reliability</span>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1.05fr 300px;gap:48px;align-items:baseline;padding:24px 0;border-top:1px solid var(--hairline);border-bottom:1px solid var(--hairline);">
+        <span style="font-weight:700;font-size:31px;letter-spacing:-0.02em;color:#fff;">Can't even see the work</span>
+        <span style="font-size:27px;font-weight:330;color:rgba(255,255,255,0.74);">Start a ticket queue — just begin to see it.</span>
+        <span style="font-family:var(--font-mono);font-weight:500;font-size:22px;letter-spacing:0.1em;text-transform:uppercase;color:var(--sea-green);text-align:right;">Visibility</span>
+      </div>
+    </div>
+    <div style="display:flex;gap:24px;align-items:baseline;padding-top:26px;flex-shrink:0;">
+      <span style="font-family:var(--font-mono);font-weight:500;font-size:22px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.45);white-space:nowrap;">The cloud is a tool</span>
+      <p style="font-size:27px;font-weight:330;line-height:1.4;color:rgba(255,255,255,0.78);margin:0;">— not the goal. Good method on the kit you've got beats bad method on shiny kit. <span style="color:var(--sea-green);font-weight:600;">Start where you are.</span></p>
+    </div>
+  </section>
+
+  <!-- ===================== 19 · BE HONEST ===================== -->
+  <section data-label="Be honest" data-screen-label="19 Be honest about what this is" data-speaker-notes="Quick bit of honesty, because this room will ask. This is a decision lens, not a validated instrument - there's still no peer-reviewed, platform-specific model in the research; the Anjum review from this year is good on exactly that gap. The concept of leverage is rock-solid, and it's the stated goal in the field's main text, Fournier and Nowland - but reach and depth are judgement calls, not precise meters, and reliability as a nought-to-one multiplier is a direction, not a dial. So use it to think, not to grade. These are low-stakes metrics: brilliant for getting better, wrong as a stick to beat anyone with." style="background:#000;padding:52px 96px 56px;display:flex;flex-direction:column;font-family:var(--font-sans);color:#fff;box-sizing:border-box;">
+    <div style="display:flex;align-items:center;gap:24px;flex-shrink:0;">
+      <div style="display:flex;align-items:flex-end;"><span style="font-weight:800;font-size:25px;letter-spacing:-0.04em;color:#fff;line-height:1;">enablis</span><span style="width:9px;height:9px;background:var(--coral-beach);border-radius:0 0 100% 0;margin-left:2px;margin-bottom:2px;"></span></div>
+      <span style="font-family:var(--font-mono);font-weight:500;font-size:24px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.4);white-space:nowrap;">Coda · Be honest</span>
+      <div style="flex:1;height:1px;background:var(--hairline);"></div>
+      <span style="font-family:var(--font-mono);font-weight:500;font-size:24px;letter-spacing:0.14em;color:rgba(255,255,255,0.4);">19</span>
+    </div>
+    <h1 style="font-weight:800;font-size:68px;line-height:1;letter-spacing:-0.035em;margin:30px 0 0;flex-shrink:0;">Be honest about what this is<span style="color:var(--coral-beach);">.</span></h1>
+    <div style="flex:1;display:grid;grid-template-columns:1fr 1fr;gap:64px;margin-top:38px;min-height:0;">
+      <div style="display:flex;flex-direction:column;">
+        <div style="display:flex;align-items:center;gap:14px;border-bottom:2px solid var(--sea-green);padding-bottom:18px;">
+          <span style="font-weight:800;font-size:34px;color:var(--sea-green);line-height:1;">✓</span>
+          <span style="font-family:var(--font-mono);font-weight:500;font-size:24px;letter-spacing:0.13em;text-transform:uppercase;color:var(--sea-green);">What it is</span>
+        </div>
+        <div style="display:flex;flex-direction:column;justify-content:space-between;flex:1;padding-top:8px;">
+          <div style="display:flex;gap:18px;align-items:baseline;padding:18px 0;border-bottom:1px solid var(--hairline);"><span style="color:var(--sea-green);font-weight:700;font-size:26px;flex-shrink:0;">✓</span><p style="font-size:28px;font-weight:330;line-height:1.35;color:#fff;margin:0;">A decision <span style="font-weight:600;">lens</span>.</p></div>
+          <div style="display:flex;gap:18px;align-items:baseline;padding:18px 0;border-bottom:1px solid var(--hairline);"><span style="color:var(--sea-green);font-weight:700;font-size:26px;flex-shrink:0;">✓</span><p style="font-size:28px;font-weight:330;line-height:1.35;color:#fff;margin:0;">Grounded — leverage is the field's stated goal. <span style="color:rgba(255,255,255,0.6);">(Fournier &amp; Nowland)</span></p></div>
+          <div style="display:flex;gap:18px;align-items:baseline;padding:18px 0;border-bottom:1px solid var(--hairline);"><span style="color:var(--sea-green);font-weight:700;font-size:26px;flex-shrink:0;">✓</span><p style="font-size:28px;font-weight:330;line-height:1.35;color:#fff;margin:0;">Low-stakes — brilliant for <span style="font-weight:600;">getting better</span>.</p></div>
+          <div style="display:flex;gap:18px;align-items:baseline;padding:18px 0;"><span style="color:var(--sea-green);font-weight:700;font-size:26px;flex-shrink:0;">✓</span><p style="font-size:28px;font-weight:330;line-height:1.35;color:#fff;margin:0;">Use it to <span style="font-weight:600;">think</span>.</p></div>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;">
+        <div style="display:flex;align-items:center;gap:14px;border-bottom:2px solid var(--coral-beach);padding-bottom:18px;">
+          <span style="font-weight:800;font-size:34px;color:var(--coral-beach);line-height:1;">✕</span>
+          <span style="font-family:var(--font-mono);font-weight:500;font-size:24px;letter-spacing:0.13em;text-transform:uppercase;color:var(--coral-beach);">What it isn't</span>
+        </div>
+        <div style="display:flex;flex-direction:column;justify-content:space-between;flex:1;padding-top:8px;">
+          <div style="display:flex;gap:18px;align-items:baseline;padding:18px 0;border-bottom:1px solid var(--hairline);"><span style="color:var(--coral-beach);font-weight:700;font-size:26px;flex-shrink:0;">✕</span><p style="font-size:28px;font-weight:330;line-height:1.35;color:rgba(255,255,255,0.82);margin:0;">A validated instrument.</p></div>
+          <div style="display:flex;gap:18px;align-items:baseline;padding:18px 0;border-bottom:1px solid var(--hairline);"><span style="color:var(--coral-beach);font-weight:700;font-size:26px;flex-shrink:0;">✕</span><p style="font-size:28px;font-weight:330;line-height:1.35;color:rgba(255,255,255,0.82);margin:0;">Precise meters — reach &amp; depth are judgement calls.</p></div>
+          <div style="display:flex;gap:18px;align-items:baseline;padding:18px 0;border-bottom:1px solid var(--hairline);"><span style="color:var(--coral-beach);font-weight:700;font-size:26px;flex-shrink:0;">✕</span><p style="font-size:28px;font-weight:330;line-height:1.35;color:rgba(255,255,255,0.82);margin:0;">A dial — reliability 0→1 is a direction.</p></div>
+          <div style="display:flex;gap:18px;align-items:baseline;padding:18px 0;"><span style="color:var(--coral-beach);font-weight:700;font-size:26px;flex-shrink:0;">✕</span><p style="font-size:28px;font-weight:330;line-height:1.35;color:rgba(255,255,255,0.82);margin:0;">A stick to beat anyone with.</p></div>
+        </div>
+      </div>
+    </div>
+    <div style="display:flex;gap:24px;align-items:baseline;border-top:1px solid var(--hairline);padding-top:24px;margin-top:30px;flex-shrink:0;">
+      <span style="font-family:var(--font-mono);font-weight:500;font-size:22px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.45);white-space:nowrap;">The gap</span>
+      <p style="font-size:25px;font-weight:330;line-height:1.4;color:rgba(255,255,255,0.7);margin:0;">No peer-reviewed, platform-specific model exists yet — the Anjum review (2026) is good on exactly that. <span style="color:#fff;">Use it to think, not to grade.</span></p>
+    </div>
+  </section>
+
+  <!-- ===================== 20 · CASE STUDY (TO ADD) ===================== -->
+  <section data-label="Case study" data-screen-label="20 Case study" data-speaker-notes="(Placeholder - drop in a real example from your current work. A structure that lands well:) The situation: the team/platform, the estate (cloud + on-prem/legacy), what was being measured before. What we changed: which of the five we focused on, and the concrete moves - self-service to cut cognitive load, automation to cut toil, an SLO to set the floor, a paved path to add reach and depth. What improved: before/after - toil down, time-to-provision down, fewer incidents, teams doing things they couldn't before. Keep it honest and specific. The lesson: what you'd tell the room to try first." style="background:#000;padding:56px 96px 64px;display:flex;flex-direction:column;font-family:var(--font-sans);color:#fff;box-sizing:border-box;">
+    <div style="display:flex;align-items:center;gap:24px;flex-shrink:0;">
+      <div style="display:flex;align-items:flex-end;"><span style="font-weight:800;font-size:25px;letter-spacing:-0.04em;color:#fff;line-height:1;">enablis</span><span style="width:9px;height:9px;background:var(--coral-beach);border-radius:0 0 100% 0;margin-left:2px;margin-bottom:2px;"></span></div>
+      <span style="font-family:var(--font-mono);font-weight:500;font-size:24px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.4);white-space:nowrap;">In practice</span>
+      <div style="flex:1;height:1px;background:var(--hairline);"></div>
+      <span style="font-family:var(--font-mono);font-weight:500;font-size:24px;letter-spacing:0.14em;color:rgba(255,255,255,0.4);">20</span>
+    </div>
+    <div style="display:flex;align-items:flex-end;gap:28px;margin:38px 0 0;flex-shrink:0;">
+      <h1 style="font-weight:800;font-size:90px;line-height:1;letter-spacing:-0.04em;margin:0;">Case study<span style="color:var(--coral-beach);">.</span></h1>
+      <span style="font-family:var(--font-mono);font-weight:500;font-size:23px;letter-spacing:0.14em;text-transform:uppercase;color:var(--coral-beach);border:1px solid var(--coral-40);border-radius:4px;padding:7px 16px;margin-bottom:18px;">To add — current engagement</span>
+    </div>
+    <div style="flex:1;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:32px 56px;margin-top:40px;min-height:0;">
+      <div style="display:flex;flex-direction:column;border:1px dashed rgba(255,255,255,0.22);border-radius:8px;padding:30px 34px;">
+        <div style="font-family:var(--font-mono);font-weight:500;font-size:24px;letter-spacing:0.12em;text-transform:uppercase;color:var(--sea-green);margin-bottom:14px;">01 · The situation</div>
+        <p style="font-size:26px;line-height:1.45;font-weight:330;color:rgba(255,255,255,0.5);margin:0;">The team / platform, the estate (cloud + on-prem / legacy), and what was being measured before.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;border:1px dashed rgba(255,255,255,0.22);border-radius:8px;padding:30px 34px;">
+        <div style="font-family:var(--font-mono);font-weight:500;font-size:24px;letter-spacing:0.12em;text-transform:uppercase;color:var(--sea-green);margin-bottom:14px;">02 · What we changed</div>
+        <p style="font-size:26px;line-height:1.45;font-weight:330;color:rgba(255,255,255,0.5);margin:0;">Which of the five — self-service to cut cognitive load, automation to cut toil, an SLO to set the floor, a paved path to add reach &amp; depth.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;border:1px dashed rgba(255,255,255,0.22);border-radius:8px;padding:30px 34px;">
+        <div style="font-family:var(--font-mono);font-weight:500;font-size:24px;letter-spacing:0.12em;text-transform:uppercase;color:var(--sea-green);margin-bottom:14px;">03 · What improved</div>
+        <p style="font-size:26px;line-height:1.45;font-weight:330;color:rgba(255,255,255,0.5);margin:0;">Before / after — toil down, time-to-provision down, fewer incidents, teams doing things they couldn't before. Honest and specific.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;border:1px dashed var(--coral-40);border-radius:8px;padding:30px 34px;">
+        <div style="font-family:var(--font-mono);font-weight:500;font-size:24px;letter-spacing:0.12em;text-transform:uppercase;color:var(--coral-beach);margin-bottom:14px;">04 · The lesson</div>
+        <p style="font-size:26px;line-height:1.45;font-weight:330;color:rgba(255,255,255,0.5);margin:0;">What you'd tell the room to try first.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 21 · CLOSE ===================== -->
+  <section data-label="Close" data-screen-label="21 Close" data-speaker-notes="To bring it home, in the three altitudes. The Three Ways still hold - that's the why. The model is the scoreboard - reach and depth up, cognitive load and toil down, reliability holding it all together, and leverage is what comes out. And triage is what you do with it on Monday - find your worst pain and take one step. One last practical thing: this is deliberately something you can take to your team lead to make the case - because it's grounded, and it drives real improvement, not just a nicer dashboard. Grow two, shrink two, never breach the floor. Thank you - and I'd love your questions, heckles, and war stories." style="background:var(--gradient-bg);padding:96px 120px;display:flex;flex-direction:column;justify-content:space-between;font-family:var(--font-sans);color:#fff;box-sizing:border-box;">
+    <div style="display:flex;justify-content:space-between;align-items:flex-start;">
+      <span style="font-family:var(--font-mono);font-weight:500;font-size:25px;letter-spacing:0.16em;text-transform:uppercase;color:var(--sea-green);">The Platform Leverage Model</span>
+      <div style="display:flex;align-items:flex-end;">
+        <span style="font-family:var(--font-sans);font-weight:800;font-size:30px;letter-spacing:-0.04em;color:#fff;line-height:1;">enablis</span>
+        <span style="width:10px;height:10px;background:var(--coral-beach);border-radius:0 0 100% 0;margin-left:3px;margin-bottom:3px;"></span>
+      </div>
+    </div>
+    <div>
+      <h1 style="font-weight:800;font-size:120px;line-height:1.0;letter-spacing:-0.045em;margin:0;">
+        <span style="color:var(--sea-green);">Grow two.</span> <span style="color:var(--coral-beach);">Shrink two.</span><br>
+        <span>Never breach the </span><span style="background:var(--gradient-text);-webkit-background-clip:text;background-clip:text;color:transparent;">floor</span><span style="color:var(--coral-beach);">.</span>
+      </h1>
+      <p style="font-size:38px;font-weight:330;line-height:1.4;color:rgba(255,255,255,0.82);max-width:1300px;margin:44px 0 0;">The Three Ways are the <span style="color:#fff;">why</span>. The model is the scoreboard — and leverage is what comes out. Triage is what you do <span style="color:#fff;">Monday</span>.</p>
+    </div>
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;">
+      <span style="font-family:var(--font-mono);font-weight:500;font-size:24px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.5);">Thank you — questions, heckles &amp; war stories</span>
+      <span style="font-family:var(--font-mono);font-weight:500;font-size:24px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.4);">Leverage = Reliability × (Reach × Depth − Load − Toil)</span>
+    </div>
+  </section>
+
+
+  
+
+</x-import>
+</x-dc>
+</body>
+</html>
